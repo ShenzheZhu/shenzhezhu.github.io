@@ -2,7 +2,6 @@
   title: "Minagen: A Minimal Testing Ground for Building Cognitive Architectures for Generative Agents"
   venue: In Processing
   description: "Minagen develops and tests cognitive architectures for generative AI agents, offering a minimalistic platform for researchers to explore and test cognitive modeling and AI ideas."
-  arxiv:
   image: Cognitive-1.png
   github:
   authors:
