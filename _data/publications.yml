@@ -1,6 +1,6 @@
 - id: LLMpersona
   title: "What Makes Your Model a Low-empathy or Warmth Person: Exploring the Origins of Personality in LLMs"
-  venue: arXiv, 2024
+  venue: arXiv, 2024 (ICLR 2025 Under review)
   description: "Large language models (LLMs) display human-like traits, but how they form is unclear. We explore how long-term factors and short-term pressures shape these traits and their impact on model safety."
   arxiv: https://openreview.net/forum?id=DXaUC7lBq1
   image: Long_Short_Term.png
@@ -26,7 +26,7 @@
 
 - id: kgSurvey
   title: "Exploring knowledge graph-based neural-symbolic system from application perspective"
-  venue: arXiv, 2024 (ICLR 2025 Under review)
+  venue: arXiv, 2024 
   description: "This survey paper explores KG-based neural-symbolic integration, enhancing neural reasoning, improving symbolic accuracy, and combining both"
   arxiv: 2405.03524
   image: NS.png
