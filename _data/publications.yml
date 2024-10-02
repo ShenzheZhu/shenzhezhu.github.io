@@ -1,3 +1,29 @@
+- id: LLMpersona
+  title: "What Makes Your Model a Low-empathy or Warmth Person: Exploring the Origins of Personality in LLMs"
+  venue: arXiv, 2024
+  description: "Large language models (LLMs) display human-like traits, but how they form is unclear. We explore how long-term factors and short-term pressures shape these traits and their impact on model safety."
+  arxiv: 2405.03524
+  image: Long_Short_Term.png
+  authors:
+    - name: Shu
+      equal_contributor: true
+    - name: Shenzhe
+      equal_contributor: true
+    - name: Ruoxuan
+      equal_contributor: false
+    - name: Liang
+      equal_contributor: false
+    - name: Yu
+      equal_contributor: false
+    - name: Lijie
+      equal_contributor: false
+    - name: Mengdi
+      equal_contributor: false
+    - name: Di
+      equal_contributor: false
+
+
+
 - id: kgSurvey
   title: "Exploring knowledge graph-based neural-symbolic system from application perspective"
   venue: arXiv, 2024
