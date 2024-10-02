@@ -1,3 +1,20 @@
+- id: minagen
+  title: "Minagen: A Minimal Testing Ground for Building Cognitive Architectures for Generative Agents"
+  venue: In Processing
+  description: "Minagen develops and tests cognitive architectures for generative AI agents, offering a minimalistic platform for researchers to explore and test cognitive modeling and AI ideas."
+  arxiv:
+  image: Cognitive-1.png
+  github:
+  authors:
+    - name: Eric
+      equal_contributor: true
+    - name: Shenzhe
+      equal_contributor: true
+    - name: Rebekah
+      equal_contributor: false
+    - name: Wil
+      equal_contributor: false
+
 - id: Career
   title: "Career Navigator: LLM & Knowledge Graph-Based Job Recommender Engine"
   description: "Career Navigator is an job recommendation service based on LLM and Knowledge Graph, It addresses challenges students face on the CSM platform, improving job search efficiency."
