@@ -5,33 +5,33 @@
   image: autotrust.png
   github: taco-group/AutoTrust
   project_page: https://taco-group.github.io/AutoTrust/
-authors:
-    - name: Shuo
-      equal_contributor: false
-    - name: Hongyuan
-      equal_contributor: false
-    - name: Xiangbo
-      equal_contributor: false
-    - name: Shenzhe
-      equal_contributor: false
-    - name: Renjie
-      equal_contributor: false
-    - name: Kexin
-      equal_contributor: false
-    - name: Xiaopeng
-      equal_contributor: false
-    - name: Heng
-      equal_contributor: false
-    - name: Tianbao
-      equal_contributor: false
-    - name: Zhangyang
-      equal_contributor: false
-    - name: Yang
-      equal_contributor: false
-    - name: Huaxiu
-      equal_contributor: false
-    - name: Zhengzhong
-      equal_contributor: false
+  authors:
+      - name: Shuo
+        equal_contributor: false
+      - name: Hongyuan
+        equal_contributor: false
+      - name: Xiangbo
+        equal_contributor: false
+      - name: Shenzhe
+        equal_contributor: false
+      - name: Renjie
+        equal_contributor: false
+      - name: Kexin
+        equal_contributor: false
+      - name: Xiaopeng
+        equal_contributor: false
+      - name: Heng
+        equal_contributor: false
+      - name: Tianbao
+        equal_contributor: false
+      - name: Zhangyang
+        equal_contributor: false
+      - name: Yang
+        equal_contributor: false
+      - name: Huaxiu
+        equal_contributor: false
+      - name: Zhengzhong
+        equal_contributor: false
 
 
 - id: LLMpersona
