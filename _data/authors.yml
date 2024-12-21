@@ -49,3 +49,40 @@ Mengdi:
 Di:
     first_name: Di
     last_name: Wang
+
+Shuo:
+    first_name: Shuo
+    last_name: Xing
+Hongyuan:
+    first_name: Hongyuan
+    last_name: Hua
+Xiangbo:
+    first_name: Xiangbo
+    last_name: Gao
+Renjie:
+    first_name: Renjie
+    last_name: Li
+Kexin:
+    first_name: Kexin
+    last_name: Tian
+Xiaopeng:
+    first_name: Xiaopeng
+    last_name: Li
+Heng:
+    first_name: Heng
+    last_name: Huang
+Tianbao:
+    first_name: Tianbao
+    last_name: Yang
+Zhangyang:
+    first_name: Zhangyang
+    last_name: Wang
+Yang:
+    first_name: Yang
+    last_name: Zhou
+Huaxiu:
+    first_name: Huaxiu
+    last_name: Yao
+Zhengzhong:
+    first_name: Zhengzhong
+    last_name: Tu
