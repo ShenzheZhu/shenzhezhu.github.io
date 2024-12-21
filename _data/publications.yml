@@ -1,6 +1,7 @@
 - id: autotrust
   title: "AutoTrust: Benchmarking Trustworthiness in Large Vision Language Models for Autonomous Driving"
   venue: Arxiv
+  description: "AutoTrust, a comprehensive benchmark to evaluate the trustworthiness of DriveVLMs in autonomous driving, uncovering vulnerabilities in safety, robustness, privacy, and fairness using a large visual question-answering dataset and testing six diverse VLMs."
   arxiv: 2412.15206
   image: autotrust.png
   github: taco-group/AutoTrust

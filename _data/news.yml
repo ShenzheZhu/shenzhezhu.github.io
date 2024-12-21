@@ -1,3 +1,7 @@
+- date: Dec 2024
+  description: >-
+    Please check our latest work on Trustworthy VLM: [AutoTrust: Benchmarking Trustworthiness in Large Vision Language Models for Autonomous Driving](https://arxiv.org/abs/2412.15206)
+
 - date: Oct 2024
   description: >-
     Our paper [What Makes Your Model a Low-empathy or Warmth Person: Exploring the Origins of Personality in LLMs](https://arxiv.org/abs/2410.10863) was accpeted by <font color="red">NeurIPS 2024 Workshop LanGame</font>.
