@@ -1,4 +1,34 @@
 - id: autotrust
+  title: "Fraud-R1 : A Multi-Round Benchmark for Assessing the Robustness of LLM Against Augmented Fraud and Phishing Inducements"
+  venue: arXiv, 2024
+  description: "Fraud-R1 benchmarks LLMs' fraud resistance with 8,564 cases across five types, using multi-round evaluation. Testing 15 LLMs in two settings, it reveals key weaknesses, especially in role-play and fake job scams, and a Chinese-English gap in fraud detection."
+  arxiv: 
+  image: evafraud_flow.png
+  github: kaustpradalab/Fraud-R1
+  project_page: https://kaustpradalab.github.io/Fraud-R1/
+  authors:
+      - name: Shu
+        equal_contributor: true
+      - name: Shenzhe
+        equal_contributor: true
+      - name: Zeyu Wu
+        equal_contributor: false
+      - name: Keyu Wang
+        equal_contributor: false
+      - name: Junchi Yao
+        equal_contributor: false
+      - name: Junchao Wu
+        equal_contributor: false
+      - name: Lijie
+        equal_contributor: false
+      - name: Mengdi
+        equal_contributor: false
+      - name: Derek F. Wong
+        equal_contributor: false
+      - name: Di
+        equal_contributor: false
+
+- id: autotrust
   title: "AutoTrust: Benchmarking Trustworthiness in Large Vision Language Models for Autonomous Driving"
   venue: arXiv, 2024
   description: "AutoTrust, a comprehensive benchmark to evaluate the trustworthiness of DriveVLMs in autonomous driving, uncovering vulnerabilities in safety, robustness, privacy, and fairness using a large visual question-answering dataset and testing six diverse VLMs."
