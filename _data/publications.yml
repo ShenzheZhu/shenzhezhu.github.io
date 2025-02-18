@@ -93,7 +93,7 @@
 
 
 - id: kgSurvey
-  title: "Exploring knowledge graph-based neural-symbolic system from application perspective"
+  title: "A short Survey: Exploring knowledge graph-based neural-symbolic system from application perspective"
   venue: arXiv, 2024 
   description: "This survey paper explores KG-based neural-symbolic integration, enhancing neural reasoning, improving symbolic accuracy, and combining both"
   arxiv: 2405.03524
