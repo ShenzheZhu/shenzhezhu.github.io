@@ -66,7 +66,7 @@
 
 
 - id: LLMpersona
-  title: "What Makes Your Model a Low-empathy or Warmth Person: Exploring the Origins of Personality in LLMs"
+  title: "Exploring the Personality Traits of LLMs through Latent Features Steering"
   venue: NeurIPS 2024 LanGame Workshop
   description: "Large language models (LLMs) display human-like traits, but how they form is unclear. We explore how long-term factors and short-term pressures shape these traits and their impact on model safety."
   arxiv: 2410.10863
