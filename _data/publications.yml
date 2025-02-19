@@ -1,8 +1,8 @@
-- id: autotrust
+- id: fraud
   title: "Fraud-R1 : A Multi-Round Benchmark for Assessing the Robustness of LLM Against Augmented Fraud and Phishing Inducements"
   venue: arXiv, 2024
   description: "Fraud-R1 benchmarks LLMs' fraud resistance with 8,564 cases across five types, using multi-round evaluation. Testing 15 LLMs in two settings, it reveals key weaknesses, especially in role-play and fake job scams, and a Chinese-English gap in fraud detection."
-  arxiv: 
+  arxiv: 2502.12904
   image: evafraud_flow.png
   github: kaustpradalab/Fraud-R1
   project_page: https://kaustpradalab.github.io/Fraud-R1/
