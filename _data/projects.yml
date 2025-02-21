@@ -1,18 +1,18 @@
-- id: minagen
-  title: "Minagen: A Minimal Testing Ground for Building Cognitive Architectures for Generative Agents"
-  description: "Minagen develops and tests cognitive architectures for generative AI agents, offering a minimalistic platform for researchers to explore and test cognitive modeling and AI ideas."
-  image: Cognitive-1.png
-  github:
-  authors:
-    - Eric
-    - Shenzhe
-    - Rebekah
-    - Wil
+#- id: minagen
+#  title: "Minagen: A Minimal Testing Ground for Building Cognitive Architectures for Generative Agents"
+#  description: "Minagen develops and tests cognitive architectures for generative AI agents, offering a minimalistic platform for researchers to explore and test cognitive modeling and AI ideas."
+#  image: Cognitive-1.png
+#  github:
+#  authors:
+#    - Eric
+#    - Shenzhe
+#    - Rebekah
+#    - Wil
 
-- id: Career
-  title: "Career Navigator: LLM & Knowledge Graph-Based Job Recommender Engine"
-  description: "Career Navigator is an job recommendation service based on LLM and Knowledge Graph, It addresses challenges students face on the CSM platform, improving job search efficiency."
-  image: visualisation.png
-  github: ShenzheZhu/Career_Navigator_UTSC_AScoop
-  authors:
-    - Shenzhe
+#- id: Career
+#  title: "Career Navigator: LLM & Knowledge Graph-Based Job Recommender Engine"
+#  description: "Career Navigator is an job recommendation service based on LLM and Knowledge Graph, It addresses challenges students face on the CSM platform, improving job search efficiency."
+#  image: visualisation.png
+#  github: ShenzheZhu/Career_Navigator_UTSC_AScoop
+#  authors:
+#    - Shenzhe
