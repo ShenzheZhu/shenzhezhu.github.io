@@ -1,6 +1,29 @@
+- id: jaildam
+  title: "JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model"
+  venue: arXiv, 2025
+  description: "MLLMs risk jailbreak attacks that bypass safety. JAILDAM adapts at test-time using memory-based unsafe knowledge, detecting attacks efficiently without labeled harmful data."
+  image: jaildam.jpg
+  github: https://github.com/ShenzheZhu/JailDAM
+  authors:
+      - name: Yi
+        equal_contributor: true
+      - name: Shenzhe
+        equal_contributor: true
+      - name: Qin
+        equal_contributor: false
+      - name: Li
+        equal_contributor: false
+      - name: Ziyi
+        equal_contributor: false
+      - name: Chaowei
+        equal_contributor: false
+      - name: Yue
+        equal_contributor: false
+      
+
 - id: fraud
   title: "Fraud-R1 : A Multi-Round Benchmark for Assessing the Robustness of LLM Against Augmented Fraud and Phishing Inducements"
-  venue: arXiv, 2024
+  venue: arXiv, 2025
   description: "Fraud-R1 benchmarks LLMs' fraud resistance with 8,564 cases across five types, using multi-round evaluation. Testing 15 LLMs in two settings, it reveals key weaknesses, especially in role-play and fake job scams, and a Chinese-English gap in fraud detection."
   arxiv: 2502.12904
   image: evafraud_flow.png
