@@ -3,7 +3,7 @@
   venue: arXiv, 2025
   description: "MLLMs risk jailbreak attacks that bypass safety. JAILDAM adapts at test-time using memory-based unsafe knowledge, detecting attacks efficiently without labeled harmful data."
   image: jaildam.jpg
-  github: https://github.com/ShenzheZhu/JailDAM
+  github: ShenzheZhu/JailDAM
   authors:
       - name: Yi
         equal_contributor: true
