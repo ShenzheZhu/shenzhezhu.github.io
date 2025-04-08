@@ -1,6 +1,7 @@
 - id: jaildam
   title: "JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model"
   venue: arXiv, 2025
+  arxiv: 2504.03770
   description: "MLLMs risk jailbreak attacks that bypass safety. JAILDAM adapts at test-time using memory-based unsafe knowledge, detecting attacks efficiently without labeled harmful data."
   image: jaildam.jpg
   github: ShenzheZhu/JailDAM
