@@ -24,7 +24,7 @@
 
 - id: fraud
   title: "Fraud-R1 : A Multi-Round Benchmark for Assessing the Robustness of LLM Against Augmented Fraud and Phishing Inducements"
-  venue: arXiv, 2025
+  venue: ACL Findings, 2025
   description: "Fraud-R1 benchmarks LLMs' fraud resistance with 8,564 cases across five types, using multi-round evaluation. Testing 15 LLMs in two settings, it reveals key weaknesses, especially in role-play and fake job scams, and a Chinese-English gap in fraud detection."
   arxiv: 2502.12904
   image: evafraud_flow.png

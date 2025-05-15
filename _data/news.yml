@@ -1,3 +1,6 @@
+- date: May 2025
+  description: >-
+    Excited to share that our paper Fraud-R1: A Multi-Round Benchmark for Assessing the Robustness of LLM Against Augmented Fraud and Phishing Inducements was accepted by <font color="red">ACL 2025 Findings</font>.
 - date: Apr 2025
   description: >-
     Grateful to share our latest pre-print on VLM Security and Jailbreak: [JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model](https://github.com/ShenzheZhu/JailDAM)
@@ -16,15 +19,3 @@
 - date: Oct 2024
   description: >-
     we just released our newest work about vector steering for LLM personality downstream task: [What Makes Your Model a Low-empathy or Warmth Person: Exploring the Origins of Personality in LLMs](https://arxiv.org/abs/2410.10863)
-
-- date: Jun 2024
-  description: >-
-    Excited to share that I start my research intern in PRADA lab of [KAUST](https://www.kaust.edu.sa/en/) focusing on LLM Interpretability.
-
-- date: May 2024
-  description: >-
-    Good news, I began working with Prof.[William Cunningham](https://www.psych.utoronto.ca/people/directories/all-faculty/william-cunningham), focusing on LLM agents for Social Cognition.
-
-- date: May 2024
-  description: >-
-    I've released my first arxiv paper [Exploring knowledge graph-based neural-symbolic system from application perspective](https://arxiv.org/abs/2405.03524).
