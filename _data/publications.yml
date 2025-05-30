@@ -19,6 +19,28 @@
       - name: Jiaxin
         equal_contributor: false
 
+- id: Fraud-planner
+  title: "Is Your LLM-Based Multi-Agent a Reliable Real-World Planner? Exploring Fraud Detection in Travel Planning"
+  venue: arXiv, 2025
+  arxiv: 2505.16557
+  image: planner.png
+  authors:
+      - name: Junchi
+        equal_contributor: false
+      - name: Jianhua
+        equal_contributor: false
+      - name: Tianyu
+        equal_contributor: false
+      - name: Ziyi
+        equal_contributor: false
+      - name: Shenzhe
+        equal_contributor: false
+      - name: Shu
+        equal_contributor: false
+      - name: Di
+        equal_contributor: false
+
+
 - id: jaildam
   title: "JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model"
   venue: arXiv, 2025
