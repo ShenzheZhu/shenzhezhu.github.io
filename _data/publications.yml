@@ -2,7 +2,6 @@
   title: "The Automated but Risky Game: Modeling Agent-to-Agent Negotiations and Transactions in Consumer Markets"
   venue: arXiv, 2025
   arxiv: ""
-  description: ""
   image: A2A.png
   github: ShenzheZhu/A2A-NT
   project_page: https://shenzhezhu.github.io/A2A-NT/
@@ -24,7 +23,6 @@
   title: "JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model"
   venue: arXiv, 2025
   arxiv: "2504.03770"
-  description: "MLLMs risk jailbreak attacks that bypass safety. JAILDAM adapts at test-time using memory-based unsafe knowledge, detecting attacks efficiently without labeled harmful data."
   image: jaildam.jpg
   github: ShenzheZhu/JailDAM
   authors:
