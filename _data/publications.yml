@@ -1,3 +1,24 @@
+- id: A2A-negotiation
+  title: "The Automated but Risky Game: Modeling Agent-to-Agent Negotiations and Transactions in Consumer Markets"
+  venue: arXiv, 2025
+  arxiv: ""
+  description: ""
+  image: A2A.png
+  github: ShenzheZhu/A2A-NT
+  authors:
+      - name: Shenzhe
+        equal_contributor: false
+      - name: Jiao  
+        equal_contributor: false
+      - name: Yi
+        equal_contributor: false
+      - name: Tobin
+        equal_contributor: false
+      - name: Alex
+        equal_contributor: false
+      - name: Jiaxin
+        equal_contributor: false
+
 - id: jaildam
   title: "JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model"
   venue: arXiv, 2025
