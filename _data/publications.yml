@@ -45,7 +45,6 @@
 - id: fraud
   title: "Fraud-R1 : A Multi-Round Benchmark for Assessing the Robustness of LLM Against Augmented Fraud and Phishing Inducements"
   venue: ACL Findings, 2025
-  description: "Fraud-R1 benchmarks LLMs' fraud resistance with 8,564 cases across five types, using multi-round evaluation. Testing 15 LLMs in two settings, it reveals key weaknesses, especially in role-play and fake job scams, and a Chinese-English gap in fraud detection."
   arxiv: 2502.12904
   image: evafraud_flow.png
   github: kaustpradalab/Fraud-R1
@@ -75,7 +74,6 @@
 - id: autotrust
   title: "AutoTrust: Benchmarking Trustworthiness in Large Vision Language Models for Autonomous Driving"
   venue: arXiv, 2024
-  description: "AutoTrust, a comprehensive benchmark to evaluate the trustworthiness of DriveVLMs in autonomous driving, uncovering vulnerabilities in safety, robustness, privacy, and fairness using a large visual question-answering dataset and testing six diverse VLMs."
   arxiv: 2412.15206
   image: autotrust.png
   github: taco-group/AutoTrust
@@ -112,7 +110,6 @@
 - id: LLMpersona
   title: "Exploring the Personality Traits of LLMs through Latent Features Steering"
   venue: NeurIPS 2024 LanGame Workshop
-  description: "Large language models (LLMs) display human-like traits, but how they form is unclear. We explore how long-term factors and short-term pressures shape these traits and their impact on model safety."
   arxiv: 2410.10863
   image: LLM-Persona-Steering.png
   github: kaustpradalab/LLM-Persona-Steering
@@ -135,7 +132,6 @@
 - id: kgSurvey
   title: "A short Survey: Exploring knowledge graph-based neural-symbolic system from application perspective"
   venue: arXiv, 2024 
-  description: "This survey paper explores KG-based neural-symbolic integration, enhancing neural reasoning, improving symbolic accuracy, and combining both"
   arxiv: 2405.03524
   image: NS.png
   authors:
