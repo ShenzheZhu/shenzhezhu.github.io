@@ -52,6 +52,7 @@ layout: null
             <b>Hello, I'm {{ site.name }}🤔</b>
           </h1>
           <div class="content has-text-justified">
+            {{ site.introduction | markdownify }}
             <div class="buttons">
               <a class="external-link button is-light" href="files/Research_CV.pdf">
                 <span class="icon"><i class="fas fa-file"></i></span>
@@ -134,8 +135,7 @@ layout: null
                 {% if author_data.is_me %}
                 {{ author_data.first_name }} {{ author_data.middle_name }} {{ author_data.last_name }}{% if author.equal_contributor %}*{% endif %}{% if forloop.last == false %}, {% endif %}
                 {% else %}
-                <a href="{{ author_data.website }}">{{ author_data.first_name }} {{ author_data.middle_name }} {{ author_data.last_name
-                  }}{% if author.equal_contributor %}*{% endif %}</a>{% if forloop.last == false %},{% endif %}
+                {{ author_data.first_name }} {{ author_data.middle_name }} {{ author_data.last_name }}{% if author.equal_contributor %}*{% endif %}{% if forloop.last == false %}, {% endif %}
                 {% endif %}
               </span>
               {% endfor %}
