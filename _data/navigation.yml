@@ -12,9 +12,10 @@ main:
   - title: "Internships"
     url: "/#-internships"
 
+  - title: "Educations"
+    url: "/#-educations"
+    
   - title: "Honors & Services"
     url: "/#-honors--services"
 
-  - title: "Educations"
-    url: "/#-educations"
 

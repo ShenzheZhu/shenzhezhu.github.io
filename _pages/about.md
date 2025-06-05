@@ -23,7 +23,7 @@ Currently, my research centers on developing LLMs and MLLMs that are trustworthy
 
 
 <p style="color: #8B4513; font-style: italic;">
-  I am actively seeking industry research intern positions related to <strong>Social Computing</strong> and <strong>Security</strong> for LLM/MLLM. If you share similar interests or have relevant opportunities at your company, please feel free to connect with me!
+  I am actively seeking industry research internship positions related to <strong>Social Computing</strong> and <strong>Security</strong> for LLMs/MLLMs. If you share similar interests or are aware of relevant opportunities at your company, please feel free to connect with me at cho.zhu@mail.utoronto.ca.
 </p>
 
 
@@ -144,22 +144,21 @@ Other Papers
 # 💻 Internships
 <ul>
   <li>
-    <em>2024.05 - 2024.09</em>, Urban Data Research Centre, University of Toronto, Canada<br>
-    &nbsp;<strong>NLP Analyst</strong>
+    <em>2024.05 - 2024.09</em>, Urban Data Research Centre, University of Toronto, Canada, <strong>NLP Analyst</strong>
   </li>
 </ul>
 
 <ul>
   <li>
-    <em>2024.01 - 2024.05</em>, University of Toronto, Canada<br>
-    &nbsp;<strong>Data Analyst</strong>
+    <em>2024.01 - 2024.05</em>, University of Toronto, Canada, <strong>Data Analyst</strong>
   </li>
 </ul>
+
+
+# 📖 Educations
+- *2022.06 - Present*, **Bachelor of Computer Science** in University of Toronto, Canada
 
 # 💬 Honors & Services
 - *Reviewer*: ICML 2025 MAS; IJCNN 2025; ICLR 2025 WMARK; ICLR 2025 XAI4Science
 - *Honors&Awards*: 2022-2024 Dean’s List Student
 
-
-# 📖 Educations
-- *2022.06 - Present*, **Bachelor of Computer Science** in University of Toronto, Canada
