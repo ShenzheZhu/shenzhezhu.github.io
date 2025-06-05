@@ -28,8 +28,8 @@ Currently, my research centers on developing LLMs and MLLMs that are trustworthy
 
 
 # 🔥 News
-- *2025.05*: &nbsp;🎉🎉 Excited to share that our paper  <a href='https://kaustpradalab.github.io/Fraud-R1'><strong>Fraud-R1: A Multi-Round Benchmark for Assessing the Robustness of LLM Against Augmented Fraud and Phishing Inducements</strong></a> was accepted by <strong  style="color:rgb(19, 110, 138);">ACL 2025 Findings</strong>.
-- *2024.12*: &nbsp;🎉🎉 Excited to share that our paper  <a href='https://arxiv.org/abs/2410.10863'><strong>Exploring the Personality Traits of LLMs through Latent Features Steering</strong></a> was accepted by <strong  style="color:rgb(19, 110, 138);">NeurIPS 2024 LanGame Workshop</strong>.
+- *2025.05*: &nbsp; 🎉🎉 One paper was accepted  by <strong  style="color:rgb(19, 110, 138);">ACL 2025 Findings</strong>, this is my first conference paper. Everything is getting better.
+- *2024.12*: &nbsp; One paper was accepted by <strong  style="color:rgb(19, 110, 138);">NeurIPS 2024 LanGame Workshop</strong>.
 
 # 📝 Publications 
 *(\*) represents equal contribution*
