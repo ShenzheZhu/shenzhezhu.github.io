@@ -15,44 +15,151 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
+# 🤔 About Me
 <span class='anchor' id='about-me'></span>
+I am a third-year Computer Science student at the <a href='https://www.utoronto.ca/'>University of Toronto</a>. Before transitioning into research, I spent some time working as a Data Analyst. It was a great pleasure and honor to collaborate with the <a href='https://pradalab1.github.io/research.html'>PRADA Lab</a> at King Abdullah University of Science and Technology (KAUST).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+Currently, my research centers on developing LLMs and MLLMs that are trustworthy and socially responsible, with a focus on human-centered challenges such as bias, risk, and security vulnerabilities. Most recently, I have been particularly interested in building reliable LLM agents for social good, closely collaborating with <a href='https://jiaxin-pei.github.io/'>Dr. Jiaxin Pei</a> from the <a href='https://digitaleconomy.stanford.edu/'>Stanford Digital Economy Lab</a>.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+
+<p style="color: #8B4513; font-style: italic;">
+  I am actively seeking industry research intern positions related to <strong>Social Computing</strong> and <strong>Security</strong> for LLM/MLLM. If you share similar interests or have relevant opportunities at your company, please feel free to connect with me!
+</p>
 
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2025.05*: &nbsp;🎉🎉 Excited to share that our paper  <a href='https://kaustpradalab.github.io/Fraud-R1'><strong>Fraud-R1: A Multi-Round Benchmark for Assessing the Robustness of LLM Against Augmented Fraud and Phishing Inducements</strong></a> was accepted by <strong  style="color:rgb(19, 110, 138);">ACL 2025 Findings</strong>.
+- *2024.12*: &nbsp;🎉🎉 Excited to share that our paper  <a href='https://arxiv.org/abs/2410.10863'><strong>Exploring the Personality Traits of LLMs through Latent Features Steering</strong></a> was accepted by <strong  style="color:rgb(19, 110, 138);">NeurIPS 2024 LanGame Workshop</strong>.
 
 # 📝 Publications 
+*(\*) represents equal contribution*
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='images_old/A2A.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+<strong>
+  <a href="https://arxiv.org/abs/2506.00073">
+    The Automated but Risky Game: Modeling Agent-to-Agent Negotiations and Transactions in Consumer Markets
+  </a>
+</strong>
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+**Shenzhe Zhu**, Jiao Sun, Yi Nian, Tobin South, Alex Pentland, Jiaxin Pei
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+[**Project**](https://shenzhezhu.github.io/A2A-NT/) |
+[**Code**](https://github.com/ShenzheZhu/A2A-NT) |
+[**Paper**](https://arxiv.org/abs/2506.00073) 
 </div>
 </div>
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='images_old/planner.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
-# 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+<strong>
+  <a href="https://arxiv.org/abs/2505.16557">
+    Is Your LLM-Based Multi-Agent a Reliable Real-World Planner? Exploring Fraud Detection in Travel Planning
+  </a>
+</strong>
 
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+Junchi Yao, Jianhua Xu, Tianyu Xin, Ziyi Wang, **Shenzhe Zhu**, Shu Yang, Di Wang
 
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+[**Paper**](https://arxiv.org/abs/2505.16557) 
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='images_old/jaildam.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+<strong>
+  <a href="https://arxiv.org/abs/2504.03770">
+    JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model
+  </a>
+</strong>
+
+Yi Nian\*, **Shenzhe Zhu\***, Yuehan Qin, Li Li, Ziyi Wang, Chaowei Xiao, Yue Zhao
+
+[**Code**](https://github.com/ShenzheZhu/JailDAM) |
+[**Paper**](https://arxiv.org/pdf/2504.03770) 
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025 Findings</div><img src='images_old/evafraud_flow.png' alt="sym" width="70%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+<strong>
+  <a href="https://arxiv.org/abs/2502.12904">
+    Fraud-R1 : A Multi-Round Benchmark for Assessing the Robustness of LLM Against Augmented Fraud and Phishing Inducements
+  </a>
+</strong>
+
+Shu Yang\*, **Shenzhe Zhu\***, Zeyu Wu, Keyu Wang, Junchi Yao, Junchao Wu, Lijie Hu, Mengdi Li, Derek F. Wong, Di Wang
+
+*Findings of the Association for Computational Linguistics, 2025*
+
+[**Project**](https://kaustpradalab.github.io/Fraud-R1/) |
+[**Code**](https://github.com/kaustpradalab/Fraud-R1) |
+[**Paper**](https://arxiv.org/abs/2502.12904) 
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2024</div><img src='images_old/autotrust.png' alt="sym" width="120%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+<strong>
+  <a href="https://arxiv.org/abs/2412.15206">
+    AutoTrust: Benchmarking Trustworthiness in Large Vision Language Models for Autonomous Driving
+  </a>
+</strong>
+
+Shuo Xing, Hongyuan Hua, Xiangbo Gao, **Shenzhe Zhu**, Renjie Li, Kexin Tian, Xiaopeng Li, Heng Huang, Tianbao Yang, Zhangyang Wang, Yang Zhou, Huaxiu Yao, Zhengzhong Tu
+
+[**Project**](https://taco-group.github.io/AutoTrust/) |
+[**Code**](https://github.com/taco-group/AutoTrust) |
+[**Paper**](https://arxiv.org/abs/2412.15206) 
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background:rgb(142, 32, 89); color: #fff;">NeurIPS 2024 LanGame</div><img src='images_old/LLM-Persona-Steering.png' alt="sym" width="70%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+<strong>
+  <a href="https://arxiv.org/abs/2410.10863">
+    Exploring the Personality Traits of LLMs through Latent Features Steering
+  </a>
+</strong>
+
+Shu Yang\*, **Shenzhe Zhu\***, Liang Liu, Lijie Hu, Mengdi Li, Di Wang
+
+*Language Gamification - NeurIPS 2024 Workshop*
+
+[**Code**](https://github.com/kaustpradalab/LLM-Persona-Steering) |
+[**Paper**](https://arxiv.org/abs/2410.10863) 
+</div>
+</div>
+
+<strong>
+Other Papers
+</strong>
+- <strong><a href="https://arxiv.org/abs/2405.03524">A short Survey: Exploring knowledge graph-based neural-symbolic system from application perspective</a></strong>, **Shenzhe Zhu**, Shengxiang Sun, arXiv 2024
 
 # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+<ul>
+  <li>
+    <em>2024.05 - 2024.09</em>, Urban Data Research Centre, University of Toronto, Canada<br>
+    &nbsp;<strong>NLP Analyst</strong>
+  </li>
+</ul>
+
+<ul>
+  <li>
+    <em>2024.01 - 2024.05</em>, University of Toronto, Canada<br>
+    &nbsp;<strong>Data Analyst</strong>
+  </li>
+</ul>
+
+# 💬 Honors & Services
+- *Reviewer*: ICML 2025 MAS; IJCNN 2025; ICLR 2025 WMARK; ICLR 2025 XAI4Science
+- *Honors&Awards*: 2022-2024 Dean’s List Student
+
+
+# 📖 Educations
+- *2022.06 - Present*, **Bachelor of Computer Science** in University of Toronto, Canada
