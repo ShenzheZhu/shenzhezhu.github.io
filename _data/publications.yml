@@ -1,0 +1,93 @@
+- title: "The Automated but Risky Game: Modeling Agent-to-Agent Negotiations and Transactions in Consumer Markets"
+  authors:
+    - Shenzhe Zhu
+    - Jiao Sun
+    - Yi Zhu
+    - Tobin South
+    - Alex Pentland
+    - Jiaxin Huang
+  venue: arXiv, 2025
+  paper_pdf: https://arxiv.org/pdf/2506.00073.pdf
+  project_page: https://shenzhezhu.github.io/A2A-NT/
+  code: https://github.com/ShenzheZhu/A2A-NT
+
+- title: "Is Your LLM-Based Multi-Agent a Reliable Real-World Planner? Exploring Fraud Detection in Travel Planning"
+  authors:
+    - Junchi Yu
+    - Jianhua Han
+    - Tianyu Liu
+    - Ziyi Wu
+    - Shenzhe Zhu
+    - Shu Yang
+    - Di Wang
+  venue: arXiv, 2025
+  paper_pdf: https://arxiv.org/pdf/2505.16557.pdf
+
+- title: "JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model"
+  authors:
+    - Yi Zhu*
+    - Shenzhe Zhu*
+    - Qin Jin
+    - Li Dong
+    - Ziyi Wu
+    - Chaowei Xiao
+    - Yue Zhang
+  venue: arXiv, 2025
+  paper_pdf: https://arxiv.org/pdf/2504.03770.pdf
+  code: https://github.com/ShenzheZhu/JailDAM
+
+- title: "Fraud-R1: A Multi-Round Benchmark for Assessing the Robustness of LLM Against Augmented Fraud and Phishing Inducements"
+  authors:
+    - Shu Yang*
+    - Shenzhe Zhu*
+    - Zeyu Wang
+    - Keyu Zhu
+    - Junchi Yu
+    - Junchao Wu
+    - Lijie Hu
+    - Mengdi Wang
+    - Derek Zhiyuan Cheng
+    - Di Wang
+  venue: ACL Findings, 2025
+  paper_pdf: https://arxiv.org/pdf/2502.12904.pdf
+  project_page: https://kaustpradalab.github.io/Fraud-R1/
+  code: https://github.com/kaustpradalab/Fraud-R1
+
+- title: "AutoTrust: Benchmarking Trustworthiness in Large Vision Language Models for Autonomous Driving"
+  authors:
+    - Shuo Yang
+    - Hongyuan Du
+    - Xiangbo Wu
+    - Shenzhe Zhu
+    - Renjie Pi
+    - Kexin Yang
+    - Xiaopeng Zhang
+    - Heng Fan
+    - Tianbao Yang
+    - Zhangyang Wang
+    - Yang Liu
+    - Huaxiu Yao
+    - Zhengzhong Tu
+  venue: arXiv, 2024
+  paper_pdf: https://arxiv.org/pdf/2412.15206.pdf
+  project_page: https://taco-group.github.io/AutoTrust/
+  code: https://github.com/taco-group/AutoTrust
+
+- title: "Exploring the Personality Traits of LLMs through Latent Features Steering"
+  authors:
+    - Shu Yang*
+    - Shenzhe Zhu*
+    - Liang Chen
+    - Lijie Hu
+    - Mengdi Wang
+    - Di Wang
+  venue: NeurIPS 2024 LanGame Workshop
+  paper_pdf: https://arxiv.org/pdf/2410.10863.pdf
+  code: https://github.com/kaustpradalab/LLM-Persona-Steering
+
+- title: "A short Survey: Exploring knowledge graph-based neural-symbolic system from application perspective"
+  authors:
+    - Shenzhe Zhu
+    - Shengxiang Zhang
+  venue: arXiv, 2024
+  paper_pdf: https://arxiv.org/pdf/2405.03524.pdf 
