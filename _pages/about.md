@@ -51,7 +51,7 @@ Currently, my research centers on developing LLMs and MLLMs that are trustworthy
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='images_old/planner.png' alt="sym" width="80%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='images_old/planner.png' alt="sym" width="90%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <strong>
