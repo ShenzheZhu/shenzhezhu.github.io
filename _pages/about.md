@@ -51,7 +51,7 @@ Currently, my research centers on developing LLMs and MLLMs that are trustworthy
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='images_old/planner.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='images_old/planner.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <strong>
@@ -66,7 +66,7 @@ Junchi Yao, Jianhua Xu, Tianyu Xin, Ziyi Wang, **Shenzhe Zhu**, Shu Yang, Di Wan
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='images_old/jaildam.jpg' alt="sym" width="80%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='images_old/jaildam.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <strong>
