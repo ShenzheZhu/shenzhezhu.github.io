@@ -159,6 +159,6 @@ Other Papers
 - *2022.06 - Present*, **Bachelor of Computer Science** in University of Toronto, Canada
 
 # 💬 Honors & Services
-- *Reviewer*: ICML 2025 MAS; IJCNN 2025; ICLR 2025 WMARK; ICLR 2025 XAI4Science
-- *Honors&Awards*: 2022-2024 Dean’s List Student
+- *Reviewer*: ACL 2025 SRW, ICML 2025 MAS; IJCNN 2025; ICLR 2025 WMARK; ICLR 2025 XAI4Science
+- *Honors&Awards*: 2022-2024 Dean's List Student
 
