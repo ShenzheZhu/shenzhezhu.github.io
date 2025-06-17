@@ -9,6 +9,9 @@ main:
   - title: "Publications"
     url: "/#-publications"
 
+  - title: "Media & Talk"
+    url: "/#-media--talk"
+
   - title: "Internships"
     url: "/#-internships"
 

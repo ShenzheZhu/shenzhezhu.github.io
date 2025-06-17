@@ -141,6 +141,24 @@ Other Papers
 </strong>
 - <strong><a href="https://arxiv.org/abs/2405.03524">A short Survey: Exploring knowledge graph-based neural-symbolic system from application perspective</a></strong>, **Shenzhe Zhu**, Shengxiang Sun, arXiv 2024
 
+# 📺 Media & Talk
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #2E8B57; color: #fff;">MIT Tech Review 2025</div><img src='images_old/A2A.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+<strong>
+  <a href="https://www.technologyreview.com/2025/06/17/1118910/ai-price-negotiation/">
+    When AIs bargain, a less advanced agent could cost you
+  </a>
+</strong>
+
+**MIT Technology Review**, *June 17, 2025*
+
+New research shows that in AI-to-AI price negotiations, weaker models often lose out—costing users real money and raising concerns about growing digital inequality.
+
+[**Read Article**](https://www.technologyreview.com/2025/06/17/1118910/ai-price-negotiation/)
+</div>
+</div>
+
 # 💻 Internships
 <ul>
   <li>
