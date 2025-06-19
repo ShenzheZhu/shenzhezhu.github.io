@@ -15,7 +15,7 @@ author_profile: true
 # 📝 Publications 
 *(\*) represents equal contribution*
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='{{ site.baseurl }}/images_old/A2A.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='{{ "/images_old/A2A.png" | relative_url }}' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <strong>
@@ -32,7 +32,7 @@ author_profile: true
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='{{ site.baseurl }}/images_old/planner.png' alt="sym" width="90%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='{{ "/images_old/planner.png" | relative_url }}' alt="sym" width="90%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <strong>
@@ -47,7 +47,7 @@ Junchi Yao, Jianhua Xu, Tianyu Xin, Ziyi Wang, **Shenzhe Zhu**, Shu Yang, Di Wan
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='{{ site.baseurl }}/images_old/jaildam.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='{{ "/images_old/jaildam.jpg" | relative_url }}' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <strong>
@@ -63,7 +63,7 @@ Yi Nian\*, **Shenzhe Zhu\***, Yuehan Qin, Li Li, Ziyi Wang, Chaowei Xiao, Yue Zh
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025 Findings</div><img src='{{ site.baseurl }}/images_old/evafraud_flow.png' alt="sym" width="70%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025 Findings</div><img src='{{ "/images_old/evafraud_flow.png" | relative_url }}' alt="sym" width="70%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <strong>
@@ -82,7 +82,7 @@ Shu Yang\*, **Shenzhe Zhu\***, Zeyu Wu, Keyu Wang, Junchi Yao, Junchao Wu, Lijie
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2024</div><img src='{{ site.baseurl }}/images_old/autotrust.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2024</div><img src='{{ "/images_old/autotrust.png" | relative_url }}' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <strong>
@@ -99,7 +99,7 @@ Shuo Xing, Hongyuan Hua, Xiangbo Gao, **Shenzhe Zhu**, Renjie Li, Kexin Tian, Xi
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background:rgb(142, 32, 89); color: #fff;">NeurIPS 2024 LanGame</div><img src='{{ site.baseurl }}/images_old/LLM-Persona-Steering.png' alt="sym" width="70%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background:rgb(142, 32, 89); color: #fff;">NeurIPS 2024 LanGame</div><img src='{{ "/images_old/LLM-Persona-Steering.png" | relative_url }}' alt="sym" width="70%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <strong>
