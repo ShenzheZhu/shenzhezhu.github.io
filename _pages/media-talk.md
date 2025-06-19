@@ -13,7 +13,7 @@ author_profile: true
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
 # 📺 Media & Talk
-<div class='paper-box'><div class='paper-box-image'><div><img src='{{ "/images/forbes.jpg" | relative_url }}' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><img src='{{ "/images/forbes.jpg" | relative_url }}' alt="sym" width="90%"></div></div>
 <div class='paper-box-text' markdown="1">
 <strong>
   <a href="https://www.forbes.com/sites/rashishrivastava/2025/06/17/the-prompt-white-collar-bloodbaths/">

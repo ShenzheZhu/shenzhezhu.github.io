@@ -15,7 +15,7 @@ author_profile: true
 # 📝 Publications 
 *(\*) represents equal contribution*
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='{{ "/images_old/A2A.png" | relative_url }}' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background:rgb(142, 32, 89); color: #fff;">ICML 2025 MAS</div><img src='{{ "/images_old/A2A.png" | relative_url }}' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <strong>
@@ -26,13 +26,15 @@ author_profile: true
 
 **Shenzhe Zhu**, Jiao Sun, Yi Nian, Tobin South, Alex Pentland, Jiaxin Pei
 
+*MAS - ICML 2025 Workshop*
+
 [**Project**](https://shenzhezhu.github.io/A2A-NT/) |
 [**Code**](https://github.com/ShenzheZhu/A2A-NT) |
 [**Paper**](https://arxiv.org/abs/2506.00073) 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background: #731911; color: #fff;">arXiv 2025</div><img src='{{ "/images_old/planner.png" | relative_url }}' alt="sym" width="90%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge" style="background:rgb(142, 32, 89); color: #fff;">ICML 2025 MAS</div><img src='{{ "/images_old/planner.png" | relative_url }}' alt="sym" width="90%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <strong>
@@ -42,6 +44,8 @@ author_profile: true
 </strong>
 
 Junchi Yao, Jianhua Xu, Tianyu Xin, Ziyi Wang, **Shenzhe Zhu**, Shu Yang, Di Wang
+
+*MAS - ICML 2025 Workshop*
 
 [**Paper**](https://arxiv.org/abs/2505.16557) 
 </div>
