@@ -9,6 +9,8 @@
 title                    : "Homepage"
 description              : "Think beyond the boundaries of NLP"
 repository               : "ShenzheZhu/shenzhezhu.github.io"
+url                      : "https://shenzhezhu.github.io"
+baseurl                  : ""
 google_scholar_stats_use_cdn : true
 
 # google analytics
