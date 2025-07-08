@@ -28,6 +28,7 @@ Currently, my research centers on developing LLMs and MLLMs that are trustworthy
 
 
 # 🔥 News
+- *2024.06*: &nbsp; One paper was accepeted by  <strong  style="color:rgb(19, 110, 138);">COLM 2025</strong>🎉.
 - *2024.06*: &nbsp; Two papers were accepted by <strong  style="color:rgb(19, 110, 138);">ICML 2025 MAS Workshop</strong>.
 - *2025.05*: &nbsp; 🎉🎉 One paper was accepted  by <strong  style="color:rgb(19, 110, 138);">ACL 2025 Findings</strong>, this is my first conference paper. Everything is getting better.
 - *2024.12*: &nbsp; One paper was accepted by <strong  style="color:rgb(19, 110, 138);">NeurIPS 2024 LanGame Workshop</strong>.
