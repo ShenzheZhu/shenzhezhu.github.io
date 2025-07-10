@@ -62,7 +62,7 @@ Junchi Yao, Jianhua Xu, Tianyu Xin, Ziyi Wang, **Shenzhe Zhu**, Shu Yang, Di Wan
 
 Yi Nian\*, **Shenzhe Zhu\***, Yuehan Qin, Li Li, Ziyi Wang, Chaowei Xiao, Yue Zhao
 
-*Conference on Language Modeling(COLM), 2025*
+*Conference on Language Modeling, 2025*
 
 [**Code**](https://github.com/ShenzheZhu/JailDAM) |
 [**Paper**](https://arxiv.org/pdf/2504.03770) 
