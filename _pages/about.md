@@ -17,9 +17,9 @@ redirect_from:
 
 # 🤔 About Me
 <span class='anchor' id='about-me'></span>
-I am a third-year Computer Science student at the <a href='https://www.utoronto.ca/'>University of Toronto</a>. Before transitioning into research, I spent some time working as a Data Analyst. It was a great pleasure and honor to collaborate with the <a href='https://pradalab1.github.io/research.html'>PRADA Lab</a> at King Abdullah University of Science and Technology (KAUST).
+I am a third-year Computer Science student at the <a href='https://www.utoronto.ca/'>University of Toronto</a>. Before switching professions to research, I worked as a data analyst for a period of time. It was a great pleasure and honor to collaborate with the <a href='https://pradalab1.github.io/research.html'>PRADA Lab</a> at King Abdullah University of Science and Technology (KAUST), which gave me my first experience and guidance in academic research.
 
-Currently, my research centers on developing LLMs and MLLMs that are trustworthy and socially responsible, with a focus on human-centered challenges such as bias, risk, and security vulnerabilities. Most recently, I have been particularly interested in building reliable LLM agents for social good, closely collaborating with <a href='https://jiaxin-pei.github.io/'>Dr. Jiaxin Pei</a> from the <a href='https://digitaleconomy.stanford.edu/'>Stanford Digital Economy Lab</a>.
+Currently, my research centers on developing AI that are trustworthy and socially responsible, with a focus on human-centered challenges such as bias, risk, and security vulnerabilities. Most recently, I have been particularly interested in building reliable LLM agents for social good, closely collaborating with <a href='https://jiaxin-pei.github.io/'>Dr. Jiaxin Pei</a> from the <a href='https://digitaleconomy.stanford.edu/'>Stanford Digital Economy Lab</a>.
 
 
 <p style="color: #8B4513; font-style: italic;">
