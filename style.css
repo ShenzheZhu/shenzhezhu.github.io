@@ -239,3 +239,45 @@ h4 + p {
     height: auto; /* 保持图片比例 */
   }
 }
+
+
+.publication p {
+  line-height: 1.2; /* Reduce line height. Default is usually around 1.5-1.6. Try 1.2, 1.3, or 1.4 */
+  margin-top: 0.3rem; /* Reduce top margin for paragraphs */
+  margin-bottom: 0.3rem; /* Reduce bottom margin for paragraphs */
+  /* You can even try smaller margins like 0.1rem or 0.2rem if you want them very close */
+}
+
+/* Adjust the margin of the h4 within the publication box if needed */
+.publication h4 {
+  margin-top: 0.5rem; /* Adjust space above the title */
+  margin-bottom: 0.5rem; /* Adjust space below the title. Default might be larger. */
+}
+
+/* Also, reconsider the overall bottom margin of each publication entry if they are too far apart */
+.publication {
+  margin-bottom: 1.5rem; /* This controls the space BETWEEN each publication block. You can reduce this, e.g., to 1rem or 0.8rem */
+  padding-bottom: 0.8rem; /* Adjust padding if you have a border-bottom */
+}
+
+/* Ensure list items within publications (if any, though not in your current snippet) also have tight spacing */
+.publication ul {
+  padding-left: 1.2em; /* Adjust left padding for lists */
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.publication ul li {
+  margin-bottom: 0.2rem; /* Spacing between list items */
+}
+
+/* Specific adjustment for the general "Publications & Preprints" heading */
+h3 {
+  margin-bottom: 1rem; /* Adjust space below this main heading */
+}
+
+/* And the small text below the main heading */
+.publications-page p:first-of-type { /* Assuming this is the p tag for "(*) represents equal contribution" */
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem; /* Adjust as needed */
+}
