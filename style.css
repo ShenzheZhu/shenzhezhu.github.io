@@ -1,0 +1,241 @@
+/* style.css */
+
+
+/* Import Montserrat from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  background-color: #1e1e1e; /* 雾蒙蒙的黑色背景 */
+  color: #e0e0e0; /* 稍微柔和的白色文字 */
+  /* Change the font-family to Montserrat, with fallbacks */
+  font-family: 'Courier New','Montserrat', sans-serif;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+nav {
+  width: 150px;
+  padding: 2rem;
+  background: #1e1e1e; /* 与body背景一致 */
+}
+
+nav h1 {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: 0rem;
+}
+
+nav a {
+  color: #e0e0e0; /* 与body文字颜色一致 */
+  text-decoration: none;
+}
+
+nav a[data-page] {
+  font-size: 1rem; /* 增大导航链接字体 */
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: #e0e0e0; /* 悬停时的下划线颜色 */
+}
+
+.nav-btn {
+  display: block;
+  color: #e0e0e0; /* 与其他链接颜色一致 */
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer; /* 添加这一行确保显示手型指针 */
+}
+
+.nav-btn:hover {
+  text-decoration: underline;
+  text-decoration-color: #e0e0e0; /* 悬停时的下划线颜色 */
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.fade {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 为publications页面添加样式 */
+.publication {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.publication:last-child {
+  border-bottom: none;
+}
+
+.publication h4 {
+  margin-bottom: 0.5rem;
+  color: #e0e0e0; /* 与整体文字颜色一致 */
+}
+
+.publication p {
+  margin: 0.3rem 0;
+  line-height: 1.5;
+}
+
+.publication a {
+  color: #e0e0e0; /* 与整体文字颜色一致 */
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.publication a:hover {
+  text-decoration: underline;
+}
+
+.teaching, .project {
+  margin-bottom: 1.5rem;
+}
+
+main a {
+  color: #808080; /* This is a common gray color. You can use other shades like #A9A9A9 for dark gray or #CCCCCC for light gray */
+}
+
+/* If you have specific hover effects for main content links, you might want to adjust them too */
+main a:hover {
+  color: #C0C0C0; /* A slightly lighter gray on hover for better user experience */
+}
+
+/* Ensure these don't override your nav links if they are meant to be a different color */
+/* If your nav links are already gray, this might not be strictly necessary for them. */
+/* However, to explicitly target all nav links and set them to gray: */
+/* For links within your .publication class (if you still use it for other pages): */
+.publication a {
+  color: #808080; /* Gray for publication links */
+}
+
+.publication a:hover {
+  text-decoration-color: #C0C0C0; /* Gray hover for publication links */
+}
+
+/* For links within the "About Me" section content that you just provided: */
+.about-section a {
+  color: #808080; /* Specifically target links within the about section */
+}
+
+.about-section a:hover {
+  text-decoration-color: #C0C0C0; /* Hover color for about section links */
+}
+
+
+h4 {
+  /* Reduce the space *below* the h4 heading */
+  margin-bottom: 0.5rem; /* You can try even smaller values like 0.25rem or 0 */
+  /* If you want the font size of h4 to be slightly larger than regular text but smaller than h3,
+     you can set it here if you haven't already: */
+  /* font-size: 1.1rem; */
+}
+
+/* --- Specific adjustments for ul and p tags after h4 (if needed) --- */
+
+/* This targets an unordered list directly following an h4 */
+h4 + ul {
+  margin-top: 0; /* Remove or reduce the space *above* the list */
+}
+
+/* This targets a paragraph directly following an h4 (e.g., in "Other Papers") */
+h4 + p {
+  margin-top: 0; /* Remove or reduce the space *above* the paragraph */
+}
+
+/* If you have .publication divs, you might want to adjust space for h4 within them too if they exist.
+   Based on your latest "Publications" code, the h4 is inside the .publication div already,
+   so the general h4 rule should apply. */
+
+/* Also check the spacing around .publication and .teaching divs */
+.publication,
+.teaching,
+.project {
+  margin-bottom: 1rem; /* You can reduce this further if needed, e.g., 0.5rem */
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* 在小屏幕上，将导航和主内容垂直堆叠 */
+  }
+
+  nav {
+    width: 100%; /* 导航栏占据全部宽度 */
+    padding: 1rem; /* 调整内边距，使其在顶部时更合理 */
+    text-align: center; /* 导航项居中显示 */
+    /* 考虑是否需要固定定位，使其始终可见 */
+    /* position: sticky; */
+    /* top: 0; */
+    /* z-index: 100; */
+  }
+
+  nav h1 {
+    margin-bottom: 1rem; /* 调整标题下边距 */
+  }
+
+  nav ul {
+    display: flex; /* 让导航链接水平排列 */
+    justify-content: center; /* 导航链接居中 */
+    flex-wrap: wrap; /* 如果链接太多，允许换行 */
+  }
+
+  nav li {
+    margin: 0 0.8rem 0.5rem 0.8rem; /* 调整列表项间距，使其水平分布 */
+  }
+
+  nav a[data-page] {
+    font-size: 0.9rem; /* 导航链接字体可以适当减小 */
+  }
+
+  .nav-btn {
+    display: inline-block; /* 让按钮水平排列 */
+    margin: 0 0.5rem 0.5rem 0.5rem; /* 调整按钮间距 */
+  }
+
+  main {
+    padding: 1rem; /* 调整主内容区内边距 */
+  }
+
+  /* 如果你的 .paper-box 布局是两列或多列，也需要调整为单列 */
+  .paper-box {
+    flex-direction: column; /* 假设 .paper-box 也是 flex 布局 */
+    align-items: center; /* 内容居中 */
+  }
+
+  .paper-box-image {
+    width: 80%; /* 图片在小屏幕上宽度可以更大 */
+    margin-bottom: 1rem; /* 图片下方增加间距 */
+  }
+
+  .paper-box-text {
+    width: 100%; /* 文本区域占据全部宽度 */
+    padding: 0; /* 移除左右内边距 */
+  }
+
+  /* 调整其他可能需要改变的元素，如图片、表格等 */
+  img {
+    max-width: 100%; /* 确保图片不会超出其容器 */
+    height: auto; /* 保持图片比例 */
+  }
+}
