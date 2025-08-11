@@ -16,7 +16,20 @@ body {
   display: flex;
   min-height: 100vh;
 }
-
+.about-section blockquote.about-quote {
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid #5fb3cd;
+  background: #151515;
+  color: #cfcfcf;
+  font-style: italic;
+}
+.about-section blockquote.about-quote cite {
+  display: block;
+  margin-top: 0.4rem;
+  color: #9a9a9a;
+  font-style: normal;
+}
 nav {
   width: 150px;
   padding: 2rem;
