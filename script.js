@@ -1,7 +1,19 @@
-// script.js
+// script.js (v2)
 
 const links = document.querySelectorAll('nav a[data-page]');
 const content = document.getElementById('content');
+
+function setActiveLink(page) {
+  links.forEach(link => {
+    const isActive = link.dataset.page === page;
+    link.classList.toggle('active', isActive);
+    if (isActive) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+}
 
 async function loadPage(page) {
   try {
@@ -15,8 +27,16 @@ async function loadPage(page) {
     }
     const html = await response.text();
     
-    // 更新内容并添加动画
+    // 更新内容
     content.innerHTML = html;
+
+    // Publications: group cards by year with a muted year label
+    if (page === 'publications') {
+      groupPublicationsByYear();
+      applyPublicationThumbnails();
+    }
+
+    // 添加动画
     content.classList.remove('fade');
     void content.offsetWidth; // trigger reflow for animation
     content.classList.add('fade');
@@ -26,11 +46,80 @@ async function loadPage(page) {
   }
 }
 
+function groupPublicationsByYear() {
+  const pubs = Array.from(content.querySelectorAll('.publication'));
+  if (!pubs.length) return;
+  let lastYear = null;
+  pubs.forEach(pub => {
+    const text = pub.textContent || '';
+    const match = text.match(/(19|20)\d{2}/);
+    const year = match ? match[0] : (lastYear || 'Other');
+    if (year !== lastYear) {
+      const label = document.createElement('div');
+      label.className = 'pub-year';
+      label.textContent = year;
+      pub.parentNode.insertBefore(label, pub);
+      lastYear = year;
+    }
+  });
+}
+
+function applyPublicationThumbnails() {
+  const map = [
+    { re: /Deliberations|Represent\s+Your\s+Voice/i, src: 'asset/paper_fig/deliberation.png', alt: 'Deliberations study illustration' },
+    { re: /Automated\s+but\s+Risky\s+Game|A2A/i, src: 'asset/paper_fig/A2A.png', alt: 'Agent-to-Agent negotiation illustration' },
+    { re: /HarmTransform/i, src: 'asset/paper_fig/harmtransform.png', alt: 'HarmTransform concept' },
+    { re: /JailDAM/i, src: 'asset/paper_fig/jaildam.jpg', alt: 'JailDAM visual' },
+    { re: /Personality\s+Traits|Persona\s+Steering/i, src: 'asset/paper_fig/LLM-Persona-Steering.png', alt: 'Persona steering chart' },
+    { re: /AutoTrust/i, src: 'asset/paper_fig/autotrust.png', alt: 'AutoTrust benchmark' },
+    { re: /Fraud-?R1/i, src: 'asset/paper_fig/fraud-r1.png', alt: 'Fraud-R1 flow' },
+    { re: /Real-World\s+Planner|Travel\s+Planning/i, src: 'asset/paper_fig/agentplanner.png', alt: 'Planner robustness' },
+    { re: /neural-symbolic|knowledge\s+graph/i, src: 'asset/paper_fig/neuro-symbolic.png', alt: 'Neural-symbolic survey' },
+  ];
+
+  const pubs = Array.from(content.querySelectorAll('.publication'));
+  pubs.forEach(pub => {
+    if (pub.querySelector('.pub-thumb')) return; // already enhanced
+
+    const titleEl = pub.querySelector('h4, h4 a');
+    const title = titleEl ? (titleEl.textContent || '') : '';
+    const pair = map.find(m => m.re.test(title));
+    if (!pair) return; // skip if no match
+
+    // Wrap existing content in .pub-text
+    let textWrap = pub.querySelector('.pub-text');
+    if (!textWrap) {
+      textWrap = document.createElement('div');
+      textWrap.className = 'pub-text';
+      while (pub.firstChild) {
+        textWrap.appendChild(pub.firstChild);
+      }
+      pub.appendChild(textWrap);
+    }
+
+    // Add thumbnail BEFORE text content so text wraps around it
+    const thumb = document.createElement('div');
+    thumb.className = 'pub-thumb';
+    const img = document.createElement('img');
+    img.src = pair.src;
+    img.alt = pair.alt;
+    img.loading = 'lazy';
+    thumb.appendChild(img);
+    textWrap.insertBefore(thumb, textWrap.firstChild);
+  });
+}
+
 // Handle internal navigation
 links.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
     const page = link.dataset.page;
+    if (!page) return;
+    // Update hash for deep linking
+    if (location.hash.slice(1) !== page) {
+      location.hash = page;
+    }
+    setActiveLink(page);
     loadPage(page);
   });
 });
@@ -51,5 +140,14 @@ mailtoLinks.forEach(link => {
   // They will work naturally to open the default email client
 });
 
-// Load default page
-loadPage('about');
+// Handle hash navigation (back/forward)
+window.addEventListener('hashchange', () => {
+  const page = location.hash ? location.hash.slice(1) : 'about';
+  setActiveLink(page);
+  loadPage(page);
+});
+
+// Initial load based on hash, default to 'about'
+const initialPage = location.hash ? location.hash.slice(1) : 'about';
+setActiveLink(initialPage);
+loadPage(initialPage);

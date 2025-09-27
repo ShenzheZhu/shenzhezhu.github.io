@@ -1,4 +1,20 @@
-/* style.css */
+/* style.css (v2) */
+
+/* Color system */
+:root {
+  --bg: #1e1e1e;
+  /* Panel should be slightly lighter than bg for elevation */
+  --panel: #242424;
+  --text: #e0e0e0;
+  --muted: #9a9a9a;
+  --border: #2a2a2a;
+  /* Muted low-saturation accent for active underline */
+  --accent: #9aa5b1;
+  /* Publication thumbnail width */
+  --thumb: 200px;
+  /* Publication thumbnail max height to avoid tall cards */
+  --thumb-max-h: 160px;
+}
 
 
 /* Import Montserrat from Google Fonts */
@@ -6,15 +22,17 @@
 
 body {
   margin: 0;
-  background-color: #1e1e1e; /* 雾蒙蒙的黑色背景 */
-  color: #e0e0e0; /* 稍微柔和的白色文字 */
-  /* Change the font-family to Montserrat, with fallbacks */
+  background-color: var(--bg);
+  color: var(--text);
+  /* Restore original font preference */
   font-family: 'Courier New','Montserrat', sans-serif;
+  line-height: 1.55;
 }
 
 .container {
   display: flex;
   min-height: 100vh;
+  gap: 0.8rem; /* control space between sidebar and content */
 }
 .about-section blockquote.about-quote {
   margin: 1rem 0;
@@ -31,14 +49,31 @@ body {
   font-style: normal;
 }
 nav {
-  width: 150px;
+  width: 200px; /* widened left sidebar */
   padding: 2rem;
-  background: #1e1e1e; /* 与body背景一致 */
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  position: sticky; /* follow on scroll (desktop) */
+  top: 0;
+  align-self: flex-start;
+  max-height: 100vh; /* avoid overflow on short viewports */
+  overflow: auto;
+}
+
+/* Avatar image in left nav */
+.nav-avatar {
+  display: block;
+  width: 100%;         /* Fill the nav content width */
+  max-width: 120px;    /* Keep a comfortable size on desktop */
+  height: auto;
+  border-radius: 8px;  /* Slightly rounded corners; remove if undesired */
+  margin: 0 auto 0.8rem auto; /* Center avatar in the sidebar */
 }
 
 nav h1 {
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin: 0.2rem 0 1.6rem; /* tighten space above and below */
+  text-align: center;       /* center the name under avatar */
 }
 
 nav ul {
@@ -50,8 +85,21 @@ nav li {
   margin-bottom: 0rem;
 }
 
+/* Base link style */
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: #bdbdbd;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 0.06em;
+}
+
+a:hover {
+  text-decoration-color: var(--text);
+}
+
 nav a {
-  color: #e0e0e0; /* 与body文字颜色一致 */
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -61,7 +109,14 @@ nav a[data-page] {
 
 nav a:hover {
   text-decoration: underline;
-  text-decoration-color: #e0e0e0; /* 悬停时的下划线颜色 */
+  text-decoration-color: var(--text);
+}
+
+/* active nav item */
+nav a.active {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  font-weight: 600;
 }
 
 .nav-btn {
@@ -79,7 +134,9 @@ nav a:hover {
 
 main {
   flex: 1;
-  padding: 2rem;
+  padding: 2rem; /* symmetric padding; gap controls column spacing */
+  max-width: 920px;
+  margin: 0 auto;
 }
 
 .fade {
@@ -91,20 +148,43 @@ main {
   to { opacity: 1; }
 }
 
-/* 为publications页面添加样式 */
-.publication {
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #333;
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    animation: none;
+  }
 }
 
-.publication:last-child {
-  border-bottom: none;
+/* 为publications页面添加样式 */
+.pub-year {
+  color: #c8c8c8;            /* deeper than muted for readability */
+  font-size: 1.08rem;        /* slightly larger */
+  font-weight: 600;          /* slightly bolder */
+  letter-spacing: 0.02em;
+  margin: 1.1rem 0 0.5rem;
+}
+
+.publication {
+  background: var(--panel);
+  border-radius: 10px;
+  padding: 1rem; /* symmetric top/bottom padding */
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  display: flow-root; /* establish BFC to self-clear float */
 }
 
 .publication h4 {
-  margin-bottom: 0.5rem;
-  color: #e0e0e0; /* 与整体文字颜色一致 */
+  margin-top: 0;           /* remove extra gap at card top */
+  margin-bottom: 0.45rem;
+  color: var(--text);
+}
+
+/* Title link: clean look, underline only on hover */
+.publication h4 a {
+  text-decoration: none;
+}
+.publication h4 a:hover {
+  text-decoration: underline;
 }
 
 .publication p {
@@ -112,8 +192,63 @@ main {
   line-height: 1.5;
 }
 
+/* Ensure symmetric spacing: no extra bottom margin from last child */
+.publication > :last-child {
+  margin-bottom: 0;
+}
+
+/* Publication with right-side thumbnail */
+.pub-text { min-width: 0; }
+.pub-thumb {
+  float: right;
+  width: min(var(--thumb), 45%);
+  max-width: 100%;
+  margin: 0 0 0.3rem 1rem; /* spacing from text */
+}
+.pub-thumb img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;                 /* preserve intrinsic ratio */
+  max-height: var(--thumb-max-h); /* prevent very tall portraits */
+  margin: 0 auto;               /* center when narrower */
+  border-radius: 8px;
+  object-fit: contain;          /* never crop */
+}
+
+/* Home page tweaks */
+.inline-cite {
+  white-space: nowrap; /* keep dash and text together */
+  color: var(--muted);
+}
+.home-figure {
+  float: right;
+  width: min(44%, 420px);
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+.home-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.home-figure figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+/* (quote block removed per request) */
+
+/* Weaken author and venue lines just under title */
+.publication h4 + p,
+.publication h4 + p + p {
+  color: var(--muted);
+}
+
 .publication a {
-  color: #e0e0e0; /* 与整体文字颜色一致 */
+  color: var(--text);
   text-decoration: none;
   margin-right: 1rem;
 }
@@ -126,26 +261,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-main a {
-  color: #808080; /* This is a common gray color. You can use other shades like #A9A9A9 for dark gray or #CCCCCC for light gray */
-}
-
-/* If you have specific hover effects for main content links, you might want to adjust them too */
-main a:hover {
-  color: #C0C0C0; /* A slightly lighter gray on hover for better user experience */
-}
-
-/* Ensure these don't override your nav links if they are meant to be a different color */
-/* If your nav links are already gray, this might not be strictly necessary for them. */
-/* However, to explicitly target all nav links and set them to gray: */
-/* For links within your .publication class (if you still use it for other pages): */
-.publication a {
-  color: #808080; /* Gray for publication links */
-}
-
-.publication a:hover {
-  text-decoration-color: #C0C0C0; /* Gray hover for publication links */
-}
+/* Removed conflicting main/publication link overrides to unify style */
 
 /* For links within the "About Me" section content that you just provided: */
 .about-section a {
@@ -197,10 +313,15 @@ h4 + p {
     width: 100%; /* 导航栏占据全部宽度 */
     padding: 1rem; /* 调整内边距，使其在顶部时更合理 */
     text-align: center; /* 导航项居中显示 */
-    /* 考虑是否需要固定定位，使其始终可见 */
-    /* position: sticky; */
-    /* top: 0; */
-    /* z-index: 100; */
+    position: static; /* disable sticky on mobile */
+    top: auto;
+    align-self: stretch;
+  }
+
+  /* Tweak avatar size on small screens */
+  .nav-avatar {
+    max-width: 100px;
+    margin-bottom: 0.8rem;
   }
 
   nav h1 {
@@ -236,6 +357,13 @@ h4 + p {
     align-items: center; /* 内容居中 */
   }
 
+  .pub-thumb {
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin: 0 0 0.6rem 0;
+  }
+
   .paper-box-image {
     width: 80%; /* 图片在小屏幕上宽度可以更大 */
     margin-bottom: 1rem; /* 图片下方增加间距 */
@@ -251,6 +379,13 @@ h4 + p {
     max-width: 100%; /* 确保图片不会超出其容器 */
     height: auto; /* 保持图片比例 */
   }
+
+  /* On small screens, stack the figure naturally */
+  .home-figure {
+    float: none;
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
 }
 
 
@@ -261,16 +396,21 @@ h4 + p {
   /* You can even try smaller margins like 0.1rem or 0.2rem if you want them very close */
 }
 
+/* Slightly larger thumbnails on very wide screens */
+@media (min-width: 1280px) {
+  :root { --thumb: 220px; --thumb-max-h: 200px; }
+}
+
 /* Adjust the margin of the h4 within the publication box if needed */
 .publication h4 {
-  margin-top: 0.5rem; /* Adjust space above the title */
-  margin-bottom: 0.5rem; /* Adjust space below the title. Default might be larger. */
+  margin-top: 0; /* Tighter top spacing inside card */
+  margin-bottom: 0.45rem;
 }
 
 /* Also, reconsider the overall bottom margin of each publication entry if they are too far apart */
 .publication {
-  margin-bottom: 1.5rem; /* This controls the space BETWEEN each publication block. You can reduce this, e.g., to 1rem or 0.8rem */
-  padding-bottom: 0.8rem; /* Adjust padding if you have a border-bottom */
+  margin-bottom: 1rem; /* Card spacing */
+  padding-bottom: 1rem; /* Match top padding for symmetry */
 }
 
 /* Ensure list items within publications (if any, though not in your current snippet) also have tight spacing */
@@ -293,4 +433,11 @@ h3 {
 .publications-page p:first-of-type { /* Assuming this is the p tag for "(*) represents equal contribution" */
   margin-top: 0.5rem;
   margin-bottom: 1.5rem; /* Adjust as needed */
+}
+
+/* Tighter spacing between h3 and its immediate explanatory paragraph */
+h3 + p {
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--muted);
 }
