@@ -157,7 +157,7 @@ window.addEventListener('hashchange', () => {
     const light = document.documentElement.classList.contains('theme-light');
     // Show NEXT mode label (what will happen on click)
     const nextIsLight = !light;
-    btn.textContent = nextIsLight ? '☀️ light' : '🌙 dark';
+    btn.textContent = nextIsLight ? '☀️Light' : '🌙Dark';
     btn.setAttribute('aria-label', nextIsLight ? 'Switch to light theme' : 'Switch to dark theme');
     btn.setAttribute('title', nextIsLight ? 'Switch to light theme' : 'Switch to dark theme');
   }
