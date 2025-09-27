@@ -147,6 +147,42 @@ window.addEventListener('hashchange', () => {
   loadPage(page);
 });
 
+// Theme toggle
+(function initThemeToggle(){
+  const KEY = 'theme';
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  function label() {
+    const light = document.documentElement.classList.contains('theme-light');
+    // Show NEXT mode label (what will happen on click)
+    const nextIsLight = !light;
+    btn.textContent = nextIsLight ? '☀️ light' : '🌙 dark';
+    btn.setAttribute('aria-label', nextIsLight ? 'Switch to light theme' : 'Switch to dark theme');
+    btn.setAttribute('title', nextIsLight ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+
+  function apply(theme){
+    const useLight = theme === 'light';
+    document.documentElement.classList.toggle('theme-light', useLight);
+    try { localStorage.setItem(KEY, useLight ? 'light' : 'dark'); } catch {}
+    label();
+  }
+
+  // Determine initial theme from storage or system preference
+  let init = 'dark';
+  try { init = localStorage.getItem(KEY) || init; } catch {}
+  if (init !== 'light' && init !== 'dark') {
+    init = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+  }
+  apply(init);
+
+  btn.addEventListener('click', () => {
+    const next = document.documentElement.classList.contains('theme-light') ? 'dark' : 'light';
+    apply(next);
+  });
+})();
+
 // Initial load based on hash, default to 'about'
 const initialPage = location.hash ? location.hash.slice(1) : 'about';
 setActiveLink(initialPage);

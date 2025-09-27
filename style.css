@@ -1,6 +1,7 @@
 /* style.css (v2) */
 
 /* Color system */
+/* Default theme: Dark */
 :root {
   --bg: #1e1e1e;
   /* Panel should be slightly lighter than bg for elevation */
@@ -16,6 +17,16 @@
   --thumb-max-h: 160px;
 }
 
+/* Light theme overrides */
+html.theme-light {
+  --bg: #ffffff;
+  --panel: #f7f7f8;
+  --text: #1f2328;
+  --muted: #637381;
+  --border: #e6e8eb;
+  --accent: #2a6fdb;
+}
+
 
 /* Import Montserrat from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
@@ -27,6 +38,7 @@ body {
   /* Restore original font preference */
   font-family: 'Courier New','Montserrat', sans-serif;
   line-height: 1.55;
+  transition: background-color .25s ease, color .25s ease;
 }
 
 .container {
@@ -34,18 +46,19 @@ body {
   min-height: 100vh;
   gap: 0.8rem; /* control space between sidebar and content */
 }
+/* Quote uses theme variables */
 .about-section blockquote.about-quote {
   margin: 1rem 0;
   padding: 0.8rem 1rem;
-  border-left: 4px solid #5fb3cd;
-  background: #151515;
-  color: #cfcfcf;
+  border-left: 4px solid var(--accent);
+  background: var(--panel);
+  color: var(--text);
   font-style: italic;
 }
 .about-section blockquote.about-quote cite {
   display: block;
   margin-top: 0.4rem;
-  color: #9a9a9a;
+  color: var(--muted);
   font-style: normal;
 }
 nav {
@@ -58,6 +71,7 @@ nav {
   align-self: flex-start;
   max-height: 100vh; /* avoid overflow on short viewports */
   overflow: auto;
+  transition: background-color .25s ease, border-color .25s ease, color .25s ease;
 }
 
 /* Avatar image in left nav */
@@ -89,9 +103,10 @@ nav li {
 a {
   color: var(--text);
   text-decoration: underline;
-  text-decoration-color: #bdbdbd;
+  text-decoration-color: color-mix(in oklab, var(--text), transparent 40%);
   text-underline-offset: 3px;
   text-decoration-thickness: 0.06em;
+  transition: color .25s ease, text-decoration-color .25s ease;
 }
 
 a:hover {
@@ -121,7 +136,7 @@ nav a.active {
 
 .nav-btn {
   display: block;
-  color: #e0e0e0; /* 与其他链接颜色一致 */
+  color: var(--text);
   text-decoration: none;
   font-size: 0.9rem;
   cursor: pointer; /* 添加这一行确保显示手型指针 */
@@ -129,7 +144,7 @@ nav a.active {
 
 .nav-btn:hover {
   text-decoration: underline;
-  text-decoration-color: #e0e0e0; /* 悬停时的下划线颜色 */
+  text-decoration-color: var(--text); /* 悬停时的下划线颜色 */
 }
 
 main {
@@ -137,6 +152,39 @@ main {
   padding: 2rem; /* symmetric padding; gap controls column spacing */
   max-width: 920px;
   margin: 0 auto;
+  transition: color .25s ease, background-color .25s ease;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 1000;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 1.05rem; /* emoji size */
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .2s ease;
+}
+.theme-toggle:hover { filter: brightness(1.05); }
+.theme-toggle:active { transform: scale(0.97); }
+
+/* Card and quote smooth transitions */
+.publication,
+.about-section blockquote.about-quote {
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+  }
 }
 
 .fade {
