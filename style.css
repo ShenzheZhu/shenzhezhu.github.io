@@ -78,7 +78,7 @@ nav {
 .nav-avatar {
   display: block;
   width: 100%;         /* Fill the nav content width */
-  max-width: 120px;    /* Keep a comfortable size on desktop */
+  max-width: 140px;    /* Slightly larger logo/avatar */
   height: auto;
   border-radius: 8px;  /* Slightly rounded corners; remove if undesired */
   margin: 0 auto 0.8rem auto; /* Center avatar in the sidebar */
@@ -161,7 +161,7 @@ main {
   top: 12px;
   right: 12px;
   z-index: 1000;
-  padding: 6px 10px;
+  padding: 8px 12px; /* accommodate larger icon */
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--panel);
@@ -171,6 +171,7 @@ main {
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .2s ease;
 }
+.theme-toggle svg { width: 1.35rem; height: 1.35rem; display: block; fill: currentColor; stroke: currentColor; }
 .theme-toggle:hover { filter: brightness(1.05); }
 .theme-toggle:active { transform: scale(0.97); }
 
@@ -355,6 +356,8 @@ h4 + p {
 @media (max-width: 768px) {
   .container {
     flex-direction: column; /* 在小屏幕上，将导航和主内容垂直堆叠 */
+    padding-left: 12px;   /* 对称左右留白，避免视觉偏左 */
+    padding-right: 12px;
   }
 
   nav {
@@ -397,6 +400,10 @@ h4 + p {
 
   main {
     padding: 1rem; /* 调整主内容区内边距 */
+    width: 100%;
+    max-width: 920px;
+    margin-left: auto;  /* 居中主内容，防止视觉偏左 */
+    margin-right: auto;
   }
 
   /* 如果你的 .paper-box 布局是两列或多列，也需要调整为单列 */
@@ -426,6 +433,15 @@ h4 + p {
   img {
     max-width: 100%; /* 确保图片不会超出其容器 */
     height: auto; /* 保持图片比例 */
+  }
+
+  /* iOS 等安全区适配，避免贴边引起的偏左/偏右视觉问题 */
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  .theme-toggle {
+    right: max(12px, env(safe-area-inset-right));
   }
 
   /* On small screens, stack the figure naturally */

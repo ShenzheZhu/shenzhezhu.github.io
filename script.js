@@ -153,11 +153,22 @@ window.addEventListener('hashchange', () => {
   const btn = document.getElementById('theme-toggle');
   if (!btn) return;
 
+  // Monochrome inline SVG icons (inherit color via currentColor)
+  const sunSVG = `
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M12 2v2m0 16v2M22 12h-2M4 12H2M18.364 5.636l-1.414 1.414M7.05 16.95l-1.414 1.414M18.364 18.364l-1.414-1.414M7.05 7.05 5.636 5.636" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>`;
+  const moonSVG = `
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>
+    </svg>`;
+
   function label() {
     const light = document.documentElement.classList.contains('theme-light');
     // Show NEXT mode label (what will happen on click)
     const nextIsLight = !light;
-    btn.textContent = nextIsLight ? '☀️Light' : '🌙Dark';
+    btn.innerHTML = nextIsLight ? sunSVG : moonSVG;
     btn.setAttribute('aria-label', nextIsLight ? 'Switch to light theme' : 'Switch to dark theme');
     btn.setAttribute('title', nextIsLight ? 'Switch to light theme' : 'Switch to dark theme');
   }
