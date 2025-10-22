@@ -505,3 +505,32 @@ h3 + p {
   margin-bottom: 0.8rem;
   color: var(--muted);
 }
+
+/* Scrollable News section */
+.news-section {
+  margin-top: 2rem;
+}
+
+.news-section h3 { margin-top: 0; }
+.news-list {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  max-height: 200px; /* adjust as needed */
+  overflow: auto; /* show scrollbar when content overflows */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: color-mix(in oklab, var(--text), transparent 70%) transparent; /* Firefox */
+}
+.news-list ul { margin: 0; padding-left: 1.2rem; }
+.news-list li { margin-bottom: 0.25rem; }
+
+/* WebKit scrollbar styling */
+.news-list::-webkit-scrollbar { width: 8px; }
+.news-list::-webkit-scrollbar-thumb {
+  background-color: color-mix(in oklab, var(--text), transparent 70%);
+  border-radius: 999px;
+}
+.news-list::-webkit-scrollbar-track {
+  background: color-mix(in oklab, var(--panel), transparent 30%);
+}
