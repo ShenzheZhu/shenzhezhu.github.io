@@ -39,7 +39,6 @@ async function loadPage(page) {
     // Publications logic
     if (page === 'publications') {
       groupPublicationsByYear();
-      applyPublicationThumbnails();
     }
 
     // 4. Animate in
@@ -112,77 +111,6 @@ function groupPublicationsByYear() {
   container.removeChild(placeholder);
 }
 
-// Floating Preview Logic
-let previewEl = null;
-
-function initFloatingPreview() {
-  if (document.getElementById('floating-preview')) return;
-
-  previewEl = document.createElement('div');
-  previewEl.id = 'floating-preview';
-  // Add an img element inside
-  const img = document.createElement('img');
-  previewEl.appendChild(img);
-  document.body.appendChild(previewEl);
-}
-
-function applyPublicationThumbnails() {
-  initFloatingPreview();
-  const previewImg = previewEl.querySelector('img');
-
-  const map = [
-    { re: /Deliberations|Represent\s+Your\s+Voice/i, src: 'asset/paper_fig/deliberation.png' },
-    { re: /Automated\s+but\s+Risky\s+Game|A2A/i, src: 'asset/paper_fig/A2A.png' },
-    { re: /HarmTransform/i, src: 'asset/paper_fig/harmtransform.png' },
-    { re: /JailDAM/i, src: 'asset/paper_fig/jaildam.jpg' },
-    { re: /Personality\s+Traits|Persona\s+Steering/i, src: 'asset/paper_fig/LLM-Persona-Steering.png' },
-    { re: /AutoTrust/i, src: 'asset/paper_fig/autotrust.png' },
-    { re: /Fraud-?R1/i, src: 'asset/paper_fig/fraud-r1.png' },
-    { re: /Real-World\s+Planner|Travel\s+Planning/i, src: 'asset/paper_fig/agentplanner.png' },
-    { re: /neural-symbolic|knowledge\s+graph/i, src: 'asset/paper_fig/neuro-symbolic.png' },
-  ];
-
-  const pubs = Array.from(content.querySelectorAll('.publication'));
-
-  pubs.forEach(pub => {
-    // We target the TITLE link for the hover effect
-    const titleLink = pub.querySelector('h4 a');
-    if (!titleLink) return;
-
-    const titleText = titleLink.textContent || '';
-    const pair = map.find(m => m.re.test(titleText));
-
-    if (pair) {
-      // Attach events to the link
-      titleLink.addEventListener('mouseenter', () => {
-        previewImg.src = pair.src;
-        previewEl.classList.add('visible');
-      });
-
-      titleLink.addEventListener('mousemove', (e) => {
-        // Dimensions
-        const imgHeight = previewEl.offsetHeight;
-        const winHeight = window.innerHeight;
-        const padding = 20; // Distance from cursor
-
-        let x = e.clientX + padding;
-        let y = e.clientY + padding;
-
-        // Check if image goes below viewport
-        if (y + imgHeight > winHeight) {
-          // Flip to above cursor
-          y = e.clientY - imgHeight - padding;
-        }
-
-        previewEl.style.transform = `translate(${x}px, ${y}px)`;
-      });
-
-      titleLink.addEventListener('mouseleave', () => {
-        previewEl.classList.remove('visible');
-      });
-    }
-  });
-}
 
 // Handle internal navigation
 links.forEach(link => {

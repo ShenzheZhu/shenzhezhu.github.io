@@ -298,38 +298,7 @@ main {
   padding-bottom: 0;
 }
 
-/* Floating Preview */
-#floating-preview {
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* Remove fixed width, let image define it */
-  width: auto;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.95);
-  /* Use a long, smooth decay curve for "heavy" fluid feel */
-  transition: opacity 0.3s ease, transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
-  will-change: transform, opacity;
-  /* Hint browser to promote to layer */
-}
 
-#floating-preview.visible {
-  opacity: 1;
-}
-
-#floating-preview img {
-  display: block;
-  /* Constrain both dimensions */
-  max-width: 450px;
-  max-height: 40vh;
-  /* Stricter vertical limit */
-  width: auto;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
 
 /* Home page tweaks */
 .inline-cite {
