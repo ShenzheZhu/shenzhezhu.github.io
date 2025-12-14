@@ -17,31 +17,43 @@ function setActiveLink(page) {
 
 async function loadPage(page) {
   try {
-    // 显示加载状态
-    content.innerHTML = '<p>Loading...</p>';
-    
-    // 从对应的HTML文件加载内容
+    // 1. Fetch content first (don't clear screen yet)
     const response = await fetch(`pages/${page}.html`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const html = await response.text();
-    
-    // 更新内容
+
+    // 2. Animate out current content
+    content.classList.add('fading-out');
+
+    // Wait for the exit animation (match css time)
+    await new Promise(r => setTimeout(r, 200));
+
+    // 3. Swap content
     content.innerHTML = html;
 
-    // Publications: group cards by year with a muted year label
+    // Reset scroll to top
+    window.scrollTo(0, 0);
+
+    // Publications logic
     if (page === 'publications') {
       groupPublicationsByYear();
       applyPublicationThumbnails();
     }
 
-    // 添加动画
-    content.classList.remove('fade');
-    void content.offsetWidth; // trigger reflow for animation
-    content.classList.add('fade');
+    // 4. Animate in
+    content.classList.remove('fading-out');
+    content.classList.add('fading-in');
+
+    // Clean up class after animation
+    setTimeout(() => {
+      content.classList.remove('fading-in');
+    }, 400);
+
   } catch (error) {
     console.error('Error loading page:', error);
+    // If error, force show error message immediately
     content.innerHTML = '<p>Error loading page. Please try again.</p>';
   }
 }
@@ -49,63 +61,126 @@ async function loadPage(page) {
 function groupPublicationsByYear() {
   const pubs = Array.from(content.querySelectorAll('.publication'));
   if (!pubs.length) return;
-  let lastYear = null;
+
+  // 1. Group by year
+  const groups = {};
+  const years = [];
+
   pubs.forEach(pub => {
     const text = pub.textContent || '';
     const match = text.match(/(19|20)\d{2}/);
-    const year = match ? match[0] : (lastYear || 'Other');
-    if (year !== lastYear) {
-      const label = document.createElement('div');
-      label.className = 'pub-year';
-      label.textContent = year;
-      pub.parentNode.insertBefore(label, pub);
-      lastYear = year;
+    const year = match ? match[0] : 'Other';
+
+    if (!groups[year]) {
+      groups[year] = [];
+      years.push(year);
     }
+    groups[year].push(pub);
   });
+
+  // 2. Prepare Insertion Point
+  // We need a stable reference because pubs[0] will be moved OUT of the container.
+  const container = pubs[0].parentNode;
+  const placeholder = document.createElement('div');
+  container.insertBefore(placeholder, pubs[0]);
+
+  // 3. Build & Insert Sections
+  years.forEach(year => {
+    const section = document.createElement('div');
+    section.className = 'year-section';
+
+    const label = document.createElement('div');
+    label.className = 'year-label';
+    label.textContent = year;
+
+    const groupContent = document.createElement('div');
+    groupContent.className = 'year-content';
+
+    groups[year].forEach(pub => {
+      // Move pub into this new container
+      groupContent.appendChild(pub);
+    });
+
+    section.appendChild(label);
+    section.appendChild(groupContent);
+
+    // Insert before the stable placeholder
+    container.insertBefore(section, placeholder);
+  });
+
+  // 4. Cleanup
+  container.removeChild(placeholder);
+}
+
+// Floating Preview Logic
+let previewEl = null;
+
+function initFloatingPreview() {
+  if (document.getElementById('floating-preview')) return;
+
+  previewEl = document.createElement('div');
+  previewEl.id = 'floating-preview';
+  // Add an img element inside
+  const img = document.createElement('img');
+  previewEl.appendChild(img);
+  document.body.appendChild(previewEl);
 }
 
 function applyPublicationThumbnails() {
+  initFloatingPreview();
+  const previewImg = previewEl.querySelector('img');
+
   const map = [
-    { re: /Deliberations|Represent\s+Your\s+Voice/i, src: 'asset/paper_fig/deliberation.png', alt: 'Deliberations study illustration' },
-    { re: /Automated\s+but\s+Risky\s+Game|A2A/i, src: 'asset/paper_fig/A2A.png', alt: 'Agent-to-Agent negotiation illustration' },
-    { re: /HarmTransform/i, src: 'asset/paper_fig/harmtransform.png', alt: 'HarmTransform concept' },
-    { re: /JailDAM/i, src: 'asset/paper_fig/jaildam.jpg', alt: 'JailDAM visual' },
-    { re: /Personality\s+Traits|Persona\s+Steering/i, src: 'asset/paper_fig/LLM-Persona-Steering.png', alt: 'Persona steering chart' },
-    { re: /AutoTrust/i, src: 'asset/paper_fig/autotrust.png', alt: 'AutoTrust benchmark' },
-    { re: /Fraud-?R1/i, src: 'asset/paper_fig/fraud-r1.png', alt: 'Fraud-R1 flow' },
-    { re: /Real-World\s+Planner|Travel\s+Planning/i, src: 'asset/paper_fig/agentplanner.png', alt: 'Planner robustness' },
-    { re: /neural-symbolic|knowledge\s+graph/i, src: 'asset/paper_fig/neuro-symbolic.png', alt: 'Neural-symbolic survey' },
+    { re: /Deliberations|Represent\s+Your\s+Voice/i, src: 'asset/paper_fig/deliberation.png' },
+    { re: /Automated\s+but\s+Risky\s+Game|A2A/i, src: 'asset/paper_fig/A2A.png' },
+    { re: /HarmTransform/i, src: 'asset/paper_fig/harmtransform.png' },
+    { re: /JailDAM/i, src: 'asset/paper_fig/jaildam.jpg' },
+    { re: /Personality\s+Traits|Persona\s+Steering/i, src: 'asset/paper_fig/LLM-Persona-Steering.png' },
+    { re: /AutoTrust/i, src: 'asset/paper_fig/autotrust.png' },
+    { re: /Fraud-?R1/i, src: 'asset/paper_fig/fraud-r1.png' },
+    { re: /Real-World\s+Planner|Travel\s+Planning/i, src: 'asset/paper_fig/agentplanner.png' },
+    { re: /neural-symbolic|knowledge\s+graph/i, src: 'asset/paper_fig/neuro-symbolic.png' },
   ];
 
   const pubs = Array.from(content.querySelectorAll('.publication'));
+
   pubs.forEach(pub => {
-    if (pub.querySelector('.pub-thumb')) return; // already enhanced
+    // We target the TITLE link for the hover effect
+    const titleLink = pub.querySelector('h4 a');
+    if (!titleLink) return;
 
-    const titleEl = pub.querySelector('h4, h4 a');
-    const title = titleEl ? (titleEl.textContent || '') : '';
-    const pair = map.find(m => m.re.test(title));
-    if (!pair) return; // skip if no match
+    const titleText = titleLink.textContent || '';
+    const pair = map.find(m => m.re.test(titleText));
 
-    // Wrap existing content in .pub-text
-    let textWrap = pub.querySelector('.pub-text');
-    if (!textWrap) {
-      textWrap = document.createElement('div');
-      textWrap.className = 'pub-text';
-      while (pub.firstChild) {
-        textWrap.appendChild(pub.firstChild);
-      }
-      pub.appendChild(textWrap);
+    if (pair) {
+      // Attach events to the link
+      titleLink.addEventListener('mouseenter', () => {
+        previewImg.src = pair.src;
+        previewEl.classList.add('visible');
+      });
+
+      titleLink.addEventListener('mousemove', (e) => {
+        // Dimensions
+        const imgHeight = previewEl.offsetHeight;
+        const winHeight = window.innerHeight;
+        const padding = 20; // Distance from cursor
+
+        let x = e.clientX + padding;
+        let y = e.clientY + padding;
+
+        // Check if image goes below viewport
+        if (y + imgHeight > winHeight) {
+          // Flip to above cursor
+          y = e.clientY - imgHeight - padding;
+        }
+
+        previewEl.style.transform = `translate(${x}px, ${y}px)`;
+      });
+
+      titleLink.addEventListener('mouseleave', () => {
+        previewEl.classList.remove('visible');
+      });
     }
-
-    // Add thumbnail BEFORE text content so text wraps around it
-    const thumb = document.createElement('div');
-    thumb.className = 'pub-thumb';
-    const img = document.createElement('img');
-    img.src = pair.src;
-    img.alt = pair.alt;
-    img.loading = 'lazy';
-    thumb.appendChild(img);
-    textWrap.insertBefore(thumb, textWrap.firstChild);
   });
 }
 
@@ -148,7 +223,7 @@ window.addEventListener('hashchange', () => {
 });
 
 // Theme toggle
-(function initThemeToggle(){
+(function initThemeToggle() {
   const KEY = 'theme';
   const btn = document.getElementById('theme-toggle');
   if (!btn) return;
@@ -173,16 +248,16 @@ window.addEventListener('hashchange', () => {
     btn.setAttribute('title', nextIsLight ? 'Switch to light theme' : 'Switch to dark theme');
   }
 
-  function apply(theme){
+  function apply(theme) {
     const useLight = theme === 'light';
     document.documentElement.classList.toggle('theme-light', useLight);
-    try { localStorage.setItem(KEY, useLight ? 'light' : 'dark'); } catch {}
+    try { localStorage.setItem(KEY, useLight ? 'light' : 'dark'); } catch { }
     label();
   }
 
   // Determine initial theme from storage or system preference
   let init = 'dark';
-  try { init = localStorage.getItem(KEY) || init; } catch {}
+  try { init = localStorage.getItem(KEY) || init; } catch { }
   if (init !== 'light' && init !== 'dark') {
     init = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
   }

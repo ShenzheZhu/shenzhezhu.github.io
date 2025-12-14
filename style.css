@@ -36,7 +36,9 @@ body {
   background-color: var(--bg);
   color: var(--text);
   /* Restore original font preference */
-  font-family: 'Courier New','Montserrat', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: -0.025em;
+  /* Tighter kerning */
   line-height: 1.55;
   transition: background-color .25s ease, color .25s ease;
 }
@@ -44,8 +46,10 @@ body {
 .container {
   display: flex;
   min-height: 100vh;
-  gap: 0.8rem; /* control space between sidebar and content */
+  gap: 0.8rem;
+  /* control space between sidebar and content */
 }
+
 /* Quote uses theme variables */
 .about-section blockquote.about-quote {
   margin: 1rem 0;
@@ -55,21 +59,26 @@ body {
   color: var(--text);
   font-style: italic;
 }
+
 .about-section blockquote.about-quote cite {
   display: block;
   margin-top: 0.4rem;
   color: var(--muted);
   font-style: normal;
 }
+
 nav {
-  width: 200px; /* widened left sidebar */
+  width: 200px;
+  /* widened left sidebar */
   padding: 2rem;
   background: var(--bg);
   border-right: 1px solid var(--border);
-  position: sticky; /* follow on scroll (desktop) */
+  position: sticky;
+  /* follow on scroll (desktop) */
   top: 0;
   align-self: flex-start;
-  max-height: 100vh; /* avoid overflow on short viewports */
+  max-height: 100vh;
+  /* avoid overflow on short viewports */
   overflow: auto;
   transition: background-color .25s ease, border-color .25s ease, color .25s ease;
 }
@@ -77,17 +86,23 @@ nav {
 /* Avatar image in left nav */
 .nav-avatar {
   display: block;
-  width: 100%;         /* Fill the nav content width */
-  max-width: 140px;    /* Slightly larger logo/avatar */
+  width: 100%;
+  /* Fill the nav content width */
+  max-width: 140px;
+  /* Slightly larger logo/avatar */
   height: auto;
-  border-radius: 8px;  /* Slightly rounded corners; remove if undesired */
-  margin: 0 auto 0.8rem auto; /* Center avatar in the sidebar */
+  border-radius: 8px;
+  /* Slightly rounded corners; remove if undesired */
+  margin: 0 auto 0.8rem auto;
+  /* Center avatar in the sidebar */
 }
 
 nav h1 {
   font-size: 1.1rem;
-  margin: 0.2rem 0 1.6rem; /* tighten space above and below */
-  text-align: center;       /* center the name under avatar */
+  margin: 0.2rem 0 1.6rem;
+  /* tighten space above and below */
+  text-align: center;
+  /* center the name under avatar */
 }
 
 nav ul {
@@ -119,7 +134,8 @@ nav a {
 }
 
 nav a[data-page] {
-  font-size: 1rem; /* 增大导航链接字体 */
+  font-size: 1rem;
+  /* 增大导航链接字体 */
 }
 
 nav a:hover {
@@ -139,17 +155,20 @@ nav a.active {
   color: var(--text);
   text-decoration: none;
   font-size: 0.9rem;
-  cursor: pointer; /* 添加这一行确保显示手型指针 */
+  cursor: pointer;
+  /* 添加这一行确保显示手型指针 */
 }
 
 .nav-btn:hover {
   text-decoration: underline;
-  text-decoration-color: var(--text); /* 悬停时的下划线颜色 */
+  text-decoration-color: var(--text);
+  /* 悬停时的下划线颜色 */
 }
 
 main {
   flex: 1;
-  padding: 2rem; /* symmetric padding; gap controls column spacing */
+  padding: 2rem;
+  /* symmetric padding; gap controls column spacing */
   max-width: 920px;
   margin: 0 auto;
   transition: color .25s ease, background-color .25s ease;
@@ -161,19 +180,34 @@ main {
   top: 12px;
   right: 12px;
   z-index: 1000;
-  padding: 8px 12px; /* accommodate larger icon */
+  padding: 8px 12px;
+  /* accommodate larger icon */
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--panel);
   color: var(--text);
-  font-size: 1.05rem; /* emoji size */
+  font-size: 1.05rem;
+  /* emoji size */
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .2s ease;
 }
-.theme-toggle svg { width: 1.35rem; height: 1.35rem; display: block; fill: currentColor; stroke: currentColor; }
-.theme-toggle:hover { filter: brightness(1.05); }
-.theme-toggle:active { transform: scale(0.97); }
+
+.theme-toggle svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.theme-toggle:hover {
+  filter: brightness(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(0.97);
+}
 
 /* Card and quote smooth transitions */
 .publication,
@@ -183,116 +217,153 @@ main {
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     transition: none !important;
   }
 }
 
-.fade {
-  animation: fadeIn 0.3s ease;
+/* Page Transitions */
+main {
+  /* Ensure main has transition enabled for properties we might animate directly */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.fading-out {
+  opacity: 0;
+  transform: translateY(-8px);
 }
 
-/* Respect reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  .fade {
-    animation: none;
+.fading-in {
+  animation: fadeInUp 0.4s cubic-bezier(0.2, 0.0, 0.2, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 /* 为publications页面添加样式 */
-.pub-year {
-  color: #c8c8c8;            /* deeper than muted for readability */
-  font-size: 1.08rem;        /* slightly larger */
-  font-weight: 600;          /* slightly bolder */
-  letter-spacing: 0.02em;
-  margin: 1.1rem 0 0.5rem;
+/* Publication Grid Layout */
+.year-section {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.year-section:first-of-type {
+  border-top: none;
+}
+
+.year-label {
+  font-family: var(--font-mono);
+  /* Use mono for data/numbers */
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  padding-top: 0.3rem;
+}
+
+.year-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  /* Even space below border */
 }
 
 .publication {
-  background: var(--panel);
-  border-radius: 10px;
-  padding: 1rem; /* symmetric top/bottom padding */
-  margin-bottom: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-  display: flow-root; /* establish BFC to self-clear float */
-}
-
-.publication h4 {
-  margin-top: 0;           /* remove extra gap at card top */
-  margin-bottom: 0.45rem;
-  color: var(--text);
-}
-
-/* Title link: clean look, underline only on hover */
-.publication h4 a {
-  text-decoration: none;
-}
-.publication h4 a:hover {
-  text-decoration: underline;
-}
-
-.publication p {
-  margin: 0.3rem 0;
-  line-height: 1.5;
-}
-
-/* Ensure symmetric spacing: no extra bottom margin from last child */
-.publication > :last-child {
+  position: relative;
+  /* Revert to single column flow since image is now floating */
+  display: flow-root;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.5rem;
+  /* Even space above border */
   margin-bottom: 0;
 }
 
-/* Publication with right-side thumbnail */
-.pub-text { min-width: 0; }
-.pub-thumb {
-  float: right;
-  width: min(var(--thumb), 45%);
-  max-width: 100%;
-  margin: 0 0 0.3rem 1rem; /* spacing from text */
+.publication:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
-.pub-thumb img {
-  display: block;
+
+/* Floating Preview */
+#floating-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Remove fixed width, let image define it */
   width: auto;
-  max-width: 100%;
-  height: auto;                 /* preserve intrinsic ratio */
-  max-height: var(--thumb-max-h); /* prevent very tall portraits */
-  margin: 0 auto;               /* center when narrower */
-  border-radius: 8px;
-  object-fit: contain;          /* never crop */
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.95);
+  /* Use a long, smooth decay curve for "heavy" fluid feel */
+  transition: opacity 0.3s ease, transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+  will-change: transform, opacity;
+  /* Hint browser to promote to layer */
+}
+
+#floating-preview.visible {
+  opacity: 1;
+}
+
+#floating-preview img {
+  display: block;
+  /* Constrain both dimensions */
+  max-width: 450px;
+  max-height: 40vh;
+  /* Stricter vertical limit */
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Home page tweaks */
 .inline-cite {
-  white-space: nowrap; /* keep dash and text together */
+  white-space: nowrap;
+  /* keep dash and text together */
   color: var(--muted);
 }
+
 .home-figure {
   float: right;
   width: min(44%, 420px);
   margin-left: 1rem;
   margin-bottom: 1rem;
 }
+
 .home-figure img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 6px;
 }
+
 .home-figure figcaption {
   text-align: center;
   font-size: 0.9rem;
   color: var(--muted);
   margin-top: 0.4rem;
 }
+
 /* (quote block removed per request) */
 
 /* Weaken author and venue lines just under title */
-.publication h4 + p,
-.publication h4 + p + p {
+.publication h4+p,
+.publication h4+p+p {
   color: var(--muted);
 }
 
@@ -306,7 +377,8 @@ main {
   text-decoration: underline;
 }
 
-.teaching, .project {
+.teaching,
+.project {
   margin-bottom: 1.5rem;
 }
 
@@ -314,17 +386,20 @@ main {
 
 /* For links within the "About Me" section content that you just provided: */
 .about-section a {
-  color: #808080; /* Specifically target links within the about section */
+  color: #808080;
+  /* Specifically target links within the about section */
 }
 
 .about-section a:hover {
-  text-decoration-color: #C0C0C0; /* Hover color for about section links */
+  text-decoration-color: #C0C0C0;
+  /* Hover color for about section links */
 }
 
 
 h4 {
   /* Reduce the space *below* the h4 heading */
-  margin-bottom: 0.5rem; /* You can try even smaller values like 0.25rem or 0 */
+  margin-bottom: 0.5rem;
+  /* You can try even smaller values like 0.25rem or 0 */
   /* If you want the font size of h4 to be slightly larger than regular text but smaller than h3,
      you can set it here if you haven't already: */
   /* font-size: 1.1rem; */
@@ -333,13 +408,15 @@ h4 {
 /* --- Specific adjustments for ul and p tags after h4 (if needed) --- */
 
 /* This targets an unordered list directly following an h4 */
-h4 + ul {
-  margin-top: 0; /* Remove or reduce the space *above* the list */
+h4+ul {
+  margin-top: 0;
+  /* Remove or reduce the space *above* the list */
 }
 
 /* This targets a paragraph directly following an h4 (e.g., in "Other Papers") */
-h4 + p {
-  margin-top: 0; /* Remove or reduce the space *above* the paragraph */
+h4+p {
+  margin-top: 0;
+  /* Remove or reduce the space *above* the paragraph */
 }
 
 /* If you have .publication divs, you might want to adjust space for h4 within them too if they exist.
@@ -350,21 +427,28 @@ h4 + p {
 .publication,
 .teaching,
 .project {
-  margin-bottom: 1rem; /* You can reduce this further if needed, e.g., 0.5rem */
+  margin-bottom: 1rem;
+  /* You can reduce this further if needed, e.g., 0.5rem */
 }
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* 在小屏幕上，将导航和主内容垂直堆叠 */
-    padding-left: 12px;   /* 对称左右留白，避免视觉偏左 */
+    flex-direction: column;
+    /* 在小屏幕上，将导航和主内容垂直堆叠 */
+    padding-left: 12px;
+    /* 对称左右留白，避免视觉偏左 */
     padding-right: 12px;
   }
 
   nav {
-    width: 100%; /* 导航栏占据全部宽度 */
-    padding: 1rem; /* 调整内边距，使其在顶部时更合理 */
-    text-align: center; /* 导航项居中显示 */
-    position: static; /* disable sticky on mobile */
+    width: 100%;
+    /* 导航栏占据全部宽度 */
+    padding: 1rem;
+    /* 调整内边距，使其在顶部时更合理 */
+    text-align: center;
+    /* 导航项居中显示 */
+    position: static;
+    /* disable sticky on mobile */
     top: auto;
     align-self: stretch;
   }
@@ -376,40 +460,52 @@ h4 + p {
   }
 
   nav h1 {
-    margin-bottom: 1rem; /* 调整标题下边距 */
+    margin-bottom: 1rem;
+    /* 调整标题下边距 */
   }
 
   nav ul {
-    display: flex; /* 让导航链接水平排列 */
-    justify-content: center; /* 导航链接居中 */
-    flex-wrap: wrap; /* 如果链接太多，允许换行 */
+    display: flex;
+    /* 让导航链接水平排列 */
+    justify-content: center;
+    /* 导航链接居中 */
+    flex-wrap: wrap;
+    /* 如果链接太多，允许换行 */
   }
 
   nav li {
-    margin: 0 0.8rem 0.5rem 0.8rem; /* 调整列表项间距，使其水平分布 */
+    margin: 0 0.8rem 0.5rem 0.8rem;
+    /* 调整列表项间距，使其水平分布 */
   }
 
   nav a[data-page] {
-    font-size: 0.9rem; /* 导航链接字体可以适当减小 */
+    font-size: 0.9rem;
+    /* 导航链接字体可以适当减小 */
   }
 
   .nav-btn {
-    display: inline-block; /* 让按钮水平排列 */
-    margin: 0 0.5rem 0.5rem 0.5rem; /* 调整按钮间距 */
+    display: inline-block;
+    /* 让按钮水平排列 */
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    /* 调整按钮间距 */
   }
 
   main {
-    padding: 1rem; /* 调整主内容区内边距 */
+    padding: 1rem;
+    /* 调整主内容区内边距 */
     width: 100%;
     max-width: 920px;
-    margin-left: auto;  /* 居中主内容，防止视觉偏左 */
+    margin-left: auto;
+    /* 居中主内容，防止视觉偏左 */
     margin-right: auto;
   }
 
   /* 如果你的 .paper-box 布局是两列或多列，也需要调整为单列 */
   .paper-box {
-    flex-direction: column; /* 假设 .paper-box 也是 flex 布局 */
-    align-items: center; /* 内容居中 */
+    flex-direction: column;
+    /* 假设 .paper-box 也是 flex 布局 */
+    align-items: center;
+    /* 内容居中 */
   }
 
   .pub-thumb {
@@ -420,19 +516,25 @@ h4 + p {
   }
 
   .paper-box-image {
-    width: 80%; /* 图片在小屏幕上宽度可以更大 */
-    margin-bottom: 1rem; /* 图片下方增加间距 */
+    width: 80%;
+    /* 图片在小屏幕上宽度可以更大 */
+    margin-bottom: 1rem;
+    /* 图片下方增加间距 */
   }
 
   .paper-box-text {
-    width: 100%; /* 文本区域占据全部宽度 */
-    padding: 0; /* 移除左右内边距 */
+    width: 100%;
+    /* 文本区域占据全部宽度 */
+    padding: 0;
+    /* 移除左右内边距 */
   }
 
   /* 调整其他可能需要改变的元素，如图片、表格等 */
   img {
-    max-width: 100%; /* 确保图片不会超出其容器 */
-    height: auto; /* 保持图片比例 */
+    max-width: 100%;
+    /* 确保图片不会超出其容器 */
+    height: auto;
+    /* 保持图片比例 */
   }
 
   /* iOS 等安全区适配，避免贴边引起的偏左/偏右视觉问题 */
@@ -440,6 +542,7 @@ h4 + p {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
   }
+
   .theme-toggle {
     right: max(12px, env(safe-area-inset-right));
   }
@@ -454,53 +557,67 @@ h4 + p {
 
 
 .publication p {
-  line-height: 1.2; /* Reduce line height. Default is usually around 1.5-1.6. Try 1.2, 1.3, or 1.4 */
-  margin-top: 0.3rem; /* Reduce top margin for paragraphs */
-  margin-bottom: 0.3rem; /* Reduce bottom margin for paragraphs */
+  line-height: 1.2;
+  /* Reduce line height. Default is usually around 1.5-1.6. Try 1.2, 1.3, or 1.4 */
+  margin-top: 0.3rem;
+  /* Reduce top margin for paragraphs */
+  margin-bottom: 0.3rem;
+  /* Reduce bottom margin for paragraphs */
   /* You can even try smaller margins like 0.1rem or 0.2rem if you want them very close */
 }
 
 /* Slightly larger thumbnails on very wide screens */
 @media (min-width: 1280px) {
-  :root { --thumb: 220px; --thumb-max-h: 200px; }
+  :root {
+    --thumb: 220px;
+    --thumb-max-h: 200px;
+  }
 }
 
 /* Adjust the margin of the h4 within the publication box if needed */
 .publication h4 {
-  margin-top: 0; /* Tighter top spacing inside card */
+  margin-top: 0;
+  /* Tighter top spacing inside card */
   margin-bottom: 0.45rem;
 }
 
 /* Also, reconsider the overall bottom margin of each publication entry if they are too far apart */
 .publication {
-  margin-bottom: 1rem; /* Card spacing */
-  padding-bottom: 1rem; /* Match top padding for symmetry */
+  margin-bottom: 1rem;
+  /* Card spacing */
+  padding-bottom: 1rem;
+  /* Match top padding for symmetry */
 }
 
 /* Ensure list items within publications (if any, though not in your current snippet) also have tight spacing */
 .publication ul {
-  padding-left: 1.2em; /* Adjust left padding for lists */
+  padding-left: 1.2em;
+  /* Adjust left padding for lists */
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
 
 .publication ul li {
-  margin-bottom: 0.2rem; /* Spacing between list items */
+  margin-bottom: 0.2rem;
+  /* Spacing between list items */
 }
 
 /* Specific adjustment for the general "Publications & Preprints" heading */
 h3 {
-  margin-bottom: 1rem; /* Adjust space below this main heading */
+  margin-bottom: 1rem;
+  /* Adjust space below this main heading */
 }
 
 /* And the small text below the main heading */
-.publications-page p:first-of-type { /* Assuming this is the p tag for "(*) represents equal contribution" */
+.publications-page p:first-of-type {
+  /* Assuming this is the p tag for "(*) represents equal contribution" */
   margin-top: 0.5rem;
-  margin-bottom: 1.5rem; /* Adjust as needed */
+  margin-bottom: 1.5rem;
+  /* Adjust as needed */
 }
 
 /* Tighter spacing between h3 and its immediate explanatory paragraph */
-h3 + p {
+h3+p {
   margin-top: 0.4rem;
   margin-bottom: 0.8rem;
   color: var(--muted);
@@ -511,26 +628,44 @@ h3 + p {
   margin-top: 2rem;
 }
 
-.news-section h3 { margin-top: 0; }
+.news-section h3 {
+  margin-top: 0;
+}
+
 .news-list {
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 0.6rem 0.8rem;
-  max-height: 200px; /* adjust as needed */
-  overflow: auto; /* show scrollbar when content overflows */
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: color-mix(in oklab, var(--text), transparent 70%) transparent; /* Firefox */
+  max-height: 200px;
+  /* adjust as needed */
+  overflow: auto;
+  /* show scrollbar when content overflows */
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: color-mix(in oklab, var(--text), transparent 70%) transparent;
+  /* Firefox */
 }
-.news-list ul { margin: 0; padding-left: 1.2rem; }
-.news-list li { margin-bottom: 0.25rem; }
+
+.news-list ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.news-list li {
+  margin-bottom: 0.25rem;
+}
 
 /* WebKit scrollbar styling */
-.news-list::-webkit-scrollbar { width: 8px; }
+.news-list::-webkit-scrollbar {
+  width: 8px;
+}
+
 .news-list::-webkit-scrollbar-thumb {
   background-color: color-mix(in oklab, var(--text), transparent 70%);
   border-radius: 999px;
 }
+
 .news-list::-webkit-scrollbar-track {
   background: color-mix(in oklab, var(--panel), transparent 30%);
 }
