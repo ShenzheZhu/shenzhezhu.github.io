@@ -98,7 +98,7 @@ nav {
   display: block;
   width: 100%;
   /* Fill the nav content width */
-  max-width: 100px;
+  max-width: 120px;
   /* Slightly larger logo/avatar */
   height: auto;
   border-radius: 8px;
@@ -109,7 +109,7 @@ nav {
 
 nav h1 {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   /* Slightly larger for presence */
   margin: 0.2rem 0 1.6rem;
   /* tighten space above and below */
