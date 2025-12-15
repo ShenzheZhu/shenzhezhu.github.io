@@ -127,32 +127,39 @@ nav li {
 }
 
 /* Base link style */
+/* Smart Underline (Ink Flow) */
 a {
   color: var(--text);
-  text-decoration: underline;
-  text-decoration-color: color-mix(in oklab, var(--text), transparent 40%);
-  text-underline-offset: 3px;
-  text-decoration-thickness: 0.06em;
-  transition: color .25s ease, text-decoration-color .25s ease;
+  text-decoration: none;
+  background-image: linear-gradient(var(--text), var(--text));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-bottom: 2px;
+  transition: background-size 0.3s cubic-bezier(0.2, 1, 0.3, 1), color 0.25s ease;
 }
 
 a:hover {
-  text-decoration-color: var(--text);
+  background-size: 100% 1px;
 }
 
 nav a {
   color: var(--text);
   text-decoration: none;
+  background-image: none;
+  /* No underline for nav links by default */
 }
 
 nav a[data-page] {
-  font-size: 1rem;
-  /* 增大导航链接字体 */
+  font-size: 0.9rem;
 }
 
 nav a:hover {
+  color: var(--text);
+  /* Optional: Add underline to nav on hover if desired, or keep clean */
   text-decoration: underline;
-  text-decoration-color: var(--text);
+  text-decoration-color: var(--border);
+  text-underline-offset: 4px;
 }
 
 /* active nav item */
@@ -239,31 +246,81 @@ main {
 
 /* Page Transitions */
 main {
-  /* Ensure main has transition enabled for properties we might animate directly */
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fading-out {
-  opacity: 0;
-  transform: translateY(-8px);
-}
-
-.fading-in {
-  animation: fadeInUp 0.4s cubic-bezier(0.2, 0.0, 0.2, 1) forwards;
+  /* Ensure container allows overflow for animations if needed */
+  will-change: opacity;
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(20px);
   }
 
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.fading-out {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Stagger Logic: When main has .fading-in, animate its children */
+.fading-in>* {
+  opacity: 0;
+  /* Star invisible */
+  animation: fadeInUp 0.6s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+}
+
+/* Stagger delays for first 12 elements */
+.fading-in>*:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.fading-in>*:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.fading-in>*:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.fading-in>*:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.fading-in>*:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.fading-in>*:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.fading-in>*:nth-child(7) {
+  animation-delay: 0.35s;
+}
+
+.fading-in>*:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+.fading-in>*:nth-child(9) {
+  animation-delay: 0.45s;
+}
+
+.fading-in>*:nth-child(10) {
+  animation-delay: 0.5s;
+}
+
+.fading-in>*:nth-child(11) {
+  animation-delay: 0.55s;
+}
+
+.fading-in>*:nth-child(12) {
+  animation-delay: 0.6s;
 }
 
 /* 为publications页面添加样式 */
