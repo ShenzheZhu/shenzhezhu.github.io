@@ -61,53 +61,60 @@ function groupPublicationsByYear() {
   const pubs = Array.from(content.querySelectorAll('.publication'));
   if (!pubs.length) return;
 
-  // 1. Group by year
-  const groups = {};
-  const years = [];
-
-  pubs.forEach(pub => {
-    const text = pub.textContent || '';
-    const match = text.match(/(19|20)\d{2}/);
-    const year = match ? match[0] : 'Other';
-
-    if (!groups[year]) {
-      groups[year] = [];
-      years.push(year);
-    }
-    groups[year].push(pub);
-  });
-
-  // 2. Prepare Insertion Point
-  // We need a stable reference because pubs[0] will be moved OUT of the container.
+  // 1. Prepare Insertion Point (Stable placeholder)
+  // We grab the parent of the first pub to use as the container for all sections.
+  // Note: This assumes all pubs are in the same flattened list area, which is standard.
   const container = pubs[0].parentNode;
   const placeholder = document.createElement('div');
   container.insertBefore(placeholder, pubs[0]);
 
-  // 3. Build & Insert Sections
-  years.forEach(year => {
-    const section = document.createElement('div');
-    section.className = 'year-section';
+  let currentSection = null;
+  let currentContent = null;
+  let lastYear = null;
 
-    const label = document.createElement('div');
-    label.className = 'year-label';
-    label.textContent = year;
+  pubs.forEach(pub => {
+    // Priority 1: Explicit tag
+    let year = pub.dataset.year || pub.getAttribute('data-year');
 
-    const groupContent = document.createElement('div');
-    groupContent.className = 'year-content';
+    // Priority 2: Text scan
+    if (!year) {
+      const text = pub.textContent || '';
+      const match = text.match(/(19|20)\d{2}/);
+      if (match) year = match[0];
+    }
 
-    groups[year].forEach(pub => {
-      // Move pub into this new container
-      groupContent.appendChild(pub);
-    });
+    // Priority 3: Inherit (Sticky Grouping)
+    if (!year) year = lastYear;
 
-    section.appendChild(label);
-    section.appendChild(groupContent);
+    // Fallback
+    if (!year) year = '';
 
-    // Insert before the stable placeholder
-    container.insertBefore(section, placeholder);
+    // If year changes (or first run), start a new section
+    if (year !== lastYear || !currentSection) {
+      currentSection = document.createElement('div');
+      currentSection.className = 'year-section';
+
+      const label = document.createElement('div');
+      label.className = 'year-label';
+      label.textContent = year; // Display year or empty
+
+      currentContent = document.createElement('div');
+      currentContent.className = 'year-content';
+
+      currentSection.appendChild(label);
+      currentSection.appendChild(currentContent);
+
+      // Insert before our stable anchor
+      container.insertBefore(currentSection, placeholder);
+
+      lastYear = year;
+    }
+
+    // Move the publication into the current section's content area
+    currentContent.appendChild(pub);
   });
 
-  // 4. Cleanup
+  // 2. Cleanup
   container.removeChild(placeholder);
 }
 

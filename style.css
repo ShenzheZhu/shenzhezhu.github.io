@@ -3,18 +3,28 @@
 /* Color system */
 /* Default theme: Dark */
 :root {
-  --bg: #1e1e1e;
   /* Panel should be slightly lighter than bg for elevation */
-  --panel: #242424;
   --text: #e0e0e0;
   --muted: #9a9a9a;
-  --border: #2a2a2a;
-  /* Muted low-saturation accent for active underline */
-  --accent: #9aa5b1;
-  /* Publication thumbnail width */
+  /* Muted low-saturation accent  /* Tech-Humanism Typography */
+  --font-serif: Georgia, 'Times New Roman', Times, serif;
+
+  /* Dark Theme (Default) - Warm Ink Aesthetic */
+  --bg: #191817;
+  /* Warm Ink Black */
+  --panel: #23211f;
+  /* Warm Dark Grey */
+  --text: #e0e0e0;
+  --text-dim: #999;
+  --border: #383533;
+  /* Warm Border */
+  --accent: #fff;
+
   --thumb: 200px;
   /* Publication thumbnail max height to avoid tall cards */
   --thumb-max-h: 160px;
+  /* Highlight color - Muted Bronze / Antiquarian Gold */
+  --highlight: #C5A585;
 }
 
 /* Light theme overrides */
@@ -77,8 +87,8 @@ nav {
   /* follow on scroll (desktop) */
   top: 0;
   align-self: flex-start;
-  max-height: 100vh;
-  /* avoid overflow on short viewports */
+  height: 100vh;
+  /* Fill entire screen height for continuous border */
   overflow: auto;
   transition: background-color .25s ease, border-color .25s ease, color .25s ease;
 }
@@ -88,7 +98,7 @@ nav {
   display: block;
   width: 100%;
   /* Fill the nav content width */
-  max-width: 140px;
+  max-width: 100px;
   /* Slightly larger logo/avatar */
   height: auto;
   border-radius: 8px;
@@ -98,7 +108,9 @@ nav {
 }
 
 nav h1 {
-  font-size: 1.1rem;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  /* Slightly larger for presence */
   margin: 0.2rem 0 1.6rem;
   /* tighten space above and below */
   text-align: center;
@@ -271,7 +283,8 @@ main {
 .year-label {
   font-family: var(--font-mono);
   /* Use mono for data/numbers */
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  /* Slightly larger */
   color: var(--text-dim);
   padding-top: 0.3rem;
 }
@@ -364,8 +377,19 @@ main {
   /* Hover color for about section links */
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: normal;
+  /* Serifs look elegant without bold */
+  margin-top: 0;
+  line-height: 1.2;
+}
 
 h4 {
+  font-family: var(--font-serif);
+  font-weight: normal;
   /* Reduce the space *below* the h4 heading */
   margin-bottom: 0.5rem;
   /* You can try even smaller values like 0.25rem or 0 */
@@ -426,6 +450,22 @@ h4+p {
   .nav-avatar {
     max-width: 100px;
     margin-bottom: 0.8rem;
+  }
+
+  /* Stack the year/content grid on mobile */
+  .year-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .year-label {
+    width: auto;
+    margin-bottom: 0.5rem;
+    padding-top: 0;
+    font-size: 1.2rem;
+    /* Make year bold/clear on mobile */
+    opacity: 0.6;
   }
 
   nav h1 {
@@ -619,10 +659,14 @@ h3+p {
 .news-list ul {
   margin: 0;
   padding-left: 1.2rem;
+  list-style: disc;
+  /* Restore bullets */
 }
 
 .news-list li {
   margin-bottom: 0.25rem;
+  line-height: 1.55;
+  color: var(--text);
 }
 
 /* WebKit scrollbar styling */
@@ -635,6 +679,7 @@ h3+p {
   border-radius: 999px;
 }
 
-.news-list::-webkit-scrollbar-track {
-  background: color-mix(in oklab, var(--panel), transparent 30%);
+.highlight {
+  color: var(--highlight);
+  font-weight: 600;
 }
