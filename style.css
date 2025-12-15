@@ -78,9 +78,9 @@ body {
 }
 
 nav {
-  width: 200px;
-  /* widened left sidebar */
-  padding: 2rem;
+  width: 260px;
+  /* widened left sidebar for large text */
+  padding: 1.5rem;
   background: var(--bg);
   border-right: 1px solid var(--border);
   position: sticky;
