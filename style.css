@@ -493,6 +493,8 @@ h4+p {
   nav {
     width: 100%;
     /* 导航栏占据全部宽度 */
+    height: auto;
+    /* Reset height for mobile */
     padding: 1rem;
     /* 调整内边距，使其在顶部时更合理 */
     text-align: center;
@@ -501,6 +503,10 @@ h4+p {
     /* disable sticky on mobile */
     top: auto;
     align-self: stretch;
+    border-right: none;
+    /* Remove vertical divider */
+    border-bottom: 1px solid var(--border);
+    /* Add horizontal divider */
   }
 
   /* Tweak avatar size on small screens */
