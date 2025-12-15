@@ -532,6 +532,8 @@ h4+p {
   }
 
   nav h1 {
+    font-size: 1.7rem;
+    /* Make sure mobile name is large enough */
     margin-bottom: 1rem;
     /* 调整标题下边距 */
   }
