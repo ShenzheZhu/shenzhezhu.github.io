@@ -98,7 +98,7 @@ nav {
   display: block;
   width: 100%;
   /* Fill the nav content width */
-  max-width: 100px;
+  max-width: 120px;
   /* Slightly larger logo/avatar */
   height: auto;
   border-radius: 8px;
@@ -109,7 +109,7 @@ nav {
 
 nav h1 {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   /* Slightly larger for presence */
   margin: 0.2rem 0 1.6rem;
   /* tighten space above and below */
@@ -511,7 +511,7 @@ h4+p {
 
   /* Tweak avatar size on small screens */
   .nav-avatar {
-    max-width: 100px;
+    max-width: 120px;
     margin-bottom: 0.8rem;
   }
 
@@ -532,7 +532,7 @@ h4+p {
   }
 
   nav h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     /* Make sure mobile name is large enough */
     margin-bottom: 1rem;
     /* 调整标题下边距 */
