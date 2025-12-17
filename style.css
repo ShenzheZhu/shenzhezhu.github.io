@@ -480,26 +480,25 @@ main {
   margin-bottom: 1.5rem;
 }
 
-/* Research Interests section in About page */
-.interests-grid {
+/* Research Interests list in About page */
+.interests-list {
   margin: 1.5rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
 }
 
-.interest-item h4 {
-  margin: 0 0 0.3rem 0;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.interest-item p {
+.interests-list ol {
+  padding-left: 1.2rem;
   margin: 0;
-  color: var(--muted);
-  font-size: 0.95rem;
+}
+
+.interests-list li {
+  margin-bottom: 0.8rem;
   line-height: 1.5;
+  color: var(--muted);
+}
+
+.interests-list li strong {
+  color: var(--text);
+  font-weight: 600;
 }
 
 /* Removed conflicting main/publication link overrides to unify style */
