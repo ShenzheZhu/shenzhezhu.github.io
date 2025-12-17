@@ -204,6 +204,29 @@ window.addEventListener('hashchange', () => {
   });
 })();
 
+// Lightbox Modal Logic
+(function initLightbox() {
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+
+  if (!modal || !modalImg) return;
+
+  // Event delegation to catch clicks on dynamically loaded images
+  document.addEventListener('click', e => {
+    if (e.target.classList.contains('pub-image')) {
+      modal.classList.add('active');
+      modalImg.src = e.target.src;
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+  });
+
+  // Close modal when clicking anywhere on it (background)
+  modal.addEventListener('click', () => {
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+  });
+})();
+
 // Initial load based on hash, default to 'about'
 const initialPage = location.hash ? location.hash.slice(1) : 'about';
 setActiveLink(initialPage);
