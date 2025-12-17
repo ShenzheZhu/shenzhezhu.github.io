@@ -133,7 +133,7 @@ nav ul {
 }
 
 nav li {
-  margin-bottom: 0rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Base link style */
@@ -161,7 +161,7 @@ nav a {
 }
 
 nav a[data-page] {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 nav a:hover {
@@ -183,7 +183,8 @@ nav a.active {
   display: block;
   color: var(--text);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
   cursor: pointer;
   /* 添加这一行确保显示手型指针 */
 }
@@ -497,8 +498,8 @@ h2,
 h3 {
   font-family: var(--font-serif);
   font-weight: normal;
-  font-size: 1.6rem;
-  /* More moderate size for section titles */
+  font-size: 1.4rem;
+  /* Balanced, elegant page titles */
   margin-top: 0;
   line-height: 1.2;
 }
