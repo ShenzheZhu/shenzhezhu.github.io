@@ -41,8 +41,18 @@ html.theme-light {
 /* Import Montserrat from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+/* Universal Box Sizing - Critical for Layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll wobble */
   background-color: var(--bg);
   color: var(--text);
   /* Restore original font preference */
