@@ -197,9 +197,9 @@ nav a.active {
 
 main {
   flex: 1;
-  padding: 2rem 2rem 2rem 1rem;
-  /* Reduced left padding to close gap */
-  max-width: 920px;
+  padding: 2rem 2rem 2rem 0.5rem;
+  /* Reduced left padding further to close gap */
+  max-width: 1000px;
   margin: 0;
   /* Align to left instead of auto-centering */
   transition: color .25s ease, background-color .25s ease;
