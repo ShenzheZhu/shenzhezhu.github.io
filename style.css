@@ -839,3 +839,7 @@ h3+p {
   color: var(--highlight);
   font-weight: 600;
 }
+
+.highlight a {
+  color: var(--highlight);
+}
