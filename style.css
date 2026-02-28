@@ -121,7 +121,8 @@ nav {
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.avatar-flip:hover .avatar-flip-inner {
+.avatar-flip:hover .avatar-flip-inner,
+.avatar-flip.flipped .avatar-flip-inner {
   transform: rotateY(180deg);
 }
 
@@ -618,9 +619,8 @@ h4+p {
     /* Add horizontal divider */
   }
 
-  /* Tweak avatar size on small screens */
-  .nav-avatar {
-    max-width: 120px;
+  /* Tweak avatar flip size on small screens */
+  .avatar-flip {
     margin-bottom: 0.8rem;
   }
 

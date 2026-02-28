@@ -231,3 +231,16 @@ window.addEventListener('hashchange', () => {
 const initialPage = location.hash ? location.hash.slice(1) : 'about';
 setActiveLink(initialPage);
 loadPage(initialPage);
+
+// Avatar flip: touch/click toggle for mobile (desktop uses CSS :hover)
+(function initAvatarFlip() {
+  const flipEl = document.querySelector('.avatar-flip');
+  if (!flipEl) return;
+
+  flipEl.addEventListener('click', () => {
+    // Only toggle on touch devices (pointer: coarse = touchscreen)
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      flipEl.classList.toggle('flipped');
+    }
+  });
+})();
