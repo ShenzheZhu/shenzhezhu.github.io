@@ -121,7 +121,14 @@ nav {
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.avatar-flip:hover .avatar-flip-inner,
+/* Desktop: CSS hover handles flip */
+@media (hover: hover) {
+  .avatar-flip:hover .avatar-flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Touch: only .flipped class (toggled via JS click) handles flip */
 .avatar-flip.flipped .avatar-flip-inner {
   transform: rotateY(180deg);
 }

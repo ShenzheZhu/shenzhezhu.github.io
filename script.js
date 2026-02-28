@@ -238,8 +238,8 @@ loadPage(initialPage);
   if (!flipEl) return;
 
   flipEl.addEventListener('click', () => {
-    // Only toggle on touch devices (pointer: coarse = touchscreen)
-    if (window.matchMedia('(pointer: coarse)').matches) {
+    // Only toggle on touch devices (hover:none = no real hover capability)
+    if (window.matchMedia('(hover: none)').matches) {
       flipEl.classList.toggle('flipped');
     }
   });
