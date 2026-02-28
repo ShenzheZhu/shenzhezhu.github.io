@@ -104,18 +104,46 @@ nav {
 }
 
 /* Avatar image in left nav */
+/* Avatar flip card */
+.avatar-flip {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 0.8rem auto;
+  perspective: 600px;
+  cursor: pointer;
+}
+
+.avatar-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.avatar-flip:hover .avatar-flip-inner {
+  transform: rotateY(180deg);
+}
+
 .nav-avatar {
   display: block;
   width: 100%;
-  /* Fill the nav content width */
   max-width: 120px;
-  /* Slightly larger logo/avatar */
-  height: auto;
+  height: 120px;
+  object-fit: cover;
   border-radius: 8px;
-  /* Slightly rounded corners; remove if undesired */
-  margin: 0 auto 0.8rem auto;
-  /* Center avatar in the sidebar */
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
+
+.avatar-back {
+  transform: rotateY(180deg);
+}
+
 
 nav h1 {
   font-family: var(--font-serif);
