@@ -1,0 +1,28 @@
+# Project: shenzhezhu.github.io
+
+Personal academic website for Shenzhe (Cho) Zhu. Vanilla HTML/CSS/JS, no build tools or frameworks.
+
+## Design Context
+
+### Users
+Academic peers, prospective collaborators, PhD program committees, and industry researchers visiting to learn about Shenzhe Zhu's research in Human-Centered AI. They arrive with intent — scanning publications, assessing fit for collaboration, or reviewing credentials. The site should make this efficient while leaving a lasting impression of taste and seriousness.
+
+### Brand Personality
+**Designer. Minimal. Refined.**
+
+The site channels the aesthetic sensibility of high-end fashion/design retail (SSENSE) into an academic context — an unusual combination that reflects the owner's dual identity as researcher and visual perfectionist. The tone is confident and understated, never loud. Every element earns its place.
+
+### Aesthetic Direction
+- **Visual tone**: Dark, editorial minimalism — closer to a designer boutique than a typical academic page. High contrast typography on warm dark backgrounds. Generous whitespace. Restrained use of color.
+- **Primary reference**: SSENSE — clean grid layouts, bold typography, monochromatic palette, editorial confidence. Adapt this to academic content while keeping the designer DNA.
+- **Anti-references**: Cluttered academic homepages with default Bootstrap styling, excessive color, or busy layouts. Avoid anything that feels templated or generic.
+- **Theme**: Dark mode preferred (`#191817` warm ink black). Light mode available but dark is the signature. Muted Bronze (`#C5A585`) as the sole highlight accent — used sparingly for emphasis.
+- **Typography**: Serif headings (Georgia) for scholarly warmth, clean sans-serif body (Helvetica Neue) for readability. Tight letter-spacing for a modern editorial feel.
+- **Imagery**: Grayscale by default, color on interaction. Monet references as a personal signature.
+
+### Design Principles
+1. **Less is more**: Remove before adding. Every element must justify its existence. White space is a feature, not wasted space.
+2. **Confidence through restraint**: Let typography, spacing, and hierarchy do the work. No decorative flourishes, no gratuitous animation.
+3. **Editorial precision**: Treat the site like a curated publication — consistent grids, deliberate alignment, typographic hierarchy that guides the eye naturally.
+4. **Dark-first warmth**: The dark palette should feel warm and inviting (warm blacks, not cold grays), creating an intimate reading environment.
+5. **Substance over surface**: Design serves the content. Never let aesthetic choices obscure or complicate access to information.

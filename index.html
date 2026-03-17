@@ -5,43 +5,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO & Meta -->
-  <title>Shenzhe's Page</title>
+  <title>Shenzhe Zhu</title>
   <meta name="description"
     content="Shenzhe Zhu is an incoming CS Ph.D. student at UT Austin, with research experience at Stanford HAI & Vector Institute, specializing in Human-Centered AI and LLM Agents." />
   <meta name="author" content="Shenzhe Zhu" />
   <meta name="keywords"
     content="Shenzhe Zhu, AI, Machine Learning, UT Austin, Stanford HAI, Vector Institute, LLM, Computer Science, UofT" />
 
-  <link rel="stylesheet" href="style.css?v=final" />
+  <link rel="stylesheet" href="style.css?v=cargo3" />
   <link rel="icon" type="image/png" href="asset/mind.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-  <!-- Theme toggle button (top-right) -->
-  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme"></button>
+  <!-- Mobile top bar -->
+  <div class="mobile-header">
+    <span class="mobile-header-name">Shenzhe Zhu</span>
+    <button class="mobile-menu-btn" id="menu-toggle">Menu</button>
+  </div>
+
   <div class="container">
-    <nav>
-      <div class="avatar-flip">
-        <div class="avatar-flip-inner">
-          <img class="avatar-front nav-avatar" src="asset/selfie.jpg" alt="Portrait of Shenzhe Zhu" loading="lazy" />
-          <img class="avatar-back nav-avatar" src="asset/monet.jpg" alt="Monet" loading="lazy" />
-        </div>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1><a href="#" data-page="home">Shenzhe Zhu</a></h1>
+        <span class="sidebar-subtitle">Human-Centered AI</span>
       </div>
-      <h1><a href="#" data-page="home">Shenzhe(Cho)Zhu</a></h1>
-      <ul>
-        <li><a href="#about" data-page="about">About Me</a></li>
-        <li><a href="#publications" data-page="publications">Publications</a></li>
-        <li><a href="#misc" data-page="misc">Miscellaneous</a></li>
-      </ul>
-      <div style="margin-top:2rem;">
-        <a class="nav-btn" href="https://www.linkedin.com/in/shenzhezhu0531/" data-external="true"
-          target="_blank">LinkedIn</a>
-        <a class="nav-btn" href="https://github.com/ShenzheZhu" data-external="true" target="_blank">Github</a>
-        <a class="nav-btn" href="https://scholar.google.com/citations?user=WBZCniUAAAAJ" data-external="true"
-          target="_blank">Google Scholar</a>
+
+      <div class="sidebar-info">
+        <a href="mailto:shenzhe@utexas.edu">Email</a>
+        <a href="https://www.linkedin.com/in/shenzhezhu0531/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/ShenzheZhu" target="_blank" rel="noopener noreferrer">Github</a>
+        <a href="https://scholar.google.com/citations?user=WBZCniUAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
       </div>
-    </nav>
+
+      <nav>
+        <ol class="nav-index">
+          <li><a href="#about" data-page="about">About Me</a></li>
+          <li><a href="#publications" data-page="publications">Publications</a></li>
+          <li><a href="#misc" data-page="misc">Miscellaneous</a></li>
+        </ol>
+      </nav>
+      <footer class="site-footer site-footer--sidebar">&copy; Love&trade; Always&reg; Wins</footer>
+    </aside>
+
     <main id="content">
       <!-- Content will load here -->
     </main>

@@ -1,433 +1,247 @@
-/* style.css (v2) */
+/* style.css — 1:1 Cargo template replica */
 
-/* Color system */
-/* Default theme: Dark */
+/* ─── Font: Inter as Diatype substitute ─── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;480;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+/* ─── Swatch System (Cargo-style opacity hierarchy) ─── */
 :root {
-  /* Panel should be slightly lighter than bg for elevation */
-  --text: #e0e0e0;
-  --muted: #9a9a9a;
-  /* Muted low-saturation accent  /* Tech-Humanism Typography */
-  --font-serif: Georgia, 'Times New Roman', Times, serif;
+  --swatch-1: rgba(0, 0, 0, 0.85);
+  --swatch-2: rgba(0, 0, 0, 0.75);
+  --swatch-3: rgba(0, 0, 0, 0.6);
+  --swatch-4: rgba(0, 0, 0, 0.4);
+  --swatch-5: rgba(0, 0, 0, 0.25);
+  --swatch-6: rgba(0, 0, 0, 0.15);
 
-  /* Dark Theme (Default) - Warm Ink Aesthetic */
-  --bg: #191817;
-  /* Warm Ink Black */
-  --panel: #23211f;
-  /* Warm Dark Grey */
-  --text: #e0e0e0;
-  --text-dim: #999;
-  --border: #383533;
-  /* Warm Border */
-  --accent: #fff;
-
-  --thumb: 200px;
-  /* Publication thumbnail max height to avoid tall cards */
-  --thumb-max-h: 160px;
-  /* Highlight color - Muted Bronze / Antiquarian Gold */
-  --highlight: #C5A585;
-}
-
-/* Light theme overrides */
-html.theme-light {
   --bg: #ffffff;
-  --panel: #f7f7f8;
-  --text: #1f2328;
-  --muted: #637381;
-  --border: #e6e8eb;
-  --accent: #2a6fdb;
+  --border: rgba(0, 0, 0, 0.15);
+  --highlight: #800020;
 }
 
-
-/* Import Montserrat from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-/* Universal Box Sizing - Critical for Layout */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* ─── Reset ─── */
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
   margin: 0;
   width: 100%;
   overflow-x: hidden;
-  /* Prevent horizontal scroll wobble */
   background-color: var(--bg);
-  color: var(--text);
-  /* Restore original font preference */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  letter-spacing: -0.025em;
-  /* Tighter kerning */
-  line-height: 1.55;
-  transition: background-color .25s ease, color .25s ease;
+  color: var(--swatch-1);
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* ─── Two-Column Container ─── */
 .container {
   display: flex;
   min-height: 100vh;
-  gap: 0.8rem;
-  /* control space between sidebar and content */
 }
 
-/* Quote uses theme variables */
-.about-section blockquote.about-quote {
-  margin: 1rem 0;
-  padding: 0.8rem 1rem;
-  border-left: 4px solid var(--accent);
-  background: var(--panel);
-  color: var(--text);
-  font-style: italic;
-}
-
-.about-section blockquote.about-quote cite {
-  display: block;
-  margin-top: 0.4rem;
-  color: var(--muted);
-  font-style: normal;
-}
-
-nav {
-  width: 260px;
-  /* widened left sidebar for large text */
-  padding: 1.5rem;
-  background: var(--bg);
-  border-right: 1px solid var(--border);
-  position: sticky;
-  /* follow on scroll (desktop) */
-  top: 0;
-  align-self: flex-start;
-  height: 100vh;
-  /* Fill entire screen height for continuous border */
-  overflow: auto;
-  transition: background-color .25s ease, border-color .25s ease, color .25s ease;
-}
-
-/* Avatar image in left nav */
-/* Avatar flip card */
-.avatar-flip {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 0.8rem auto;
-  perspective: 600px;
-  cursor: pointer;
-}
-
-.avatar-flip-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Desktop: CSS hover handles flip */
-@media (hover: hover) {
-  .avatar-flip:hover .avatar-flip-inner {
-    transform: rotateY(180deg);
-  }
-}
-
-/* Touch: only .flipped class (toggled via JS click) handles flip */
-.avatar-flip.flipped .avatar-flip-inner {
-  transform: rotateY(180deg);
-}
-
-.nav-avatar {
-  display: block;
-  width: 100%;
-  max-width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 0;
-  position: absolute;
+/* ─── Sidebar (Left Panel) ─── */
+.sidebar {
+  width: 45%;
+  max-width: 500px;
+  min-width: 280px;
+  padding: 1rem;
+  position: fixed;
   top: 0;
   left: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  height: 100vh;
+  overflow-y: auto;
+  flex-shrink: 0;
 }
 
-.avatar-back {
-  transform: rotateY(180deg);
-}
-
-
-nav h1 {
-  font-family: var(--font-serif);
-  font-size: 1.8rem;
-  /* Slightly larger for presence */
-  margin: 0.2rem 0 1.6rem;
-  /* tighten space above and below */
-  text-align: center;
-  /* center the name under avatar */
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav li {
-  margin-bottom: 0.5rem;
-}
-
-/* Base link style */
-/* Smart Underline (Ink Flow) */
-a {
-  color: var(--text);
-  text-decoration: none;
-  background-image: linear-gradient(var(--text), var(--text));
-  background-size: 0% 1px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  padding-bottom: 2px;
-  transition: background-size 0.3s cubic-bezier(0.2, 1, 0.3, 1), color 0.25s ease;
-}
-
-a:hover {
-  background-size: 100% 1px;
-}
-
-nav a {
-  color: var(--text);
-  text-decoration: none;
-  background-image: none;
-  /* No underline for nav links by default */
-}
-
-nav a[data-page] {
-  font-size: 0.9rem;
-}
-
-nav a:hover {
-  color: var(--text);
-  /* Optional: Add underline to nav on hover if desired, or keep clean */
-  text-decoration: underline;
-  text-decoration-color: var(--border);
-  text-underline-offset: 4px;
-}
-
-/* active nav item */
-nav a.active {
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  font-weight: 600;
-}
-
-.nav-btn {
-  display: block;
-  color: var(--text);
-  text-decoration: none;
-  font-size: 0.9rem;
-  margin-bottom: 0.4rem;
-  cursor: pointer;
-  /* 添加这一行确保显示手型指针 */
-}
-
-.nav-btn:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--text);
-  /* 悬停时的下划线颜色 */
-}
-
+/* Push main content to the right of the fixed sidebar */
 main {
-  flex: 1;
-  padding: 2rem 2rem 2rem 2.5rem;
-  /* Increased left padding for better centering */
-  max-width: 1000px;
-  margin: 0 auto;
-  /* Center the main content within available space */
-  transition: color .25s ease, background-color .25s ease;
-}
-
-/* Theme toggle button */
-.theme-toggle {
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  z-index: 1000;
-  padding: 8px 12px;
-  /* accommodate larger icon */
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--panel);
-  color: var(--text);
-  font-size: 1.05rem;
-  /* emoji size */
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .2s ease;
-}
-
-.theme-toggle svg {
-  width: 1.35rem;
-  height: 1.35rem;
-  display: block;
-  fill: currentColor;
-  stroke: currentColor;
-}
-
-.theme-toggle:hover {
-  filter: brightness(1.05);
-}
-
-.theme-toggle:active {
-  transform: scale(0.97);
-}
-
-/* Card and quote smooth transitions */
-.publication,
-.about-section blockquote.about-quote {
-  transition: background-color .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease;
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    transition: none !important;
-  }
-}
-
-/* Page Transitions */
-main {
-  /* Ensure container allows overflow for animations if needed */
+  margin-left: 45%;
+  padding: 1rem;
+  max-width: 55%;
   will-change: opacity;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.sidebar-header {
+  margin-bottom: 1.8rem;
 }
 
-.fading-out {
-  opacity: 0;
-  transition: opacity 0.2s ease;
+.sidebar h1 {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0em;
+  margin: 0;
+  color: var(--swatch-1);
 }
 
-/* Stagger Logic: When main has .fading-in, animate its children */
-.fading-in>* {
-  opacity: 0;
-  /* Star invisible */
-  animation: fadeInUp 0.6s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+.sidebar h1 a {
+  color: var(--swatch-1);
+  text-decoration: none;
 }
 
-/* Stagger delays for first 12 elements */
-.fading-in>*:nth-child(1) {
-  animation-delay: 0.05s;
+.sidebar-subtitle {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--swatch-3);
+  line-height: 1.1;
 }
 
-.fading-in>*:nth-child(2) {
-  animation-delay: 0.1s;
+/* Sidebar info links — stacked, bold, like Cargo's "Information / Email / Instagram" */
+.sidebar-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 1.2rem;
 }
 
-.fading-in>*:nth-child(3) {
-  animation-delay: 0.15s;
+.sidebar-info a {
+  color: var(--swatch-1);
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  text-decoration: none;
 }
 
-.fading-in>*:nth-child(4) {
-  animation-delay: 0.2s;
+.sidebar-info a:active {
+  opacity: 0.7;
 }
 
-.fading-in>*:nth-child(5) {
-  animation-delay: 0.25s;
+/* Navigation — numbered index like Cargo */
+.nav-index {
+  margin: 0;
+  padding: 0 0 0 2.5em;
+  list-style-type: decimal;
 }
 
-.fading-in>*:nth-child(6) {
-  animation-delay: 0.3s;
+.nav-index li {
+  margin-bottom: 0;
+  line-height: 1.1;
 }
 
-.fading-in>*:nth-child(7) {
-  animation-delay: 0.35s;
+.nav-index a {
+  color: var(--swatch-1);
+  font-weight: 450;
+  font-size: 1.3rem;
+  text-decoration: none;
 }
 
-.fading-in>*:nth-child(8) {
-  animation-delay: 0.4s;
+.nav-index a:active {
+  opacity: 0.7;
 }
 
-.fading-in>*:nth-child(9) {
-  animation-delay: 0.45s;
+.nav-index a.active {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.fading-in>*:nth-child(10) {
-  animation-delay: 0.5s;
+/* ─── Main Content (Right Panel) ─── */
+/* main margin-left set above after .sidebar */
+
+/* ─── Typography ─── */
+h1, h2, h3 {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 480;
+  margin-top: 0;
+  line-height: 1;
+  color: var(--swatch-2);
 }
 
-.fading-in>*:nth-child(11) {
-  animation-delay: 0.55s;
+h2, h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.fading-in>*:nth-child(12) {
-  animation-delay: 0.6s;
+h4 {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 480;
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+  color: var(--swatch-1);
 }
 
-/* 为publications页面添加样式 */
-/* Publication Grid Layout */
+h3 + p {
+  margin-top: 0.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--swatch-4);
+}
+
+h4 + ul { margin-top: 0; }
+h4 + p { margin-top: 0; }
+
+/* ─── Links — Cargo-style (no underline, opacity on active) ─── */
+a {
+  color: var(--swatch-1);
+  text-decoration: none;
+}
+
+a:active {
+  opacity: 0.7;
+}
+
+/* ─── About Page ─── */
+.about-section a {
+  color: var(--swatch-4);
+  text-decoration: none;
+}
+
+.about-section a:hover {
+  text-decoration: underline;
+}
+
+/* Research interests */
+.interests-list { margin: 1.5rem 0; }
+.interests-list ol { padding-left: 1.2rem; margin: 0; }
+
+.interests-list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+  color: var(--swatch-3);
+}
+
+.interests-list li strong {
+  color: var(--swatch-1);
+  font-weight: 600;
+}
+
+/* ─── Publications ─── */
 .year-section {
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 2rem;
-  padding: 2rem 0;
+  grid-template-columns: 70px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
   border-top: 1px solid var(--border);
 }
 
-.year-section:first-of-type {
-  border-top: none;
-}
+.year-section:first-of-type { border-top: none; }
 
 .year-label {
-  font-family: var(--font-mono);
-  /* Use mono for data/numbers */
-  font-size: 1.1rem;
-  /* Slightly larger */
-  color: var(--text-dim);
-  padding-top: 0.3rem;
+  font-family: 'Space Mono', 'SF Mono', 'Menlo', monospace;
+  font-size: 1rem;
+  color: var(--swatch-4);
+  padding-top: 0.2rem;
+  line-height: 1;
 }
 
 .year-content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  /* Even space below border */
 }
 
 .publication {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1.5rem;
   border-bottom: 1px solid var(--border);
   padding-bottom: 1.5rem;
   margin-bottom: 0;
-}
-
-.pub-text {
-  flex: 1;
-}
-
-.pub-image {
-  max-width: 240px;
-  height: auto;
-  border-radius: 4px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-  border: 1px solid var(--border);
-}
-
-.pub-image:hover {
-  filter: grayscale(0%);
-  transform: scale(1.02);
 }
 
 .publication:last-child {
@@ -435,16 +249,136 @@ main {
   padding-bottom: 0;
 }
 
-/* Lightbox / Modal */
+.pub-text { flex: 1; }
+
+.pub-image {
+  max-width: 200px;
+  height: auto;
+  border-radius: 0;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+
+.pub-image:hover {
+  filter: grayscale(0%);
+}
+
+.publication h4 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+.publication h4 + p,
+.publication h4 + p + p {
+  color: var(--swatch-4);
+}
+
+.publication a {
+  color: var(--swatch-1);
+  text-decoration: none;
+  margin-right: 0.8rem;
+}
+
+.publication a:hover {
+  text-decoration: underline;
+}
+
+.publication p {
+  line-height: 1.2;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.publication, .teaching, .project {
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.publication ul {
+  padding-left: 1.2em;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.publication ul li { margin-bottom: 0.15rem; }
+
+.teaching, .project { margin-bottom: 1.5rem; }
+
+/* ─── News ─── */
+.news-section { margin-top: 2rem; }
+.news-section h3 { margin-top: 0; }
+
+.news-list {
+  border-top: 1px solid var(--border);
+  padding: 0.6rem 0;
+  max-height: 220px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--swatch-5) transparent;
+}
+
+.news-list ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.news-list li {
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+  color: var(--swatch-1);
+}
+
+.news-list::-webkit-scrollbar { width: 6px; }
+.news-list::-webkit-scrollbar-thumb {
+  background-color: var(--swatch-5);
+  border-radius: 999px;
+}
+
+/* ─── Home page ─── */
+.inline-cite {
+  white-space: nowrap;
+  color: var(--swatch-4);
+}
+
+.home-figure {
+  float: right;
+  width: min(50%, 380px);
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-figure figcaption {
+  font-size: 0.9rem;
+  color: var(--swatch-4);
+  margin-top: 0.4rem;
+  line-height: 1.2;
+}
+
+/* ─── Highlight ─── */
+.highlight {
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+.highlight a { color: var(--highlight); }
+
+/* ─── Modal / Lightbox ─── */
 .modal {
   display: none;
   position: fixed;
   z-index: 2000;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.92);
   justify-content: center;
   align-items: center;
   cursor: zoom-out;
@@ -454,427 +388,201 @@ main {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
-  border-radius: 4px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   cursor: default;
 }
 
-.modal.active {
-  display: flex;
-}
+.modal.active { display: flex; }
 
-
-
-/* Home page tweaks */
-.inline-cite {
-  white-space: nowrap;
-  /* keep dash and text together */
-  color: var(--muted);
-}
-
-.home-figure {
-  float: right;
-  width: min(44%, 420px);
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-}
-
-.home-figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-.home-figure figcaption {
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin-top: 0.4rem;
-}
-
-/* (quote block removed per request) */
-
-/* Weaken author and venue lines just under title */
-.publication h4+p,
-.publication h4+p+p {
-  color: var(--muted);
-}
-
-.publication a {
-  color: var(--text);
-  text-decoration: none;
-  margin-right: 1rem;
-}
-
-.publication a:hover {
-  text-decoration: underline;
-}
-
-.teaching,
-.project {
-  margin-bottom: 1.5rem;
-}
-
-/* Research Interests list in About page */
-.interests-list {
-  margin: 1.5rem 0;
-}
-
-.interests-list ol {
-  padding-left: 1.2rem;
-  margin: 0;
-}
-
-.interests-list li {
-  margin-bottom: 0.8rem;
-  line-height: 1.5;
-  color: var(--muted);
-}
-
-.interests-list li strong {
-  color: var(--text);
-  font-weight: 600;
-}
-
-/* Removed conflicting main/publication link overrides to unify style */
-
-/* For links within the "About Me" section content that you just provided: */
-.about-section a {
-  color: #808080;
-  /* Specifically target links within the about section */
-}
-
-.about-section a:hover {
-  text-decoration-color: #C0C0C0;
-  /* Hover color for about section links */
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--font-serif);
-  font-weight: normal;
+/* ─── Footer ─── */
+.site-footer {
+  padding: 1rem;
+  color: var(--swatch-4);
   font-size: 1.3rem;
-  /* Understated, high-end page titles */
-  margin-top: 0;
+  font-weight: 450;
   line-height: 1.2;
 }
 
-h4 {
-  font-family: var(--font-serif);
-  font-weight: normal;
-  /* Reduce the space *below* the h4 heading */
-  margin-bottom: 0.5rem;
-  /* You can try even smaller values like 0.25rem or 0 */
-  /* If you want the font size of h4 to be slightly larger than regular text but smaller than h3,
-     you can set it here if you haven't already: */
-  /* font-size: 1.1rem; */
+/* Sidebar footer pinned to bottom */
+.site-footer--sidebar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-/* --- Specific adjustments for ul and p tags after h4 (if needed) --- */
-
-/* This targets an unordered list directly following an h4 */
-h4+ul {
-  margin-top: 0;
-  /* Remove or reduce the space *above* the list */
+/* ─── Page Transitions ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* This targets a paragraph directly following an h4 (e.g., in "Other Papers") */
-h4+p {
-  margin-top: 0;
-  /* Remove or reduce the space *above* the paragraph */
+.fading-out {
+  opacity: 0;
+  transition: opacity 0.15s ease;
 }
 
-/* If you have .publication divs, you might want to adjust space for h4 within them too if they exist.
-   Based on your latest "Publications" code, the h4 is inside the .publication div already,
-   so the general h4 rule should apply. */
-
-/* Also check the spacing around .publication and .teaching divs */
-.publication,
-.teaching,
-.project {
-  margin-bottom: 1rem;
-  /* You can reduce this further if needed, e.g., 0.5rem */
+.fading-in > * {
+  opacity: 0;
+  animation: fadeInUp 0.4s cubic-bezier(0.2, 1, 0.3, 1) forwards;
 }
 
+.fading-in > *:nth-child(1) { animation-delay: 0.03s; }
+.fading-in > *:nth-child(2) { animation-delay: 0.06s; }
+.fading-in > *:nth-child(3) { animation-delay: 0.09s; }
+.fading-in > *:nth-child(4) { animation-delay: 0.12s; }
+.fading-in > *:nth-child(5) { animation-delay: 0.15s; }
+.fading-in > *:nth-child(6) { animation-delay: 0.18s; }
+.fading-in > *:nth-child(7) { animation-delay: 0.21s; }
+.fading-in > *:nth-child(8) { animation-delay: 0.24s; }
+
+/* ─── Scroll Reveal (Cargo scale-in) ─── */
+.scroll-reveal {
+  opacity: 0;
+  transform: scale(0.875);
+  transform-origin: 50% 0%;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+  .scroll-reveal { opacity: 1; transform: none; }
+}
+
+/* ─── Mobile Header & Menu ─── */
+.mobile-header {
+  display: none;
+}
+
+/* ─── Mobile ─── */
 @media (max-width: 768px) {
+  /* Fixed top bar */
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    padding: 0.8rem 1rem;
+    background: var(--bg);
+    border-bottom: none;
+  }
+
+  .mobile-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 1px;
+    background: var(--swatch-1);
+  }
+
+  .mobile-header-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--swatch-1);
+  }
+
+  .mobile-menu-btn {
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 450;
+    color: var(--swatch-1);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .mobile-menu-btn:active {
+    opacity: 0.7;
+  }
+
+  /* Sidebar becomes fullscreen overlay */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: none;
+    min-width: auto;
+    height: 100vh;
+    z-index: 300;
+    padding: 1rem;
+    background: var(--bg);
+    overflow-y: auto;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.menu-open {
+    transform: translateY(0);
+  }
+
+  .site-footer--sidebar {
+    display: none;
+  }
+
   .container {
     flex-direction: column;
-    /* 在小屏幕上，将导航和主内容垂直堆叠 */
-    padding-left: 12px;
-    /* 对称左右留白，避免视觉偏左 */
-    padding-right: 12px;
-  }
-
-  nav {
-    width: 100%;
-    /* 导航栏占据全部宽度 */
-    height: auto;
-    /* Reset height for mobile */
-    padding: 1rem;
-    /* 调整内边距，使其在顶部时更合理 */
-    text-align: center;
-    /* 导航项居中显示 */
-    position: static;
-    /* disable sticky on mobile */
-    top: auto;
-    align-self: stretch;
-    border-right: none;
-    /* Remove vertical divider */
-    border-bottom: 1px solid var(--border);
-    /* Add horizontal divider */
-  }
-
-  /* Tweak avatar flip size on small screens */
-  .avatar-flip {
-    margin-bottom: 0.8rem;
-  }
-
-  /* Stack the year/content grid on mobile */
-  .year-section {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
-  }
-
-  .year-label {
-    width: auto;
-    margin-bottom: 0.5rem;
-    padding-top: 0;
-    font-size: 1.2rem;
-    /* Make year bold/clear on mobile */
-    opacity: 0.6;
-  }
-
-  nav h1 {
-    font-size: 1.8rem;
-    /* Make sure mobile name is large enough */
-    margin-bottom: 1rem;
-    /* 调整标题下边距 */
-  }
-
-  nav ul {
-    display: flex;
-    /* 让导航链接水平排列 */
-    justify-content: center;
-    /* 导航链接居中 */
-    flex-wrap: wrap;
-    /* 如果链接太多，允许换行 */
-  }
-
-  nav li {
-    margin: 0 0.8rem 0.5rem 0.8rem;
-    /* 调整列表项间距，使其水平分布 */
-  }
-
-  nav a[data-page] {
-    font-size: 0.9rem;
-    /* 导航链接字体可以适当减小 */
-  }
-
-  .nav-btn {
-    display: inline-block;
-    /* 让按钮水平排列 */
-    margin: 0 0.5rem 0.5rem 0.5rem;
-    /* 调整按钮间距 */
   }
 
   main {
+    margin-left: 0;
     padding: 1rem;
-    /* 调整主内容区内边距 */
-    width: 100%;
-    max-width: 920px;
-    margin-left: auto;
-    /* 居中主内容，防止视觉偏左 */
-    margin-right: auto;
-  }
-
-  /* 如果你的 .paper-box 布局是两列或多列，也需要调整为单列 */
-  .paper-box {
-    flex-direction: column;
-    /* 假设 .paper-box 也是 flex 布局 */
-    align-items: center;
-    /* 内容居中 */
-  }
-
-  .pub-thumb {
-    float: none;
-    width: 100%;
-    max-width: none;
-    margin: 0 0 0.6rem 0;
-  }
-
-  .paper-box-image {
-    width: 80%;
-    /* 图片在小屏幕上宽度可以更大 */
-    margin-bottom: 1rem;
-    /* 图片下方增加间距 */
-  }
-
-  .paper-box-text {
-    width: 100%;
-    /* 文本区域占据全部宽度 */
-    padding: 0;
-    /* 移除左右内边距 */
-  }
-
-  /* 调整其他可能需要改变的元素，如图片、表格等 */
-  img {
+    padding-top: 3.5rem;
     max-width: 100%;
-    /* 确保图片不会超出其容器 */
-    height: auto;
-    /* 保持图片比例 */
   }
 
-  /* iOS 等安全区适配，避免贴边引起的偏左/偏右视觉问题 */
-  body {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
+  h2, h3 { font-size: 1.5rem; }
+
+  .year-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
   }
 
-  .theme-toggle {
-    right: max(12px, env(safe-area-inset-right));
-  }
-
-  /* On small screens, stack the figure naturally */
-  .home-figure {
-    float: none;
-    width: 100%;
-    margin: 0 0 1rem 0;
+  .year-label {
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
   }
 
   .publication {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
   .pub-image {
     max-width: 100%;
     align-self: center;
   }
-}
 
-
-.publication p {
-  line-height: 1.2;
-  /* Reduce line height. Default is usually around 1.5-1.6. Try 1.2, 1.3, or 1.4 */
-  margin-top: 0.3rem;
-  /* Reduce top margin for paragraphs */
-  margin-bottom: 0.3rem;
-  /* Reduce bottom margin for paragraphs */
-  /* You can even try smaller margins like 0.1rem or 0.2rem if you want them very close */
-}
-
-/* Slightly larger thumbnails on very wide screens */
-@media (min-width: 1280px) {
-  :root {
-    --thumb: 220px;
-    --thumb-max-h: 200px;
+  .home-figure {
+    float: none;
+    width: 100%;
+    margin: 0 0 1rem 0;
   }
-}
 
-/* Adjust the margin of the h4 within the publication box if needed */
-.publication h4 {
-  margin-top: 0;
-  /* Tighter top spacing inside card */
-  margin-bottom: 0.45rem;
-}
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 
-/* Also, reconsider the overall bottom margin of each publication entry if they are too far apart */
-.publication {
-  margin-bottom: 1rem;
-  /* Card spacing */
-  padding-bottom: 1rem;
-  /* Match top padding for symmetry */
-}
-
-/* Ensure list items within publications (if any, though not in your current snippet) also have tight spacing */
-.publication ul {
-  padding-left: 1.2em;
-  /* Adjust left padding for lists */
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-}
-
-.publication ul li {
-  margin-bottom: 0.2rem;
-  /* Spacing between list items */
-}
-
-/* Specific adjustment for the general "Publications & Preprints" heading */
-h3 {
-  margin-bottom: 1rem;
-  /* Adjust space below this main heading */
-}
-
-/* And the small text below the main heading */
-.publications-page p:first-of-type {
-  /* Assuming this is the p tag for "(*) represents equal contribution" */
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-  /* Adjust as needed */
-}
-
-/* Tighter spacing between h3 and its immediate explanatory paragraph */
-h3+p {
-  margin-top: 0.4rem;
-  margin-bottom: 0.8rem;
-  color: var(--muted);
-}
-
-/* Scrollable News section */
-.news-section {
-  margin-top: 2rem;
-}
-
-.news-section h3 {
-  margin-top: 0;
-}
-
-.news-list {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 0.6rem 0.8rem;
-  max-height: 200px;
-  /* adjust as needed */
-  overflow: auto;
-  /* show scrollbar when content overflows */
-  scrollbar-width: thin;
-  /* Firefox */
-  scrollbar-color: color-mix(in oklab, var(--text), transparent 70%) transparent;
-  /* Firefox */
-}
-
-.news-list ul {
-  margin: 0;
-  padding-left: 1.2rem;
-  list-style: disc;
-  /* Restore bullets */
-}
-
-.news-list li {
-  margin-bottom: 0.25rem;
-  line-height: 1.55;
-  color: var(--text);
-}
-
-/* WebKit scrollbar styling */
-.news-list::-webkit-scrollbar {
-  width: 8px;
-}
-
-.news-list::-webkit-scrollbar-thumb {
-  background-color: color-mix(in oklab, var(--text), transparent 70%);
-  border-radius: 999px;
-}
-
-.highlight {
-  color: var(--highlight);
-  font-weight: 600;
-}
-
-.highlight a {
-  color: var(--highlight);
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
 }
