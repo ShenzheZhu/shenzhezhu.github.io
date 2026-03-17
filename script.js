@@ -216,6 +216,15 @@ window.addEventListener('hashchange', () => {
   });
 })();
 
+// Mobile bottom bar
+(function initMobileFooter() {
+  document.querySelectorAll('#btn-top, #btn-top-right').forEach(btn => {
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+})();
+
 // Initial load
 const initialPage = location.hash ? location.hash.slice(1) : 'about';
 setActiveLink(initialPage);
