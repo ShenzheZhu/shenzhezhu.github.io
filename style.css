@@ -1,8 +1,6 @@
 /* style.css — 1:1 Cargo template replica */
 
-/* ─── Font: Inter as Diatype substitute ─── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;480;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+/* ─── Font: Inter as Diatype substitute (loaded via <link> in HTML) ─── */
 
 /* ─── Swatch System (Cargo-style opacity hierarchy) ─── */
 :root {
@@ -18,6 +16,32 @@
   --highlight: #800020;
 }
 
+/* ─── Skip Link ─── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--swatch-1);
+  color: var(--bg);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+/* ─── Focus Indicators ─── */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--swatch-1);
+  outline-offset: 2px;
+}
+
 /* ─── Reset ─── */
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -31,7 +55,6 @@ body {
   font-size: 1.1rem;
   font-weight: normal;
   line-height: 1.2;
-  letter-spacing: 0em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -59,9 +82,8 @@ body {
 /* Push main content to the right of the fixed sidebar */
 main {
   margin-left: 45%;
-  padding: 1rem;
+  padding: 0.5rem 1rem 1rem;
   max-width: 55%;
-  will-change: opacity;
 }
 
 .sidebar-header {
@@ -73,7 +95,6 @@ main {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.1;
-  letter-spacing: 0em;
   margin: 0;
   color: var(--swatch-1);
 }
@@ -95,7 +116,6 @@ main {
 .sidebar-info {
   display: flex;
   flex-direction: column;
-  gap: 0;
   margin-bottom: 1.2rem;
 }
 
@@ -249,7 +269,7 @@ a:active {
   padding-bottom: 0;
 }
 
-.pub-text { flex: 1; }
+.pub-text { flex: 1; min-width: 0; }
 
 .pub-image {
   max-width: 200px;
@@ -373,15 +393,23 @@ a:active {
 
 /* ─── Modal / Lightbox ─── */
 .modal {
-  display: none;
   position: fixed;
   z-index: 2000;
   top: 0; left: 0;
   width: 100%; height: 100%;
   background-color: rgba(0, 0, 0, 0.92);
+  display: flex;
   justify-content: center;
   align-items: center;
   cursor: zoom-out;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal-content {
@@ -389,9 +417,13 @@ a:active {
   max-height: 90%;
   object-fit: contain;
   cursor: default;
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
 }
 
-.modal.active { display: flex; }
+.modal.active .modal-content {
+  transform: scale(1);
+}
 
 /* ─── Footer ─── */
 .site-footer {
@@ -418,6 +450,7 @@ a:active {
 .fading-out {
   opacity: 0;
   transition: opacity 0.15s ease;
+  will-change: opacity;
 }
 
 .fading-in > * {
@@ -473,9 +506,8 @@ a:active {
     left: 0;
     right: 0;
     z-index: 200;
-    padding: 0.8rem 1rem;
+    padding: 0.1rem 1rem 0.4rem;
     background: var(--bg);
-    border-bottom: none;
   }
 
   .mobile-header::after {
@@ -502,11 +534,31 @@ a:active {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: 0.5rem 0;
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   .mobile-menu-btn:active {
     opacity: 0.7;
+  }
+
+  /* Increase touch targets for sidebar links */
+  .sidebar-info a {
+    padding: 0.35rem 0;
+    display: block;
+  }
+
+  .nav-index li {
+    line-height: 1.4;
+  }
+
+  .nav-index a {
+    padding: 0.3rem 0;
+    display: inline-block;
   }
 
   /* Sidebar becomes fullscreen overlay */
@@ -543,7 +595,7 @@ a:active {
   main {
     margin-left: 0;
     padding: 1rem;
-    padding-top: 3.5rem;
+    padding-top: 3.8rem;
     max-width: 100%;
   }
 
@@ -568,6 +620,11 @@ a:active {
   .pub-image {
     max-width: 100%;
     align-self: center;
+  }
+
+  .publication a {
+    display: inline-block;
+    padding: 0.25rem 0;
   }
 
   .home-figure {
