@@ -229,3 +229,13 @@ window.addEventListener('hashchange', () => {
 const initialPage = location.hash ? location.hash.slice(1) : 'about';
 setActiveLink(initialPage);
 loadPage(initialPage);
+
+// Easter egg
+(function initEasterEgg() {
+  const trigger = document.getElementById('easter-egg');
+  const overlay = document.getElementById('easter-egg-overlay');
+  if (!trigger || !overlay) return;
+
+  trigger.addEventListener('click', () => overlay.classList.add('active'));
+  overlay.addEventListener('click', () => overlay.classList.remove('active'));
+})();
