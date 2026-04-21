@@ -145,7 +145,7 @@ links.forEach(link => {
 // Hash navigation (back/forward only — skip if triggered by click)
 let lastLoadedPage = null;
 window.addEventListener('hashchange', () => {
-  const page = location.hash ? location.hash.slice(1) : 'about';
+  const page = location.hash ? location.hash.slice(1) : 'home';
   if (page === lastLoadedPage) return;
   setActiveLink(page);
   loadPage(page);
