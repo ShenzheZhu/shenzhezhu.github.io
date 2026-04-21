@@ -92,7 +92,7 @@ main {
 
 .sidebar h1 {
   font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
   line-height: 1.1;
   margin: 0;
@@ -106,7 +106,7 @@ main {
 
 .sidebar-subtitle {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: var(--swatch-3);
   line-height: 1.1;
@@ -123,7 +123,7 @@ main {
 .sidebar-info a {
   color: var(--swatch-1);
   font-weight: 500;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   line-height: 1.1;
   text-decoration: none;
 }
@@ -142,12 +142,13 @@ main {
 .nav-index li {
   margin-bottom: 0;
   line-height: 1.1;
+  font-size: 0.8rem;
 }
 
 .nav-index a {
   color: var(--swatch-1);
   font-weight: 450;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-decoration: none;
 }
 
@@ -456,7 +457,7 @@ a:active {
 .site-footer {
   padding: 1rem;
   color: var(--swatch-4);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 450;
   line-height: 1.2;
 }
