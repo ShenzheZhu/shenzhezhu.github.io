@@ -226,7 +226,7 @@ window.addEventListener('hashchange', () => {
 })();
 
 // Initial load
-const initialPage = location.hash ? location.hash.slice(1) : 'about';
+const initialPage = location.hash ? location.hash.slice(1) : 'home';
 setActiveLink(initialPage);
 loadPage(initialPage);
 
