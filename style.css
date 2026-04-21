@@ -51,7 +51,7 @@ body {
   overflow-x: hidden;
   background-color: var(--bg);
   color: var(--swatch-1);
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.1rem;
   font-weight: normal;
   line-height: 1.2;
@@ -91,7 +91,7 @@ main {
 }
 
 .sidebar h1 {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.1;
@@ -165,7 +165,7 @@ main {
 
 /* ─── Typography ─── */
 h1, h2, h3 {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 480;
   margin-top: 0;
   line-height: 1;
@@ -178,7 +178,7 @@ h2, h3 {
 }
 
 h4 {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 480;
   margin-top: 0;
   margin-bottom: 0.4rem;
@@ -242,7 +242,7 @@ a:active {
 .year-section:first-of-type { border-top: none; }
 
 .year-label {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.1rem;
   color: var(--swatch-4);
   padding-top: 0.2rem;
