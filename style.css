@@ -233,29 +233,34 @@ a:active {
 
 /* ─── Publications ─── */
 .pub-tabs {
-  display: flex;
-  gap: 1.5rem;
-  margin: 1.5rem 0 2rem;
-  border-bottom: 1px solid var(--swatch-6);
-  padding-bottom: 0.5rem;
+  display: inline-flex;
+  margin: 1rem 0 2rem;
+  border: 1px solid var(--swatch-5);
+  border-radius: 2px;
+  overflow: hidden;
 }
 
 .pub-tab {
   background: none;
   border: none;
-  padding: 0.2rem 0;
-  color: var(--swatch-4);
+  padding: 0.35rem 0.9rem;
+  color: var(--swatch-3);
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   letter-spacing: 0.02em;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-.pub-tab:hover { color: var(--swatch-2); }
+.pub-tab + .pub-tab {
+  border-left: 1px solid var(--swatch-5);
+}
+
+.pub-tab:hover { color: var(--swatch-1); }
 
 .pub-tab.active {
-  color: var(--swatch-1);
+  background: var(--swatch-1);
+  color: var(--bg);
   font-weight: 500;
 }
 
