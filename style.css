@@ -233,35 +233,31 @@ a:active {
 
 /* ─── Publications ─── */
 .pub-tabs {
-  display: inline-flex;
+  display: flex;
+  gap: 1.5rem;
   margin: 1rem 0 2rem;
-  border: 1px solid var(--swatch-5);
-  border-radius: 2px;
-  overflow: hidden;
 }
 
 .pub-tab {
   background: none;
   border: none;
-  padding: 0.35rem 0.9rem;
-  color: var(--swatch-3);
+  padding: 0;
+  color: var(--swatch-4);
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   letter-spacing: 0.02em;
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: color 0.15s ease;
 }
 
-.pub-tab + .pub-tab {
-  border-left: 1px solid var(--swatch-5);
-}
-
-.pub-tab:hover { color: var(--swatch-1); }
+.pub-tab:hover { color: var(--swatch-2); }
 
 .pub-tab.active {
-  background: var(--swatch-1);
-  color: var(--bg);
+  color: var(--swatch-1);
   font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
 
 .year-section {
