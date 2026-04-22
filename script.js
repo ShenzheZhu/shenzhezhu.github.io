@@ -117,12 +117,23 @@ function initPubTabs() {
     pubs.forEach(pub => {
       const isSelected = pub.dataset.selected === 'true';
       pub.style.display = (filter === 'all' || isSelected) ? '' : 'none';
+      pub.classList.remove('pub-last-visible');
     });
+
+    let firstVisibleSection = null;
     content.querySelectorAll('.year-section').forEach(section => {
-      const visible = section.querySelectorAll('.publication');
-      const anyVisible = Array.from(visible).some(p => p.style.display !== 'none');
-      section.style.display = anyVisible ? '' : 'none';
+      section.classList.remove('year-first-visible');
+      const visiblePubs = Array.from(section.querySelectorAll('.publication'))
+        .filter(p => p.style.display !== 'none');
+      if (visiblePubs.length) {
+        section.style.display = '';
+        visiblePubs[visiblePubs.length - 1].classList.add('pub-last-visible');
+        if (!firstVisibleSection) firstVisibleSection = section;
+      } else {
+        section.style.display = 'none';
+      }
     });
+    if (firstVisibleSection) firstVisibleSection.classList.add('year-first-visible');
   }
 
   tabs.forEach(tab => {

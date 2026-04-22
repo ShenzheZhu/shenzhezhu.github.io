@@ -269,6 +269,7 @@ a:active {
 }
 
 .year-section:first-of-type { border-top: none; }
+.year-section.year-first-visible { border-top: none; }
 
 .year-label {
   font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -294,7 +295,8 @@ a:active {
   margin-bottom: 0;
 }
 
-.publication:last-child {
+.publication:last-child,
+.publication.pub-last-visible {
   border-bottom: none;
   padding-bottom: 0;
 }
