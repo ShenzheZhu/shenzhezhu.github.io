@@ -31,7 +31,10 @@ async function loadPage(page) {
     window.scrollTo(0, 0);
 
     // Publications year grouping
-    if (page === 'publications') groupPublicationsByYear();
+    if (page === 'publications') {
+      groupPublicationsByYear();
+      initPubTabs();
+    }
 
     // Make pub-images keyboard accessible
     content.querySelectorAll('.pub-image').forEach(img => {
@@ -103,6 +106,37 @@ function groupPublicationsByYear() {
   });
 
   container.removeChild(placeholder);
+}
+
+function initPubTabs() {
+  const tabs = content.querySelectorAll('.pub-tab');
+  if (!tabs.length) return;
+
+  function applyFilter(filter) {
+    const pubs = content.querySelectorAll('.publication');
+    pubs.forEach(pub => {
+      const isSelected = pub.dataset.selected === 'true';
+      pub.style.display = (filter === 'all' || isSelected) ? '' : 'none';
+    });
+    content.querySelectorAll('.year-section').forEach(section => {
+      const visible = section.querySelectorAll('.publication');
+      const anyVisible = Array.from(visible).some(p => p.style.display !== 'none');
+      section.style.display = anyVisible ? '' : 'none';
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.toggle('active', t === tab);
+        t.setAttribute('aria-selected', t === tab);
+      });
+      applyFilter(tab.dataset.filter);
+    });
+  });
+
+  const activeTab = content.querySelector('.pub-tab.active');
+  applyFilter(activeTab ? activeTab.dataset.filter : 'selected');
 }
 
 // Scroll reveal — Cargo-style scale-in

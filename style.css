@@ -232,6 +232,33 @@ a:active {
 }
 
 /* ─── Publications ─── */
+.pub-tabs {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+  border-bottom: 1px solid var(--swatch-6);
+  padding-bottom: 0.5rem;
+}
+
+.pub-tab {
+  background: none;
+  border: none;
+  padding: 0.2rem 0;
+  color: var(--swatch-4);
+  font-family: inherit;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.pub-tab:hover { color: var(--swatch-2); }
+
+.pub-tab.active {
+  color: var(--swatch-1);
+  font-weight: 500;
+}
+
 .year-section {
   display: grid;
   grid-template-columns: 70px 1fr;
