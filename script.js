@@ -116,15 +116,16 @@ function initGallery() {
   const gallery = content.querySelector('.home-gallery');
   if (!gallery) return;
 
+  const track = gallery.querySelector('.gallery-track');
   const slides = gallery.querySelectorAll('.gallery-slide');
   const caption = gallery.querySelector('.gallery-caption');
-  if (slides.length < 2) return;
+  if (!track || slides.length < 2) return;
 
   const interval = parseInt(gallery.dataset.interval, 10) || 5000;
   let idx = 0;
 
   function show(i) {
-    slides.forEach((s, n) => s.classList.toggle('active', n === i));
+    track.style.transform = `translateX(-${i * 100}%)`;
     if (caption) caption.innerHTML = slides[i].dataset.caption || '';
   }
 
