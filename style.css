@@ -262,18 +262,38 @@ a:active {
 
 .interest:hover > summary strong { color: var(--swatch-2); }
 
+.interest-body {
+  padding: 0.4rem 0 0.4rem 1.3rem;
+}
+
+.interest-q {
+  margin: 0 0 0.5rem 0;
+  color: var(--swatch-3);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
 .interest-works {
   list-style: disc;
-  padding-left: 2rem;
-  margin: 0.5rem 0 0.4rem;
+  padding-left: 1.2rem;
+  margin: 0;
   color: var(--swatch-3);
   font-size: 0.95rem;
 }
 
 .interest-works li {
   margin-bottom: 0.35rem;
-  line-height: 1.4;
+  line-height: 1.45;
 }
+
+.interest-works a {
+  color: var(--swatch-2);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+.interest-works a:hover { color: var(--highlight); }
 
 .interest-works:empty::before {
   content: '— Coming soon —';
