@@ -848,6 +848,8 @@ a:active {
     background: var(--bg);
   }
 
+  body.page-home .mobile-footer { display: none; }
+
   .mobile-footer::before {
     content: '';
     position: absolute;
