@@ -470,7 +470,7 @@ a:active {
 
 .home-figure {
   float: right;
-  width: min(60%, 450px);
+  width: min(50%, 380px);
   margin-left: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -492,7 +492,7 @@ a:active {
 .gallery-stack {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
 }
 
