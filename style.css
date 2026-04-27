@@ -815,8 +815,9 @@ a:active {
 
   .home-figure {
     float: none;
-    width: 100%;
-    margin: 0 0 1rem 0;
+    width: 75%;
+    max-width: 320px;
+    margin: 0 auto 1rem;
   }
 
   img {
