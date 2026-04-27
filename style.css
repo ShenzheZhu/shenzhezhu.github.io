@@ -521,6 +521,11 @@ a:active {
   object-fit: contain;
 }
 
+.gallery-track .gallery-slide:nth-child(2) img {
+  max-height: 90%;
+  max-width: 90%;
+}
+
 /* ─── Highlight ─── */
 .highlight {
   color: var(--highlight);
