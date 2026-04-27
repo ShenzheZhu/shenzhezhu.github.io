@@ -486,6 +486,7 @@ a:active {
   color: var(--swatch-4);
   margin-top: 0.4rem;
   line-height: 1.2;
+  text-align: center;
 }
 
 /* Gallery slideshow */
