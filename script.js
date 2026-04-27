@@ -36,6 +36,8 @@ async function loadPage(page) {
       initPubTabs();
     }
 
+    if (page === 'home') initGallery();
+
     // Make pub-images keyboard accessible
     content.querySelectorAll('.pub-image').forEach(img => {
       img.setAttribute('tabindex', '0');
@@ -106,6 +108,31 @@ function groupPublicationsByYear() {
   });
 
   container.removeChild(placeholder);
+}
+
+let galleryTimer = null;
+function initGallery() {
+  if (galleryTimer) { clearInterval(galleryTimer); galleryTimer = null; }
+  const gallery = content.querySelector('.home-gallery');
+  if (!gallery) return;
+
+  const slides = gallery.querySelectorAll('.gallery-slide');
+  const caption = gallery.querySelector('.gallery-caption');
+  if (slides.length < 2) return;
+
+  const interval = parseInt(gallery.dataset.interval, 10) || 5000;
+  let idx = 0;
+
+  function show(i) {
+    slides.forEach((s, n) => s.classList.toggle('active', n === i));
+    if (caption) caption.innerHTML = slides[i].dataset.caption || '';
+  }
+
+  show(0);
+  galleryTimer = setInterval(() => {
+    idx = (idx + 1) % slides.length;
+    show(idx);
+  }, interval);
 }
 
 function initPubTabs() {
