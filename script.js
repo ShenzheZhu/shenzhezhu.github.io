@@ -118,21 +118,37 @@ function initGallery() {
   if (!gallery) return;
 
   const track = gallery.querySelector('.gallery-track');
-  const slides = gallery.querySelectorAll('.gallery-slide');
+  const slides = Array.from(gallery.querySelectorAll('.gallery-slide'));
   const caption = gallery.querySelector('.gallery-caption');
   if (!track || slides.length < 2) return;
+
+  const realCount = slides.length;
+  // Clone the first slide and append so we can slide forward past the last
+  // into a visual duplicate, then silently snap back to the real first.
+  track.appendChild(slides[0].cloneNode(true));
 
   const interval = parseInt(gallery.dataset.interval, 10) || 5000;
   let idx = 0;
 
   function show(i) {
     track.style.transform = `translateX(-${i * 100}%)`;
-    if (caption) caption.innerHTML = slides[i].dataset.caption || '';
+    const realIdx = i % realCount;
+    if (caption) caption.innerHTML = slides[realIdx].dataset.caption || '';
   }
+
+  track.addEventListener('transitionend', () => {
+    if (idx === realCount) {
+      track.style.transition = 'none';
+      idx = 0;
+      track.style.transform = 'translateX(0%)';
+      void track.offsetWidth;
+      track.style.transition = '';
+    }
+  });
 
   show(0);
   galleryTimer = setInterval(() => {
-    idx = (idx + 1) % slides.length;
+    idx += 1;
     show(idx);
   }, interval);
 }
