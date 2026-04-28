@@ -119,75 +119,33 @@ function groupPublicationsByYear() {
 }
 
 let galleryTimer = null;
-let galleryResetTimer = null;
-let galleryVisibilityHandler = null;
 function initGallery() {
   if (galleryTimer) { clearInterval(galleryTimer); galleryTimer = null; }
-  if (galleryResetTimer) { clearTimeout(galleryResetTimer); galleryResetTimer = null; }
-  if (galleryVisibilityHandler) {
-    document.removeEventListener('visibilitychange', galleryVisibilityHandler);
-    galleryVisibilityHandler = null;
-  }
   const gallery = content.querySelector('.home-gallery');
   if (!gallery) return;
 
   const track = gallery.querySelector('.gallery-track');
   const slides = Array.from(gallery.querySelectorAll('.gallery-slide'));
   const caption = gallery.querySelector('.gallery-caption');
-  if (!track || slides.length < 2) return;
-
-  const realCount = slides.length;
-  // Clone the first slide and append so we can slide forward past the last
-  // into a visual duplicate, then silently snap back to the real first.
-  track.appendChild(slides[0].cloneNode(true));
+  if (!track || !slides.length) return;
 
   const interval = parseInt(gallery.dataset.interval, 10) || 5000;
-  const transitionMs = 600;
   let idx = 0;
 
-  function show(i, animate = true) {
-    track.style.transition = animate ? '' : 'none';
-    track.style.transform = `translateX(-${i * 100}%)`;
-    const realIdx = i % realCount;
-    if (caption) caption.innerHTML = slides[realIdx].dataset.caption || '';
-    if (!animate) {
-      void track.offsetWidth;
-      track.style.transition = '';
-    }
+  function show(i) {
+    idx = i % slides.length;
+    slides.forEach((slide, slideIdx) => {
+      slide.classList.toggle('is-active', slideIdx === idx);
+      slide.setAttribute('aria-hidden', slideIdx === idx ? 'false' : 'true');
+    });
+    if (caption) caption.innerHTML = slides[idx].dataset.caption || '';
   }
-
-  function snapToFirst() {
-    if (idx !== realCount) return;
-    show(0, false);
-    idx = 0;
-  }
-
-  track.addEventListener('transitionend', snapToFirst);
-
-  function scheduleReset() {
-    if (galleryResetTimer) clearTimeout(galleryResetTimer);
-    galleryResetTimer = setTimeout(() => {
-      snapToFirst();
-      galleryResetTimer = null;
-    }, transitionMs + 50);
-  }
-
-  galleryVisibilityHandler = () => {
-    if (!document.hidden && idx >= realCount) {
-      snapToFirst();
-    }
-  };
-  document.addEventListener('visibilitychange', galleryVisibilityHandler);
 
   show(0);
+  if (slides.length < 2) return;
+
   galleryTimer = setInterval(() => {
-    if (idx >= realCount) {
-      idx = 0;
-      show(0, false);
-    }
-    idx += 1;
-    show(idx);
-    if (idx === realCount) scheduleReset();
+    show(idx + 1);
   }, interval);
 }
 
