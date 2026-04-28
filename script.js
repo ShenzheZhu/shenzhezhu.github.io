@@ -119,8 +119,15 @@ function groupPublicationsByYear() {
 }
 
 let galleryTimer = null;
+let galleryResetTimer = null;
+let galleryVisibilityHandler = null;
 function initGallery() {
   if (galleryTimer) { clearInterval(galleryTimer); galleryTimer = null; }
+  if (galleryResetTimer) { clearTimeout(galleryResetTimer); galleryResetTimer = null; }
+  if (galleryVisibilityHandler) {
+    document.removeEventListener('visibilitychange', galleryVisibilityHandler);
+    galleryVisibilityHandler = null;
+  }
   const gallery = content.querySelector('.home-gallery');
   if (!gallery) return;
 
@@ -135,28 +142,52 @@ function initGallery() {
   track.appendChild(slides[0].cloneNode(true));
 
   const interval = parseInt(gallery.dataset.interval, 10) || 5000;
+  const transitionMs = 600;
   let idx = 0;
 
-  function show(i) {
+  function show(i, animate = true) {
+    track.style.transition = animate ? '' : 'none';
     track.style.transform = `translateX(-${i * 100}%)`;
     const realIdx = i % realCount;
     if (caption) caption.innerHTML = slides[realIdx].dataset.caption || '';
-  }
-
-  track.addEventListener('transitionend', () => {
-    if (idx === realCount) {
-      track.style.transition = 'none';
-      idx = 0;
-      track.style.transform = 'translateX(0%)';
+    if (!animate) {
       void track.offsetWidth;
       track.style.transition = '';
     }
-  });
+  }
+
+  function snapToFirst() {
+    if (idx !== realCount) return;
+    show(0, false);
+    idx = 0;
+  }
+
+  track.addEventListener('transitionend', snapToFirst);
+
+  function scheduleReset() {
+    if (galleryResetTimer) clearTimeout(galleryResetTimer);
+    galleryResetTimer = setTimeout(() => {
+      snapToFirst();
+      galleryResetTimer = null;
+    }, transitionMs + 50);
+  }
+
+  galleryVisibilityHandler = () => {
+    if (!document.hidden && idx >= realCount) {
+      snapToFirst();
+    }
+  };
+  document.addEventListener('visibilitychange', galleryVisibilityHandler);
 
   show(0);
   galleryTimer = setInterval(() => {
+    if (idx >= realCount) {
+      idx = 0;
+      show(0, false);
+    }
     idx += 1;
     show(idx);
+    if (idx === realCount) scheduleReset();
   }, interval);
 }
 
