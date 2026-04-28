@@ -119,26 +119,40 @@ function groupPublicationsByYear() {
 }
 
 let galleryTimer = null;
+let galleryResetTimer = null;
 function initGallery() {
   if (galleryTimer) { clearInterval(galleryTimer); galleryTimer = null; }
+  if (galleryResetTimer) { clearTimeout(galleryResetTimer); galleryResetTimer = null; }
   const gallery = content.querySelector('.home-gallery');
   if (!gallery) return;
 
   const track = gallery.querySelector('.gallery-track');
-  const slides = Array.from(gallery.querySelectorAll('.gallery-slide'));
   const caption = gallery.querySelector('.gallery-caption');
-  if (!track || !slides.length) return;
+  if (!track) return;
+
+  track.querySelectorAll('.gallery-slide[data-clone="true"]').forEach(slide => slide.remove());
+  const slides = Array.from(track.querySelectorAll('.gallery-slide'));
+  if (!slides.length) return;
+
+  const firstClone = slides[0].cloneNode(true);
+  firstClone.dataset.clone = 'true';
+  firstClone.setAttribute('aria-hidden', 'true');
+  track.appendChild(firstClone);
 
   const interval = parseInt(gallery.dataset.interval, 10) || 5000;
+  const transitionMs = 600;
+  const realCount = slides.length;
   let idx = 0;
+  let isResetting = false;
 
   function show(i, animate = true) {
     idx = i;
     track.style.transition = animate ? '' : 'none';
     track.style.transform = `translateX(-${idx * 100}%)`;
-    if (caption) caption.innerHTML = slides[idx].dataset.caption || '';
+    const realIdx = idx % realCount;
+    if (caption) caption.innerHTML = slides[realIdx].dataset.caption || '';
     slides.forEach((slide, slideIdx) => {
-      slide.setAttribute('aria-hidden', slideIdx === idx ? 'false' : 'true');
+      slide.setAttribute('aria-hidden', slideIdx === realIdx ? 'false' : 'true');
     });
     if (!animate) {
       void track.offsetWidth;
@@ -150,9 +164,16 @@ function initGallery() {
   if (slides.length < 2) return;
 
   galleryTimer = setInterval(() => {
+    if (isResetting) return;
+
     const nextIdx = idx + 1;
-    if (nextIdx >= slides.length) {
-      show(0, false);
+    if (nextIdx >= realCount) {
+      isResetting = true;
+      show(realCount);
+      galleryResetTimer = setTimeout(() => {
+        show(0, false);
+        isResetting = false;
+      }, transitionMs + 30);
       return;
     }
     show(nextIdx);
