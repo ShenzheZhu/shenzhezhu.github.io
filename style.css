@@ -495,6 +495,7 @@ a:active {
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  background: var(--bg);
 }
 
 .gallery-track {
@@ -511,6 +512,7 @@ a:active {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .gallery-slide img {
@@ -816,9 +818,19 @@ a:active {
 
   .home-figure {
     float: none;
-    width: 75%;
-    max-width: 320px;
+    width: 82%;
+    max-width: 350px;
     margin: 0 auto 1rem;
+  }
+
+  .gallery-slide img {
+    transform: scale(1.02);
+    transform-origin: center center;
+  }
+
+  .gallery-track .gallery-slide:nth-child(2) img {
+    max-height: 92%;
+    max-width: 92%;
   }
 
   img {
