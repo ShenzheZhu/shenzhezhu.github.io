@@ -383,7 +383,7 @@ a:active {
   border-radius: 0;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
-  cursor: pointer;
+  cursor: zoom-in;
 }
 
 .pub-image:hover {
@@ -521,6 +521,7 @@ a:active {
   width: auto;
   height: auto;
   object-fit: contain;
+  cursor: zoom-in;
 }
 
 .gallery-track .gallery-slide:nth-child(2) img {
@@ -568,6 +569,26 @@ a:active {
 
 .modal.active .modal-content {
   transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  padding: 0.35rem 0.7rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  color: var(--swatch-1);
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+  background: var(--bg);
 }
 
 /* ─── Easter Egg ─── */

@@ -45,6 +45,13 @@ async function loadPage(page) {
       img.setAttribute('role', 'button');
     });
 
+    // Make home gallery images keyboard accessible
+    content.querySelectorAll('.gallery-slide img').forEach(img => {
+      img.setAttribute('tabindex', '0');
+      img.setAttribute('role', 'button');
+      img.setAttribute('aria-label', 'Open image preview');
+    });
+
     // Update page title
     const pageTitles = { about: 'About', publications: 'Publications', misc: 'Miscellaneous', home: 'Home' };
     document.title = pageTitles[page]
@@ -245,7 +252,8 @@ window.addEventListener('hashchange', () => {
 (function initLightbox() {
   const modal = document.getElementById('image-modal');
   const modalImg = document.getElementById('modal-img');
-  if (!modal || !modalImg) return;
+  const closeBtn = document.getElementById('modal-close');
+  if (!modal || !modalImg || !closeBtn) return;
 
   let lastFocused = null;
 
@@ -265,17 +273,20 @@ window.addEventListener('hashchange', () => {
   }
 
   document.addEventListener('click', e => {
-    if (e.target.classList.contains('pub-image')) openModal(e.target);
+    if (e.target.matches('.pub-image, .gallery-slide img')) openModal(e.target);
   });
 
   document.addEventListener('keydown', e => {
-    if (e.target.classList.contains('pub-image') && (e.key === 'Enter' || e.key === ' ')) {
+    if (e.target.matches('.pub-image, .gallery-slide img') && (e.key === 'Enter' || e.key === ' ')) {
       e.preventDefault();
       openModal(e.target);
     }
   });
 
-  modal.addEventListener('click', closeModal);
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal();
+  });
+  closeBtn.addEventListener('click', closeModal);
 
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
