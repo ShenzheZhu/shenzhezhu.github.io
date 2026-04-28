@@ -132,20 +132,30 @@ function initGallery() {
   const interval = parseInt(gallery.dataset.interval, 10) || 5000;
   let idx = 0;
 
-  function show(i) {
-    idx = i % slides.length;
+  function show(i, animate = true) {
+    idx = i;
+    track.style.transition = animate ? '' : 'none';
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    if (caption) caption.innerHTML = slides[idx].dataset.caption || '';
     slides.forEach((slide, slideIdx) => {
-      slide.classList.toggle('is-active', slideIdx === idx);
       slide.setAttribute('aria-hidden', slideIdx === idx ? 'false' : 'true');
     });
-    if (caption) caption.innerHTML = slides[idx].dataset.caption || '';
+    if (!animate) {
+      void track.offsetWidth;
+      track.style.transition = '';
+    }
   }
 
   show(0);
   if (slides.length < 2) return;
 
   galleryTimer = setInterval(() => {
-    show(idx + 1);
+    const nextIdx = idx + 1;
+    if (nextIdx >= slides.length) {
+      show(0, false);
+      return;
+    }
+    show(nextIdx);
   }, interval);
 }
 
