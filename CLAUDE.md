@@ -1,28 +1,66 @@
-# Project: shenzhezhu.github.io
+# CLAUDE.md
 
-Personal academic website for Shenzhe (Cho) Zhu. Vanilla HTML/CSS/JS, no build tools or frameworks.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Design Context
+## Project Overview
 
-### Users
-Academic peers, prospective collaborators, PhD program committees, and industry researchers visiting to learn about Shenzhe Zhu's research in Human-Centered AI. They arrive with intent — scanning publications, assessing fit for collaboration, or reviewing credentials. The site should make this efficient while leaving a lasting impression of taste and seriousness.
+Personal academic website for Shenzhe (Cho) Zhu. Vanilla HTML/CSS/JS — no build tools, no package manager, no framework.
 
-### Brand Personality
-**Designer. Minimal. Refined.**
+## Development
 
-The site channels the aesthetic sensibility of high-end fashion/design retail (SSENSE) into an academic context — an unusual combination that reflects the owner's dual identity as researcher and visual perfectionist. The tone is confident and understated, never loud. Every element earns its place.
+Serve locally with a static HTTP server (required for `fetch("pages/...")` to work):
 
-### Aesthetic Direction
-- **Visual tone**: Dark, editorial minimalism — closer to a designer boutique than a typical academic page. High contrast typography on warm dark backgrounds. Generous whitespace. Restrained use of color.
-- **Primary reference**: SSENSE — clean grid layouts, bold typography, monochromatic palette, editorial confidence. Adapt this to academic content while keeping the designer DNA.
-- **Anti-references**: Cluttered academic homepages with default Bootstrap styling, excessive color, or busy layouts. Avoid anything that feels templated or generic.
-- **Theme**: Dark mode preferred (`#191817` warm ink black). Light mode available but dark is the signature. Muted Bronze (`#C5A585`) as the sole highlight accent — used sparingly for emphasis.
-- **Typography**: Serif headings (Georgia) for scholarly warmth, clean sans-serif body (Helvetica Neue) for readability. Tight letter-spacing for a modern editorial feel.
-- **Imagery**: Grayscale by default, color on interaction. Monet references as a personal signature.
+```bash
+python3 -m http.server 8000
+```
 
-### Design Principles
-1. **Less is more**: Remove before adding. Every element must justify its existence. White space is a feature, not wasted space.
-2. **Confidence through restraint**: Let typography, spacing, and hierarchy do the work. No decorative flourishes, no gratuitous animation.
-3. **Editorial precision**: Treat the site like a curated publication — consistent grids, deliberate alignment, typographic hierarchy that guides the eye naturally.
-4. **Dark-first warmth**: The dark palette should feel warm and inviting (warm blacks, not cold grays), creating an intimate reading environment.
-5. **Substance over surface**: Design serves the content. Never let aesthetic choices obscure or complicate access to information.
+Then open `http://localhost:8000`. There are no automated tests; validate changes manually in a browser.
+
+**Manual checks after any change:**
+- Hash navigation between sections (`#about`, `#publications`, `#misc`)
+- Mobile header/menu toggle and sidebar close-on-nav
+- Homepage gallery autoplay, looping, and captions
+- Publication tabs (`Selected` / `All`), year grouping, and lightbox
+- Image/PDF links and responsive layout at desktop and mobile widths
+
+## Architecture
+
+`index.html` is the SPA shell — it never reloads. `script.js` drives all behavior: hash-based routing, page fetching, gallery, pub filtering, lightbox, mobile menu, and scroll-reveal. `style.css` contains all layout, typography, and responsive rules.
+
+**Navigation flow:** URL hash → `hashchange` or nav click → `loadPage(page)` → `fetch("pages/<page>.html")` → inject into `<main id="content">`. On `publications` load, `groupPublicationsByYear()` and `initPubTabs()` run. On `home` load, `initGallery()` runs.
+
+**Page fragments** live in `pages/` (`home.html`, `about.html`, `publications.html`, `misc.html`). These are bare HTML snippets — no `<html>`/`<head>`/`<body>` wrappers.
+
+**Assets:**
+- `asset/gallery/` — homepage slideshow images (referenced by `<div class="gallery-slide" data-caption="...">`)
+- `asset/paper_fig/` — publication figures (referenced by `.pub-image` elements)
+- `asset/fonts/` — local font files
+
+**Publication entries** use `data-year` and `data-selected="true"` attributes on `.publication` elements. `groupPublicationsByYear()` reorganizes them into `.year-section` wrappers at runtime; `initPubTabs()` filters by `data-selected`.
+
+## Coding Conventions
+
+- 2-space indentation in HTML, CSS, and JS
+- CSS classes: `kebab-case` (e.g., `mobile-header-name`, `gallery-track`)
+- JS identifiers: `camelCase` (e.g., `loadPage`, `initGallery`)
+- New assets: short lowercase filenames in the matching `asset/` subdirectory
+
+## Design System
+
+**Theme:** Dark mode default (`#191817` warm ink black). Light mode available. Muted Bronze (`#C5A585`) is the sole accent — use sparingly.
+
+**Typography:** Georgia for headings (scholarly warmth), Helvetica Neue for body. Archivo Narrow and Space Mono loaded via Google Fonts.
+
+**Aesthetic direction:** Editorial minimalism — SSENSE-style high contrast, generous whitespace, restrained color. Avoid Bootstrap-like defaults, decorative flourishes, or gratuitous animation.
+
+**Principles:**
+1. Remove before adding — every element must justify its presence
+2. Let typography, spacing, and hierarchy do the work
+3. Dark palette should feel warm (warm blacks, not cold grays)
+
+## Commit Style
+
+Short, lowercase imperative subjects scoped to one visible change, e.g.:
+```
+make gallery loop seamless by cloning first slide
+```
