@@ -443,15 +443,27 @@ a:active {
   margin: 0.8rem 0 1.4rem;
 }
 
-.blog-filter-tags span,
+.blog-filter-tag,
 .blog-card-tags span {
   display: inline-flex;
   align-items: center;
   border: 1px solid var(--border);
   color: var(--swatch-4);
+  background: transparent;
+  font-family: inherit;
   font-size: 0.82rem;
   line-height: 1;
   padding: 0.22rem 0.45rem;
+}
+
+.blog-filter-tag {
+  cursor: pointer;
+}
+
+.blog-filter-tag:hover,
+.blog-filter-tag.active {
+  border-color: var(--swatch-2);
+  color: var(--swatch-1);
 }
 
 .blog-card {

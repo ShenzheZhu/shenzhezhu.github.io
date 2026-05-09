@@ -38,6 +38,7 @@ async function loadPage(page) {
     }
 
     if (page === 'home') initGallery();
+    if (page === 'blog') initBlogFilters();
 
     // Make pub-images keyboard accessible
     content.querySelectorAll('.pub-image').forEach(img => {
@@ -220,6 +221,32 @@ function initPubTabs() {
 
   const activeTab = content.querySelector('.pub-tab.active');
   applyFilter(activeTab ? activeTab.dataset.filter : 'selected');
+}
+
+function initBlogFilters() {
+  const filters = content.querySelectorAll('.blog-filter-tag');
+  const cards = content.querySelectorAll('.blog-card');
+  if (!filters.length || !cards.length) return;
+
+  function applyFilter(filter) {
+    cards.forEach(card => {
+      const tags = (card.dataset.tags || '').split(/\s+/);
+      card.style.display = (filter === 'all' || tags.includes(filter)) ? '' : 'none';
+    });
+  }
+
+  filters.forEach(filterButton => {
+    filterButton.addEventListener('click', () => {
+      filters.forEach(button => {
+        const isActive = button === filterButton;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', isActive);
+      });
+      applyFilter(filterButton.dataset.filter || 'all');
+    });
+  });
+
+  applyFilter('all');
 }
 
 // Scroll reveal — Cargo-style scale-in

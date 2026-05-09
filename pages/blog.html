@@ -1,14 +1,15 @@
 <div class="blog-section">
   <span class='anchor' id='blog'></span>
   <h3>Blog</h3>
-  <div class="blog-filter-tags" aria-label="Blog categories">
-    <span>Aesthetics</span>
-    <span>Philosophy</span>
-    <span>Academic</span>
-    <span>Engineering</span>
+  <div class="blog-filter-tags" role="group" aria-label="Blog categories">
+    <button class="blog-filter-tag active" type="button" data-filter="all" aria-pressed="true">All</button>
+    <button class="blog-filter-tag" type="button" data-filter="aesthetics" aria-pressed="false">Aesthetics</button>
+    <button class="blog-filter-tag" type="button" data-filter="philosophy" aria-pressed="false">Philosophy</button>
+    <button class="blog-filter-tag" type="button" data-filter="academic" aria-pressed="false">Academic</button>
+    <button class="blog-filter-tag" type="button" data-filter="engineering" aria-pressed="false">Engineering</button>
   </div>
 
-  <article class="blog-card">
+  <article class="blog-card" data-tags="aesthetics">
     <div class="blog-card-index">
       <span>01</span>
     </div>
@@ -22,7 +23,6 @@
       </h4>
       <div class="blog-card-tags" aria-label="Post tags">
         <span>Aesthetics</span>
-        <span>Philosophy</span>
       </div>
       <p>
         A short note on artworks I keep returning to. To be continued as the gallery grows.
