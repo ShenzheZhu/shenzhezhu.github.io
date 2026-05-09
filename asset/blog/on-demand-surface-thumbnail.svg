@@ -28,23 +28,23 @@
     <text x="26" y="112" fill="#252525" font-family="Arial, sans-serif" font-size="38" font-weight="700">Request</text>
   </g>
 
-  <g transform="translate(356 298)">
-    <rect width="190" height="190" fill="#efe8e1" stroke="#cfb9a7" stroke-width="3" />
-    <text x="26" y="80" fill="#252525" font-family="Arial, sans-serif" font-size="52" font-weight="700">Agent</text>
-    <circle cx="96" cy="122" r="31" fill="#4fd8c6" opacity="0.95" />
-    <path d="M82 122 L93 134 L114 107" fill="none" stroke="#252525" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <g transform="translate(356 318)">
+    <rect width="190" height="150" fill="#efe8e1" stroke="#cfb9a7" stroke-width="3" />
+    <text x="26" y="60" fill="#252525" font-family="Arial, sans-serif" font-size="52" font-weight="700">Agent</text>
+    <circle cx="96" cy="106" r="26" fill="#4fd8c6" opacity="0.95" />
+    <path d="M84 106 L94 116 L111 94" fill="none" stroke="#252525" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 
-  <g transform="translate(638 286)">
-    <rect width="190" height="214" fill="url(#surface)" stroke="#d9cabc" stroke-width="3" />
-    <text x="46" y="72" fill="#252525" font-family="Arial, sans-serif" font-size="62" font-weight="700">UI</text>
-    <rect x="34" y="96" width="122" height="28" fill="#f8f6f3" stroke="#d9cabc" stroke-width="3" />
-    <rect x="34" y="146" width="54" height="42" fill="#f1e7dc" stroke="#cfb9a7" stroke-width="3" />
-    <rect x="104" y="146" width="54" height="42" fill="#ffffff" stroke="#d9cabc" stroke-width="3" />
+  <g transform="translate(638 318)">
+    <rect width="190" height="150" fill="url(#surface)" stroke="#d9cabc" stroke-width="3" />
+    <text x="46" y="60" fill="#252525" font-family="Arial, sans-serif" font-size="62" font-weight="700">UI</text>
+    <rect x="34" y="78" width="122" height="24" fill="#f8f6f3" stroke="#d9cabc" stroke-width="3" />
+    <rect x="34" y="118" width="54" height="24" fill="#f1e7dc" stroke="#cfb9a7" stroke-width="3" />
+    <rect x="104" y="118" width="54" height="24" fill="#ffffff" stroke="#d9cabc" stroke-width="3" />
   </g>
 
-  <path d="M308 393 C326 393, 338 393, 346 393" fill="none" stroke="#9a6b45" stroke-width="6" marker-end="url(#arrow)" />
-  <path d="M562 393 C590 393, 606 393, 628 393" fill="none" stroke="#9a6b45" stroke-width="6" marker-end="url(#arrow)" />
+  <path d="M308 393 L346 393" fill="none" stroke="#9a6b45" stroke-width="6" marker-end="url(#arrow)" />
+  <path d="M562 393 L628 393" fill="none" stroke="#9a6b45" stroke-width="6" marker-end="url(#arrow)" />
   <path d="M724 542 C586 614, 318 606, 184 488" fill="none" stroke="#879799" stroke-width="5" opacity="0.65" />
   <rect x="268" y="564" width="364" height="44" fill="#f6f2ec" opacity="0.9" />
   <text x="286" y="596" fill="#8f867d" font-family="Arial, sans-serif" font-size="34">interaction loop, not just chat</text>
