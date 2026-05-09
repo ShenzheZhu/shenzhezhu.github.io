@@ -18,9 +18,9 @@
 
   <rect width="900" height="675" fill="url(#bg)" />
 
-  <text x="78" y="116" fill="#9b9087" font-family="Arial, sans-serif" font-size="34" letter-spacing="2">AGENT-NATIVE APP</text>
-  <text x="78" y="184" fill="#252525" font-family="Arial, sans-serif" font-size="68" font-weight="700">GENERATED UI</text>
-  <text x="78" y="240" fill="#252525" font-family="Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="1">WHEN THE TASK NEEDS IT</text>
+  <text x="78" y="116" fill="#9b9087" font-family="Arial, sans-serif" font-size="38">Agent-Native App</text>
+  <text x="78" y="184" fill="#252525" font-family="Arial, sans-serif" font-size="72" font-weight="700">Generated UI</text>
+  <text x="78" y="240" fill="#252525" font-family="Arial, sans-serif" font-size="50" font-weight="700">When the Task Needs It</text>
 
   <g transform="translate(84 318)">
     <rect width="208" height="150" fill="#ffffff" stroke="#d9cabc" stroke-width="3" />
