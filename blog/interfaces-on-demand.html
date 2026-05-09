@@ -24,10 +24,10 @@
       </header>
 
       <p>
-        Claude Design made one trend feel very concrete: agents are starting to generate interfaces, not just text. The
-        product pairs chat with a canvas, then lets the user iterate on a working design with messages and inline
-        comments. Export is also part of the loop: the same design can become a standalone HTML file, a Canva handoff,
-        or a handoff to Claude Code.
+        Claude Design made one trend feel very concrete: agents are starting to generate interfaces, not just text.
+        Anthropic's product pairs chat with a canvas, then lets the user iterate on a working design with messages and
+        inline comments. Export is also part of the loop: the same design can become a standalone HTML file, a Canva
+        handoff, or a handoff to Claude Code.
       </p>
 
       <p>
@@ -37,30 +37,45 @@
         arranging assets.
       </p>
 
-      <figure class="blog-post-interface-demo" aria-label="Generated export panel mockup">
+      <figure class="blog-post-interface-demo" aria-label="Agent-generated interface mockup">
         <div class="interface-demo">
-          <div class="interface-demo-sidebar">
-            <span>Prompt</span>
-            <p>Export these assets for the next design pass.</p>
+          <div class="interface-demo-column interface-demo-chat">
+            <span class="interface-demo-label">Chat</span>
+            <p class="interface-demo-message">Make the export step visual and editable.</p>
+            <span class="interface-demo-note">inline feedback</span>
           </div>
-          <div class="interface-demo-panel">
+          <div class="interface-demo-canvas">
             <div class="interface-demo-header">
-              <span>Generated export panel</span>
+              <span>Live canvas</span>
               <span>HTML surface</span>
             </div>
+            <div class="interface-demo-artboard">
+              <div class="interface-demo-card">
+                <span>Asset set</span>
+                <strong>Interface draft</strong>
+              </div>
+              <div class="interface-demo-bars" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <div class="interface-demo-column interface-demo-panel">
+            <span class="interface-demo-label">Generated controls</span>
             <div class="interface-demo-grid">
-              <button type="button">PNG</button>
-              <button type="button">SVG</button>
-              <button type="button">HTML</button>
-              <button type="button">Canva</button>
+              <span>PNG</span>
+              <span>SVG</span>
+              <span>HTML</span>
+              <span>Canva</span>
             </div>
             <div class="interface-demo-actions">
-              <button type="button">Preview</button>
-              <button type="button">Export</button>
+              <span>Preview</span>
+              <span>Export</span>
             </div>
           </div>
         </div>
-        <figcaption>A task-specific interface can be generated only when the user needs it.</figcaption>
+        <figcaption>A task-specific interface can be generated at the moment the user needs it.</figcaption>
       </figure>
 
       <h2>HTML for Humans</h2>
@@ -107,6 +122,7 @@
 
       <p class="blog-post-links">
         Further reading:
+        <a href="https://www.anthropic.com/news/claude-design-anthropic-labs" target="_blank" rel="noopener noreferrer">Anthropic announcement</a>,
         <a href="https://support.claude.com/en/articles/14604416-get-started-with-claude-design" target="_blank" rel="noopener noreferrer">Claude Design guide</a>,
         <a href="https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/" target="_blank" rel="noopener noreferrer">Simon Willison</a>,
         <a href="https://thariqs.github.io/html-effectiveness/" target="_blank" rel="noopener noreferrer">HTML examples</a>.
