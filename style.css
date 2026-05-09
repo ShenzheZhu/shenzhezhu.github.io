@@ -112,7 +112,7 @@ main {
   line-height: 1.1;
 }
 
-/* Sidebar info links — stacked, bold, like Cargo's "Information / Email / Instagram" */
+/* Sidebar info links — stacked, bold, like Cargo's profile links */
 .sidebar-info {
   display: flex;
   flex-direction: column;
