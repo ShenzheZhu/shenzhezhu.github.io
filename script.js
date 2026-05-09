@@ -226,13 +226,18 @@ function initPubTabs() {
 function initBlogFilters() {
   const filters = content.querySelectorAll('.blog-filter-tag');
   const cards = content.querySelectorAll('.blog-card');
+  const emptyState = content.querySelector('.blog-empty');
   if (!filters.length || !cards.length) return;
 
   function applyFilter(filter) {
+    let visibleCount = 0;
     cards.forEach(card => {
       const tags = (card.dataset.tags || '').split(/\s+/);
-      card.style.display = (filter === 'all' || tags.includes(filter)) ? '' : 'none';
+      const isVisible = filter === 'all' || tags.includes(filter);
+      card.style.display = isVisible ? '' : 'none';
+      if (isVisible) visibleCount += 1;
     });
+    if (emptyState) emptyState.hidden = visibleCount > 0;
   }
 
   filters.forEach(filterButton => {
