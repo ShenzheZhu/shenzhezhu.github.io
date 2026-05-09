@@ -1331,15 +1331,19 @@ a:active {
   }
 
   .blog-post-main {
+    max-width: 100%;
     padding: 3.5rem 1rem 3.5rem;
   }
 
   .blog-post h1 {
     font-size: 2rem;
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .blog-post p {
     font-size: 1.05rem;
+    max-width: 100%;
   }
 
   .blog-post-source-figure,
