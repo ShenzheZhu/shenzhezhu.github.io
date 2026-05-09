@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
   <title id="title">On-demand agent-native interaction surface thumbnail</title>
-  <desc id="desc">An original abstract diagram showing user intent, an agent, and a generated task surface.</desc>
+  <desc id="desc">An original diagram showing need to agent to generated UI.</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#fbfaf7" />
@@ -19,33 +19,34 @@
   <rect width="900" height="675" fill="url(#bg)" />
   <rect x="42" y="42" width="816" height="591" fill="none" stroke="#d9cabc" stroke-width="2" />
 
-  <text x="92" y="116" fill="#9b9087" font-family="Arial, sans-serif" font-size="32">agent-native interaction</text>
-  <text x="92" y="172" fill="#252525" font-family="Arial, sans-serif" font-size="58" font-weight="700">surface on demand</text>
+  <text x="90" y="118" fill="#9b9087" font-family="Arial, sans-serif" font-size="34">agent-native app</text>
+  <text x="90" y="178" fill="#252525" font-family="Arial, sans-serif" font-size="60" font-weight="700">generated UI</text>
+  <text x="90" y="226" fill="#252525" font-family="Arial, sans-serif" font-size="44" font-weight="700">when the task needs it</text>
 
-  <g transform="translate(92 324)">
-    <rect width="180" height="132" fill="#ffffff" stroke="#d9cabc" stroke-width="3" />
-    <text x="32" y="56" fill="#252525" font-family="Arial, sans-serif" font-size="31" font-weight="700">intent</text>
-    <rect x="32" y="84" width="74" height="12" fill="#c8d0d1" />
-    <rect x="32" y="108" width="112" height="12" fill="#d9cabc" />
+  <g transform="translate(86 326)">
+    <rect width="190" height="134" fill="#ffffff" stroke="#d9cabc" stroke-width="3" />
+    <text x="36" y="78" fill="#252525" font-family="Arial, sans-serif" font-size="44" font-weight="700">Need</text>
+    <rect x="36" y="96" width="74" height="12" fill="#c8d0d1" />
   </g>
 
-  <g transform="translate(362 286)">
-    <rect width="184" height="208" fill="#efe8e1" stroke="#cfb9a7" stroke-width="3" />
-    <text x="39" y="74" fill="#252525" font-family="Arial, sans-serif" font-size="36" font-weight="700">agent</text>
-    <circle cx="92" cy="126" r="30" fill="#4fd8c6" opacity="0.9" />
-    <path d="M79 126 L89 136 L108 112" fill="none" stroke="#252525" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  <g transform="translate(356 298)">
+    <rect width="190" height="190" fill="#efe8e1" stroke="#cfb9a7" stroke-width="3" />
+    <text x="39" y="78" fill="#252525" font-family="Arial, sans-serif" font-size="44" font-weight="700">Agent</text>
+    <circle cx="96" cy="122" r="31" fill="#4fd8c6" opacity="0.95" />
+    <path d="M82 122 L93 134 L114 107" fill="none" stroke="#252525" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 
-  <g transform="translate(636 252)">
-    <rect width="190" height="276" fill="url(#surface)" stroke="#d9cabc" stroke-width="3" />
-    <text x="30" y="60" fill="#252525" font-family="Arial, sans-serif" font-size="33" font-weight="700">surface</text>
-    <rect x="32" y="94" width="126" height="30" fill="#f8f6f3" stroke="#d9cabc" stroke-width="3" />
-    <rect x="32" y="150" width="54" height="42" fill="#f1e7dc" stroke="#cfb9a7" stroke-width="3" />
-    <rect x="106" y="150" width="54" height="42" fill="#ffffff" stroke="#d9cabc" stroke-width="3" />
-    <rect x="32" y="224" width="118" height="12" fill="#c8d0d1" />
+  <g transform="translate(638 286)">
+    <rect width="190" height="214" fill="url(#surface)" stroke="#d9cabc" stroke-width="3" />
+    <text x="52" y="66" fill="#252525" font-family="Arial, sans-serif" font-size="48" font-weight="700">UI</text>
+    <rect x="34" y="96" width="122" height="28" fill="#f8f6f3" stroke="#d9cabc" stroke-width="3" />
+    <rect x="34" y="146" width="54" height="42" fill="#f1e7dc" stroke="#cfb9a7" stroke-width="3" />
+    <rect x="104" y="146" width="54" height="42" fill="#ffffff" stroke="#d9cabc" stroke-width="3" />
   </g>
 
-  <path d="M286 392 C314 392, 332 392, 350 392" fill="none" stroke="#9a6b45" stroke-width="5" marker-end="url(#arrow)" />
-  <path d="M560 392 C590 392, 606 392, 624 392" fill="none" stroke="#9a6b45" stroke-width="5" marker-end="url(#arrow)" />
-  <path d="M724 560 C586 622, 322 617, 184 494" fill="none" stroke="#879799" stroke-width="5" opacity="0.65" />
+  <path d="M290 393 C318 393, 334 393, 346 393" fill="none" stroke="#9a6b45" stroke-width="6" marker-end="url(#arrow)" />
+  <path d="M562 393 C590 393, 606 393, 628 393" fill="none" stroke="#9a6b45" stroke-width="6" marker-end="url(#arrow)" />
+  <path d="M724 542 C586 614, 318 606, 184 488" fill="none" stroke="#879799" stroke-width="5" opacity="0.65" />
+  <rect x="268" y="564" width="364" height="44" fill="#f6f2ec" opacity="0.9" />
+  <text x="292" y="594" fill="#8f867d" font-family="Arial, sans-serif" font-size="30">interaction loop, not just chat</text>
 </svg>
