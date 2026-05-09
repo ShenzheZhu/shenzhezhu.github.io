@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interfaces on Demand — Shenzhe Zhu</title>
-  <meta name="description" content="A short note on HTML, Claude Design, and agent-generated interactive interfaces." />
+  <meta name="description" content="A short note on agent-native apps and on-demand interactive interfaces." />
   <meta name="author" content="Shenzhe Zhu" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Space+Mono&display=swap">
-  <link rel="stylesheet" href="../style.css?v=cargo8" />
+  <link rel="stylesheet" href="../style.css?v=cargo9" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='white'/%3E%3C/svg%3E">
   <meta name="theme-color" content="#ffffff">
 </head>
@@ -31,29 +31,35 @@
       </p>
 
       <p>
-        The important shift is not only "AI makes mockups faster." It is that the interface can be generated at the
-        moment of need. A task does not always need a fixed product screen that was designed months ago. It may need a
-        temporary editor, a comparison board, a set of buttons for choosing an export format, or a small canvas for
-        arranging assets.
+        But the larger point is not HTML itself. HTML is only the easiest concrete example right now. The real shift is
+        that an agent-native app can generate interaction at the moment of need. A task does not always need a fixed
+        product screen designed months ago. It may need a temporary editor, a comparison board, a set of controls, or a
+        small canvas for arranging assets.
       </p>
 
       <p>
-        The way I would frame it: an agentic-native platform should not treat UI as a permanent container. It should
+        This matters because user experience is not only about visual polish. It is also about interaction performance:
+        how quickly a user can understand the state, make a choice, give feedback, and move to the next step. Text is
+        often too indirect for that. A generated interface can turn a vague back-and-forth into direct manipulation.
+      </p>
+
+      <p>
+        The way I would frame it: an agent-native platform should not treat UI as a permanent container. It should
         treat UI as a material the system can reshape around the user's current intention.
       </p>
 
       <figure class="blog-post-svg-figure">
         <svg class="interface-loop-svg" viewBox="0 0 760 360" role="img" aria-labelledby="interface-loop-title interface-loop-desc">
           <title id="interface-loop-title">A task-specific interface loop</title>
-          <desc id="interface-loop-desc">A diagram showing user intent moving through an agent into an HTML surface, then returning through user action and handoff.</desc>
+          <desc id="interface-loop-desc">A diagram showing user intent moving through an agent into a task surface, then returning through user action and handoff.</desc>
           <defs>
             <marker id="interface-arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
               <path d="M0,0 L7,3 L0,6 Z"></path>
             </marker>
           </defs>
           <rect class="loop-bg" x="1" y="1" width="758" height="358"></rect>
-          <text class="loop-kicker" x="48" y="54">Interface as generated material</text>
-          <text class="loop-title" x="48" y="88">Not every answer wants to stay as text.</text>
+          <text class="loop-kicker" x="48" y="54">Interaction as generated material</text>
+          <text class="loop-title" x="48" y="88">Not every task wants the same surface.</text>
 
           <g class="loop-node" transform="translate(48 142)">
             <rect width="170" height="96"></rect>
@@ -73,7 +79,7 @@
 
           <g class="loop-surface" transform="translate(544 118)">
             <rect width="168" height="150"></rect>
-            <text class="loop-node-title" x="20" y="34">HTML surface</text>
+            <text class="loop-node-title" x="20" y="34">Task surface</text>
             <rect class="loop-mini-panel" x="20" y="54" width="128" height="26"></rect>
             <rect class="loop-mini-button" x="20" y="94" width="56" height="24"></rect>
             <rect class="loop-mini-button" x="92" y="94" width="56" height="24"></rect>
@@ -87,7 +93,7 @@
           <text class="loop-return-label" x="318" y="321">user action becomes the next prompt</text>
         </svg>
         <figcaption>
-          My version of the pattern: the agent does not only produce content; it produces the temporary interface that
+          My version of the pattern: the agent does not only produce content; it produces the temporary interaction that
           makes the next human decision easier.
         </figcaption>
       </figure>
@@ -100,18 +106,19 @@
         </figcaption>
       </figure>
 
-      <h2>HTML for Humans</h2>
+      <h2>HTML as One Surface</h2>
       <p>
         Markdown is still useful. It is compact, easy for agents to produce, and good for plain explanations. But the
-        final surface is often for a human, not for another model. HTML is better when the answer needs layout,
-        hierarchy, buttons, forms, SVG, tabs, sliders, or export actions.
+        final surface is often for a human, not for another model. HTML is useful because it can carry layout,
+        hierarchy, buttons, forms, SVG, tabs, sliders, and export actions in one familiar runtime.
       </p>
 
       <p>
         Simon Willison's note on the "unreasonable effectiveness of HTML" makes the same point from another angle:
         instead of returning a wall of Markdown, an agent can return a small self-contained page. Thariq Shihipar's
         examples show code reviews, design systems, prototypes, diagrams, research explainers, and custom editors as
-        HTML artifacts. These are not just prettier documents. They are easier to scan, react to, and reuse.
+        HTML artifacts. These are not just prettier documents. They show how one agent answer can become a more usable
+        interaction surface.
       </p>
 
       <figure class="blog-post-source-figure blog-post-source-figure--tall">
@@ -121,9 +128,9 @@
         </figcaption>
       </figure>
 
-      <h2>Agentic-Native Platforms</h2>
+      <h2>Agent-Native Interaction</h2>
       <p>
-        A future agentic-native platform may not have one fixed interface. It may have a stable core product, plus many
+        A future agent-native platform may not have one fixed interface. It may have a stable core product, plus many
         task-specific surfaces generated on the fly. One user needs a dashboard. Another needs a Canva-like asset
         picker. Another needs a prompt tuner, a feature-flag editor, or a visual plan. The same app can become many
         small apps.
@@ -135,18 +142,26 @@
         and give feedback. The user stays in the loop, but the loop becomes more visual and much tighter.
       </p>
 
+      <p>
+        Some product functions feel natural here: temporary control panels for parameter tuning, comparison boards for
+        choosing between generated options, editable previews before handoff, visual review surfaces for comments,
+        task-specific dashboards, and export panels that know the user's next tool. If a generated surface becomes useful
+        repeatedly, the product can promote it into a saved workflow. That is how an agent-native app can evolve without
+        forcing every workflow into the same fixed screen.
+      </p>
+
       <h2>The Product Implication</h2>
       <p>
         "Anything can be HTML" does not mean every response should become a webpage. Plain text is still right for many
-        cases. The point is that HTML gives agents a native way to make human-facing, interactive output. When the task
-        involves choice, comparison, design, review, editing, or export, the interface should probably be generated
-        directly.
+        cases, and future surfaces may also be canvas, spreadsheets, forms, simulations, voice, or mixed interfaces. The
+        important question is not "should this be HTML?" The better question is "what interaction does this task need
+        right now?"
       </p>
 
       <p>
-        The product lesson is simple: agents should optimize not only for correct answers, but for the right surface.
-        Sometimes that surface is Markdown. Increasingly, it may be a small piece of HTML made exactly for the user and
-        the task in front of them.
+        The product lesson is simple: agents should optimize not only for correct answers, but for the right interaction
+        surface. Sometimes that surface is Markdown. Sometimes it is HTML. Increasingly, it may be a small, generated
+        workspace made exactly for the user and the task in front of them.
       </p>
 
       <p class="blog-post-links">
