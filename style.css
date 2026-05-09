@@ -670,10 +670,10 @@ a:active {
 
 .blog-post-header .blog-meta {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
+  gap: 0.42rem;
   width: 100%;
   max-width: none;
   color: var(--swatch-2);
@@ -683,8 +683,10 @@ a:active {
 }
 
 .blog-post-tag {
+  border-radius: 999px;
   color: var(--swatch-2);
   font-size: 0.78em;
+  padding: 0.24rem 0.62rem;
   transform: translateY(0.01rem);
 }
 
