@@ -572,11 +572,8 @@ a:active {
   transition: filter 0.25s ease, transform 0.25s ease;
 }
 
-.blog-card-thumb--color img {
-  filter: none;
-}
-
-.blog-card:hover .blog-card-thumb img {
+.blog-card:hover .blog-card-thumb img,
+.blog-card:focus-within .blog-card-thumb img {
   filter: grayscale(0%);
   transform: scale(1.03);
 }
