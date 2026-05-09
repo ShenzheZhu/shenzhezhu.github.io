@@ -443,7 +443,6 @@ a:active {
   margin: 0.8rem 0 1.4rem;
 }
 
-.blog-filter-tag,
 .blog-card-tags span,
 .blog-post-tag {
   display: inline-flex;
@@ -458,7 +457,16 @@ a:active {
 }
 
 .blog-filter-tag {
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--swatch-4);
   cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: 0.12rem 0;
 }
 
 .blog-card-tags span {
@@ -468,60 +476,33 @@ a:active {
 
 .blog-filter-tag:hover,
 .blog-filter-tag.active {
-  border-color: var(--swatch-2);
   color: var(--swatch-1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.blog-filter-tag.tag-aesthetics,
 .blog-card-tags .tag-aesthetics,
 .blog-post-tag.tag-aesthetics {
   border-color: rgba(128, 0, 32, 0.24);
   background: rgba(128, 0, 32, 0.055);
 }
 
-.blog-filter-tag.tag-philosophy,
 .blog-card-tags .tag-philosophy,
 .blog-post-tag.tag-philosophy {
   border-color: rgba(68, 82, 112, 0.24);
   background: rgba(68, 82, 112, 0.055);
 }
 
-.blog-filter-tag.tag-academic,
 .blog-card-tags .tag-academic,
 .blog-post-tag.tag-academic {
   border-color: rgba(65, 95, 78, 0.24);
   background: rgba(65, 95, 78, 0.055);
 }
 
-.blog-filter-tag.tag-engineering,
 .blog-card-tags .tag-engineering,
 .blog-post-tag.tag-engineering {
   border-color: rgba(92, 84, 56, 0.24);
   background: rgba(92, 84, 56, 0.055);
-}
-
-.blog-filter-tag.tag-aesthetics:hover,
-.blog-filter-tag.tag-aesthetics.active {
-  border-color: rgba(128, 0, 32, 0.5);
-  background: rgba(128, 0, 32, 0.09);
-}
-
-.blog-filter-tag.tag-philosophy:hover,
-.blog-filter-tag.tag-philosophy.active {
-  border-color: rgba(68, 82, 112, 0.5);
-  background: rgba(68, 82, 112, 0.09);
-}
-
-.blog-filter-tag.tag-academic:hover,
-.blog-filter-tag.tag-academic.active {
-  border-color: rgba(65, 95, 78, 0.5);
-  background: rgba(65, 95, 78, 0.09);
-}
-
-.blog-filter-tag.tag-engineering:hover,
-.blog-filter-tag.tag-engineering.active {
-  border-color: rgba(92, 84, 56, 0.5);
-  background: rgba(92, 84, 56, 0.09);
 }
 
 .blog-empty {
