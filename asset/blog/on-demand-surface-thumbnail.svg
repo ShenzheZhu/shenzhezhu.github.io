@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
   <title id="title">On-demand agent-native interaction surface thumbnail</title>
-  <desc id="desc">An original diagram showing need to agent to generated UI.</desc>
+  <desc id="desc">An original diagram showing user request to agent to generated UI.</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#fbfaf7" />
@@ -22,10 +22,10 @@
   <text x="78" y="184" fill="#252525" font-family="Arial, sans-serif" font-size="72" font-weight="700">generated UI</text>
   <text x="78" y="240" fill="#252525" font-family="Arial, sans-serif" font-size="50" font-weight="700">when the task needs it</text>
 
-  <g transform="translate(86 326)">
-    <rect width="190" height="134" fill="#ffffff" stroke="#d9cabc" stroke-width="3" />
-    <text x="28" y="80" fill="#252525" font-family="Arial, sans-serif" font-size="52" font-weight="700">Need</text>
-    <rect x="36" y="96" width="74" height="12" fill="#c8d0d1" />
+  <g transform="translate(86 318)">
+    <rect width="190" height="150" fill="#ffffff" stroke="#d9cabc" stroke-width="3" />
+    <text x="28" y="66" fill="#252525" font-family="Arial, sans-serif" font-size="50" font-weight="700">User</text>
+    <text x="28" y="112" fill="#252525" font-family="Arial, sans-serif" font-size="42" font-weight="700">Request</text>
   </g>
 
   <g transform="translate(356 298)">
