@@ -719,6 +719,78 @@ a:active {
   margin-bottom: 1.4rem;
 }
 
+.blog-post-interface-demo {
+  max-width: 640px;
+  margin: 2.2rem auto;
+}
+
+.interface-demo {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  border: 1px solid var(--border);
+  background: rgba(92, 84, 56, 0.045);
+  text-align: left;
+}
+
+.interface-demo-sidebar,
+.interface-demo-panel {
+  padding: 1rem;
+}
+
+.interface-demo-sidebar {
+  border-right: 1px solid var(--border);
+}
+
+.interface-demo-sidebar span,
+.interface-demo-header span {
+  color: var(--swatch-4);
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.interface-demo-sidebar p {
+  color: var(--swatch-2);
+  font-size: 1rem;
+  line-height: 1.25;
+  margin: 0.65rem 0 0;
+}
+
+.interface-demo-header,
+.interface-demo-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.interface-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.interface-demo button {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--swatch-2);
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.7rem;
+}
+
+.interface-demo-actions button:last-child {
+  border-color: rgba(92, 84, 56, 0.35);
+  background: rgba(92, 84, 56, 0.09);
+}
+
+.blog-post-interface-demo figcaption {
+  color: var(--swatch-4);
+  font-size: 0.95rem;
+  line-height: 1.2;
+  margin-top: 0.55rem;
+  text-align: center;
+}
+
 .blog-post-figure,
 .blog-post-gallery {
   margin: 2.2rem auto;
@@ -1205,6 +1277,15 @@ a:active {
 
   .blog-post p {
     font-size: 1.05rem;
+  }
+
+  .interface-demo {
+    grid-template-columns: 1fr;
+  }
+
+  .interface-demo-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
   }
 
   .blog-post-figure img,
