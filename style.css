@@ -461,6 +461,11 @@ a:active {
   cursor: pointer;
 }
 
+.blog-card-tags span {
+  border-radius: 999px;
+  padding: 0.24rem 0.58rem;
+}
+
 .blog-filter-tag:hover,
 .blog-filter-tag.active {
   border-color: var(--swatch-2);
