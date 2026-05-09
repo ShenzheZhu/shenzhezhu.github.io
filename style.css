@@ -466,6 +466,50 @@ a:active {
   color: var(--swatch-1);
 }
 
+.tag-aesthetics {
+  border-color: rgba(128, 0, 32, 0.24);
+  color: rgba(128, 0, 32, 0.72);
+}
+
+.tag-philosophy {
+  border-color: rgba(68, 82, 112, 0.24);
+  color: rgba(68, 82, 112, 0.72);
+}
+
+.tag-academic {
+  border-color: rgba(65, 95, 78, 0.24);
+  color: rgba(65, 95, 78, 0.72);
+}
+
+.tag-engineering {
+  border-color: rgba(92, 84, 56, 0.24);
+  color: rgba(92, 84, 56, 0.72);
+}
+
+.blog-filter-tag.tag-aesthetics:hover,
+.blog-filter-tag.tag-aesthetics.active {
+  border-color: rgba(128, 0, 32, 0.5);
+  color: rgba(128, 0, 32, 0.95);
+}
+
+.blog-filter-tag.tag-philosophy:hover,
+.blog-filter-tag.tag-philosophy.active {
+  border-color: rgba(68, 82, 112, 0.5);
+  color: rgba(68, 82, 112, 0.95);
+}
+
+.blog-filter-tag.tag-academic:hover,
+.blog-filter-tag.tag-academic.active {
+  border-color: rgba(65, 95, 78, 0.5);
+  color: rgba(65, 95, 78, 0.95);
+}
+
+.blog-filter-tag.tag-engineering:hover,
+.blog-filter-tag.tag-engineering.active {
+  border-color: rgba(92, 84, 56, 0.5);
+  color: rgba(92, 84, 56, 0.95);
+}
+
 .blog-empty {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
