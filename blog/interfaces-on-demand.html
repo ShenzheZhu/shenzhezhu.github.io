@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interfaces on Demand — Shenzhe Zhu</title>
+  <meta name="description" content="A short note on HTML, Claude Design, and agent-generated interactive interfaces." />
+  <meta name="author" content="Shenzhe Zhu" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Space+Mono&display=swap">
+  <link rel="stylesheet" href="../style.css?v=cargo6" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='white'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="blog-post-body">
+  <main class="blog-post-main">
+    <article class="blog-post">
+      <header class="blog-post-header">
+        <h1>Interfaces on Demand</h1>
+        <p class="blog-meta">Shenzhe Zhu · May 9, 2026</p>
+      </header>
+
+      <p>
+        Claude Design made one trend feel very concrete: agents are starting to generate interfaces, not just text. The
+        product pairs chat with a canvas, then lets the user iterate on a working design with messages and inline
+        comments. Export is also part of the loop: the same design can become a standalone HTML file, a Canva handoff,
+        or a handoff to Claude Code.
+      </p>
+
+      <p>
+        The important shift is not only "AI makes mockups faster." It is that the interface can be generated at the
+        moment of need. A task does not always need a fixed product screen that was designed months ago. It may need a
+        temporary editor, a comparison board, a set of buttons for choosing an export format, or a small canvas for
+        arranging assets.
+      </p>
+
+      <h2>HTML for Humans</h2>
+      <p>
+        Markdown is still useful. It is compact, easy for agents to produce, and good for plain explanations. But the
+        final surface is often for a human, not for another model. HTML is better when the answer needs layout,
+        hierarchy, buttons, forms, SVG, tabs, sliders, or export actions.
+      </p>
+
+      <p>
+        Simon Willison's note on the "unreasonable effectiveness of HTML" makes the same point from another angle:
+        instead of returning a wall of Markdown, an agent can return a small self-contained page. Thariq Shihipar's
+        examples show code reviews, design systems, prototypes, diagrams, research explainers, and custom editors as
+        HTML artifacts. These are not just prettier documents. They are easier to scan, react to, and reuse.
+      </p>
+
+      <h2>Agentic-Native Platforms</h2>
+      <p>
+        A future agentic-native platform may not have one fixed interface. It may have a stable core product, plus many
+        task-specific surfaces generated on the fly. One user needs a dashboard. Another needs a Canva-like asset
+        picker. Another needs a prompt tuner, a feature-flag editor, or a visual plan. The same app can become many
+        small apps.
+      </p>
+
+      <p>
+        This is especially relevant for collaboration products. In a system like Kordi, the agent should not only write
+        messages or produce documents. It should create the interface that lets a user decide, arrange, compare, export,
+        and give feedback. The user stays in the loop, but the loop becomes more visual and much tighter.
+      </p>
+
+      <h2>The Product Implication</h2>
+      <p>
+        "Anything can be HTML" does not mean every response should become a webpage. Plain text is still right for many
+        cases. The point is that HTML gives agents a native way to make human-facing, interactive output. When the task
+        involves choice, comparison, design, review, editing, or export, the interface should probably be generated
+        directly.
+      </p>
+
+      <p>
+        The product lesson is simple: agents should optimize not only for correct answers, but for the right surface.
+        Sometimes that surface is Markdown. Increasingly, it may be a small piece of HTML made exactly for the user and
+        the task in front of them.
+      </p>
+
+      <p class="blog-post-links">
+        Further reading:
+        <a href="https://support.claude.com/en/articles/14604416-get-started-with-claude-design" target="_blank" rel="noopener noreferrer">Claude Design guide</a>,
+        <a href="https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/" target="_blank" rel="noopener noreferrer">Simon Willison</a>,
+        <a href="https://thariqs.github.io/html-effectiveness/" target="_blank" rel="noopener noreferrer">HTML examples</a>.
+      </p>
+    </article>
+  </main>
+</body>
+
+</html>
