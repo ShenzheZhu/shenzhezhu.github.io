@@ -11,9 +11,9 @@
       <stop offset="0" stop-color="#ffffff" />
       <stop offset="1" stop-color="#f2ede6" />
     </linearGradient>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L9,4 L0,8 Z" fill="#9a6b45" />
-    </marker>
+    <g id="node-arrow">
+      <path d="M0,-7 H34 V-18 L58,0 L34,18 V7 H0 Z" fill="#9a6b45" />
+    </g>
   </defs>
 
   <rect width="900" height="675" fill="url(#bg)" />
@@ -43,8 +43,8 @@
     <rect x="104" y="118" width="54" height="24" fill="#ffffff" stroke="#d9cabc" stroke-width="3" />
   </g>
 
-  <path d="M308 393 L346 393" fill="none" stroke="#9a6b45" stroke-width="6" marker-end="url(#arrow)" />
-  <path d="M562 393 L628 393" fill="none" stroke="#9a6b45" stroke-width="6" marker-end="url(#arrow)" />
+  <use href="#node-arrow" x="298" y="393" />
+  <use href="#node-arrow" x="562" y="393" />
   <path d="M724 542 C586 614, 318 606, 184 488" fill="none" stroke="#879799" stroke-width="5" opacity="0.65" />
   <rect x="268" y="564" width="364" height="44" fill="#f6f2ec" opacity="0.9" />
   <text x="286" y="596" fill="#8f867d" font-family="Arial, sans-serif" font-size="34">interaction loop, not just chat</text>
