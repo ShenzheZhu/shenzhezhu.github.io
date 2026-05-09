@@ -444,7 +444,8 @@ a:active {
 }
 
 .blog-filter-tag,
-.blog-card-tags span {
+.blog-card-tags span,
+.blog-post-tag {
   display: inline-flex;
   align-items: center;
   border: 1px solid var(--border);
@@ -467,25 +468,29 @@ a:active {
 }
 
 .blog-filter-tag.tag-aesthetics,
-.blog-card-tags .tag-aesthetics {
+.blog-card-tags .tag-aesthetics,
+.blog-post-tag.tag-aesthetics {
   border-color: rgba(128, 0, 32, 0.24);
   background: rgba(128, 0, 32, 0.055);
 }
 
 .blog-filter-tag.tag-philosophy,
-.blog-card-tags .tag-philosophy {
+.blog-card-tags .tag-philosophy,
+.blog-post-tag.tag-philosophy {
   border-color: rgba(68, 82, 112, 0.24);
   background: rgba(68, 82, 112, 0.055);
 }
 
 .blog-filter-tag.tag-academic,
-.blog-card-tags .tag-academic {
+.blog-card-tags .tag-academic,
+.blog-post-tag.tag-academic {
   border-color: rgba(65, 95, 78, 0.24);
   background: rgba(65, 95, 78, 0.055);
 }
 
 .blog-filter-tag.tag-engineering,
-.blog-card-tags .tag-engineering {
+.blog-card-tags .tag-engineering,
+.blog-post-tag.tag-engineering {
   border-color: rgba(92, 84, 56, 0.24);
   background: rgba(92, 84, 56, 0.055);
 }
@@ -664,12 +669,23 @@ a:active {
 }
 
 .blog-post-header .blog-meta {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
   width: 100%;
   max-width: none;
-  font-size: 1rem;
+  color: var(--swatch-2);
+  font-size: 1.1rem;
   margin: 0 auto;
   text-align: center;
+}
+
+.blog-post-tag {
+  color: var(--swatch-2);
+  font-size: 0.78em;
+  transform: translateY(0.01rem);
 }
 
 .blog-post h2 {
