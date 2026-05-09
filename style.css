@@ -466,22 +466,26 @@ a:active {
   color: var(--swatch-1);
 }
 
-.tag-aesthetics {
+.blog-filter-tag.tag-aesthetics,
+.blog-card-tags .tag-aesthetics {
   border-color: rgba(128, 0, 32, 0.24);
   background: rgba(128, 0, 32, 0.055);
 }
 
-.tag-philosophy {
+.blog-filter-tag.tag-philosophy,
+.blog-card-tags .tag-philosophy {
   border-color: rgba(68, 82, 112, 0.24);
   background: rgba(68, 82, 112, 0.055);
 }
 
-.tag-academic {
+.blog-filter-tag.tag-academic,
+.blog-card-tags .tag-academic {
   border-color: rgba(65, 95, 78, 0.24);
   background: rgba(65, 95, 78, 0.055);
 }
 
-.tag-engineering {
+.blog-filter-tag.tag-engineering,
+.blog-card-tags .tag-engineering {
   border-color: rgba(92, 84, 56, 0.24);
   background: rgba(92, 84, 56, 0.055);
 }
