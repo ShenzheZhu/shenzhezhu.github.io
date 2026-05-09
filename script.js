@@ -53,7 +53,7 @@ async function loadPage(page) {
     });
 
     // Update page title
-    const pageTitles = { about: 'About', publications: 'Publications', misc: 'Miscellaneous', home: 'Home' };
+    const pageTitles = { about: 'About', publications: 'Publications', blog: 'Blog', misc: 'Miscellaneous', home: 'Home' };
     document.title = pageTitles[page]
       ? `${pageTitles[page]} — Shenzhe Zhu`
       : 'Shenzhe Zhu';

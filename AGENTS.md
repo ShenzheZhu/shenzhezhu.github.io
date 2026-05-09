@@ -31,4 +31,6 @@ No automated tests are configured. Validate changes manually in a browser while 
 ## Commit & Pull Request Guidelines
 Recent commits use short, lowercase imperative subjects such as `make gallery loop seamless by cloning first slide`. Keep commits focused on one visible change and write subjects in that style.
 
+For this workspace, the user prefers each completed modification to be committed promptly. After making code or content changes, create a focused commit unless the user explicitly asks to hold off.
+
 Pull requests should include a brief summary, screenshots or a short recording for UI changes, and manual test notes listing the pages and behaviors you checked. Link any related issue or content request in the PR description.
