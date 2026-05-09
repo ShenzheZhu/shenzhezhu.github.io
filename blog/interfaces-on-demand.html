@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Space+Mono&display=swap">
-  <link rel="stylesheet" href="../style.css?v=cargo6" />
+  <link rel="stylesheet" href="../style.css?v=cargo8" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='white'/%3E%3C/svg%3E">
   <meta name="theme-color" content="#ffffff">
 </head>
@@ -36,6 +36,61 @@
         temporary editor, a comparison board, a set of buttons for choosing an export format, or a small canvas for
         arranging assets.
       </p>
+
+      <p>
+        The way I would frame it: an agentic-native platform should not treat UI as a permanent container. It should
+        treat UI as a material the system can reshape around the user's current intention.
+      </p>
+
+      <figure class="blog-post-svg-figure">
+        <svg class="interface-loop-svg" viewBox="0 0 760 360" role="img" aria-labelledby="interface-loop-title interface-loop-desc">
+          <title id="interface-loop-title">A task-specific interface loop</title>
+          <desc id="interface-loop-desc">A diagram showing user intent moving through an agent into an HTML surface, then returning through user action and handoff.</desc>
+          <defs>
+            <marker id="interface-arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L7,3 L0,6 Z"></path>
+            </marker>
+          </defs>
+          <rect class="loop-bg" x="1" y="1" width="758" height="358"></rect>
+          <text class="loop-kicker" x="48" y="54">Interface as generated material</text>
+          <text class="loop-title" x="48" y="88">Not every answer wants to stay as text.</text>
+
+          <g class="loop-node" transform="translate(48 142)">
+            <rect width="170" height="96"></rect>
+            <text class="loop-node-title" x="20" y="34">User intent</text>
+            <text class="loop-node-copy" x="20" y="62">decide</text>
+            <text class="loop-node-copy" x="86" y="62">arrange</text>
+            <text class="loop-node-copy" x="20" y="82">export</text>
+          </g>
+
+          <g class="loop-node loop-node--agent" transform="translate(296 132)">
+            <rect width="168" height="116"></rect>
+            <text class="loop-node-title" x="20" y="34">Agent</text>
+            <text class="loop-node-copy" x="20" y="62">reads context</text>
+            <text class="loop-node-copy" x="20" y="82">chooses surface</text>
+            <text class="loop-node-copy" x="20" y="102">keeps loop tight</text>
+          </g>
+
+          <g class="loop-surface" transform="translate(544 118)">
+            <rect width="168" height="150"></rect>
+            <text class="loop-node-title" x="20" y="34">HTML surface</text>
+            <rect class="loop-mini-panel" x="20" y="54" width="128" height="26"></rect>
+            <rect class="loop-mini-button" x="20" y="94" width="56" height="24"></rect>
+            <rect class="loop-mini-button" x="92" y="94" width="56" height="24"></rect>
+            <rect class="loop-mini-line" x="20" y="132" width="92" height="4"></rect>
+          </g>
+
+          <path class="loop-arrow" d="M225 190 C248 190, 263 190, 288 190"></path>
+          <path class="loop-arrow" d="M471 190 C496 190, 513 190, 536 190"></path>
+          <path class="loop-return" d="M628 286 C520 332, 270 333, 130 252"></path>
+          <rect class="loop-return-label-bg" x="304" y="306" width="252" height="22"></rect>
+          <text class="loop-return-label" x="318" y="321">user action becomes the next prompt</text>
+        </svg>
+        <figcaption>
+          My version of the pattern: the agent does not only produce content; it produces the temporary interface that
+          makes the next human decision easier.
+        </figcaption>
+      </figure>
 
       <figure class="blog-post-source-figure">
         <img src="../asset/blog/claude-design-hero.jpg" alt="Claude Design interface showing an editable prototype with generated controls" loading="lazy">
