@@ -834,6 +834,96 @@ a:active {
   fill: rgba(150, 103, 64, 0.58);
 }
 
+.platform-surfaces-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.platform-surfaces-svg .surface-bg {
+  fill: rgba(68, 82, 112, 0.035);
+  stroke: rgba(68, 82, 112, 0.16);
+}
+
+.platform-surfaces-svg text {
+  fill: var(--swatch-2);
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+.platform-surfaces-svg .surface-kicker,
+.platform-surfaces-svg .surface-label,
+.platform-surfaces-svg .surface-note {
+  fill: var(--swatch-4);
+  font-size: 16px;
+}
+
+.platform-surfaces-svg .surface-title {
+  fill: var(--swatch-1);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.platform-surfaces-svg .surface-user rect,
+.platform-surfaces-svg .surface-ui > rect {
+  fill: rgba(255, 255, 255, 0.78);
+  stroke: rgba(68, 82, 112, 0.2);
+}
+
+.platform-surfaces-svg .surface-core rect:first-child {
+  fill: rgba(150, 103, 64, 0.08);
+  stroke: rgba(150, 103, 64, 0.26);
+}
+
+.platform-surfaces-svg .surface-core-chip {
+  fill: rgba(255, 255, 255, 0.62);
+  stroke: rgba(150, 103, 64, 0.18);
+}
+
+.platform-surfaces-svg .surface-card-title {
+  fill: var(--swatch-1);
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.platform-surfaces-svg .surface-card-copy,
+.platform-surfaces-svg .surface-core-copy {
+  fill: var(--swatch-3);
+  font-size: 16px;
+}
+
+.platform-surfaces-svg .surface-core-title {
+  fill: var(--swatch-1);
+  font-size: 24px;
+  font-weight: 500;
+  text-anchor: middle;
+}
+
+.platform-surfaces-svg .surface-core-copy {
+  text-anchor: middle;
+}
+
+.platform-surfaces-svg .surface-mini-line,
+.platform-surfaces-svg .surface-mini-panel {
+  fill: rgba(68, 82, 112, 0.08);
+  stroke: rgba(68, 82, 112, 0.16);
+}
+
+.platform-surfaces-svg .surface-mini-dot {
+  fill: rgba(80, 198, 185, 0.58);
+}
+
+.platform-surfaces-svg .surface-link {
+  fill: none;
+  stroke: rgba(150, 103, 64, 0.42);
+  stroke-linecap: round;
+  stroke-width: 1.6;
+  marker-end: url(#surface-arrow);
+}
+
+.platform-surfaces-svg marker path {
+  fill: rgba(150, 103, 64, 0.56);
+}
+
 .blog-post-svg-figure figcaption {
   max-width: 720px;
   color: var(--swatch-4);
