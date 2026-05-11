@@ -1,187 +1,421 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            On-Demand Generative User Interface Calibration: Shenzhe Zhu
+        </title>
+        <meta
+            name="description"
+            content="A small Claude Design observation expanded into a broader thought on on-demand calibrated user interfaces."
+        />
+        <meta name="author" content="Shenzhe Zhu" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Space+Mono&display=swap"
+        />
+        <link rel="stylesheet" href="../style.css?v=cargo17" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='white'/%3E%3C/svg%3E"
+        />
+        <meta name="theme-color" content="#ffffff" />
+    </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>On-Demand Generative Interaction Surfaces — Shenzhe Zhu</title>
-  <meta name="description" content="A small Claude Design observation expanded into a broader thought on on-demand interaction surfaces." />
-  <meta name="author" content="Shenzhe Zhu" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Space+Mono&display=swap">
-  <link rel="stylesheet" href="../style.css?v=cargo15" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='white'/%3E%3C/svg%3E">
-  <meta name="theme-color" content="#ffffff">
-</head>
+    <body class="blog-post-body">
+        <main class="blog-post-main">
+            <article class="blog-post">
+                <header class="blog-post-header">
+                    <h1>On-Demand Generative User Interface Calibration</h1>
+                    <p class="blog-meta">
+                        <span>Shenzhe Zhu · May 9, 2026</span>
+                        <span class="blog-post-tag tag-engineering"
+                            >Engineering</span
+                        >
+                    </p>
+                    <p class="blog-meta blog-word-count">
+                        876 words · ~4 min read
+                    </p>
+                </header>
 
-<body class="blog-post-body">
-  <main class="blog-post-main">
-    <article class="blog-post">
-      <header class="blog-post-header">
-        <h1>On-Demand Generative Interaction Surfaces</h1>
-        <p class="blog-meta">
-          <span>Shenzhe Zhu · May 9, 2026</span>
-          <span class="blog-post-tag tag-engineering">Engineering</span>
-        </p>
-      </header>
+                <figure class="blog-post-svg-figure">
+                    <svg
+                        class="interface-loop-svg"
+                        viewBox="0 0 760 360"
+                        role="img"
+                        aria-labelledby="interface-loop-title interface-loop-desc"
+                    >
+                        <title id="interface-loop-title">
+                            A task-specific interface loop
+                        </title>
+                        <desc id="interface-loop-desc">
+                            A diagram showing a user request moving through an
+                            agent into a task surface, then returning through
+                            user action and handoff.
+                        </desc>
+                        <defs>
+                            <marker
+                                id="interface-arrow"
+                                markerWidth="10"
+                                markerHeight="10"
+                                refX="7"
+                                refY="3"
+                                orient="auto"
+                                markerUnits="strokeWidth"
+                            >
+                                <path d="M0,0 L7,3 L0,6 Z"></path>
+                            </marker>
+                        </defs>
+                        <rect
+                            class="loop-bg"
+                            x="1"
+                            y="1"
+                            width="758"
+                            height="358"
+                        ></rect>
+                        <text class="loop-kicker" x="48" y="54">
+                            UI as generated material
+                        </text>
+                        <text class="loop-title" x="48" y="88">
+                            Every surface adapts to user demand.
+                        </text>
 
-      <figure class="blog-post-svg-figure">
-        <svg class="interface-loop-svg" viewBox="0 0 760 360" role="img" aria-labelledby="interface-loop-title interface-loop-desc">
-          <title id="interface-loop-title">A task-specific interface loop</title>
-          <desc id="interface-loop-desc">A diagram showing a user request moving through an agent into a task surface, then returning through user action and handoff.</desc>
-          <defs>
-            <marker id="interface-arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
-              <path d="M0,0 L7,3 L0,6 Z"></path>
-            </marker>
-          </defs>
-          <rect class="loop-bg" x="1" y="1" width="758" height="358"></rect>
-          <text class="loop-kicker" x="48" y="54">Interaction as generated material</text>
-          <text class="loop-title" x="48" y="88">Not every task wants the same surface.</text>
+                        <g class="loop-node" transform="translate(48 142)">
+                            <rect width="170" height="96"></rect>
+                            <text class="loop-node-title" x="20" y="34">
+                                User request
+                            </text>
+                            <rect
+                                class="loop-tag"
+                                x="14"
+                                y="48"
+                                width="48"
+                                height="20"
+                                rx="4"
+                            ></rect>
+                            <text class="loop-node-copy" x="20" y="62">
+                                goal
+                            </text>
+                            <rect
+                                class="loop-tag"
+                                x="74"
+                                y="48"
+                                width="68"
+                                height="20"
+                                rx="4"
+                            ></rect>
+                            <text class="loop-node-copy" x="80" y="62">
+                                context
+                            </text>
+                            <rect
+                                class="loop-tag"
+                                x="14"
+                                y="74"
+                                width="94"
+                                height="20"
+                                rx="4"
+                            ></rect>
+                            <text class="loop-node-copy" x="20" y="88">
+                                constraints
+                            </text>
+                        </g>
 
-          <g class="loop-node" transform="translate(48 142)">
-            <rect width="170" height="96"></rect>
-            <text class="loop-node-title" x="20" y="34">User request</text>
-            <text class="loop-node-copy" x="20" y="62">goal</text>
-            <text class="loop-node-copy" x="86" y="62">context</text>
-            <text class="loop-node-copy" x="20" y="82">constraints</text>
-          </g>
+                        <g
+                            class="loop-node loop-node--agent"
+                            transform="translate(296 132)"
+                        >
+                            <rect width="168" height="116"></rect>
+                            <text class="loop-node-title" x="20" y="34">
+                                Agent
+                            </text>
+                            <text class="loop-node-copy" x="20" y="62">
+                                reads context
+                            </text>
+                            <text class="loop-node-copy" x="20" y="82">
+                                chooses surface
+                            </text>
+                            <text class="loop-node-copy" x="20" y="102">
+                                keeps loop tight
+                            </text>
+                        </g>
 
-          <g class="loop-node loop-node--agent" transform="translate(296 132)">
-            <rect width="168" height="116"></rect>
-            <text class="loop-node-title" x="20" y="34">Agent</text>
-            <text class="loop-node-copy" x="20" y="62">reads context</text>
-            <text class="loop-node-copy" x="20" y="82">chooses surface</text>
-            <text class="loop-node-copy" x="20" y="102">keeps loop tight</text>
-          </g>
+                        <g class="loop-surface" transform="translate(544 118)">
+                            <rect width="168" height="150"></rect>
+                            <text class="loop-node-title" x="20" y="34">
+                                Calibrated UI
+                            </text>
+                            <rect
+                                class="loop-mini-panel"
+                                x="20"
+                                y="54"
+                                width="128"
+                                height="26"
+                            ></rect>
+                            <rect
+                                class="loop-mini-button"
+                                x="20"
+                                y="94"
+                                width="56"
+                                height="24"
+                            ></rect>
+                            <rect
+                                class="loop-mini-button"
+                                x="92"
+                                y="94"
+                                width="56"
+                                height="24"
+                            ></rect>
+                            <rect
+                                class="loop-mini-line"
+                                x="20"
+                                y="132"
+                                width="92"
+                                height="4"
+                            ></rect>
+                        </g>
 
-          <g class="loop-surface" transform="translate(544 118)">
-            <rect width="168" height="150"></rect>
-            <text class="loop-node-title" x="20" y="34">Task surface</text>
-            <rect class="loop-mini-panel" x="20" y="54" width="128" height="26"></rect>
-            <rect class="loop-mini-button" x="20" y="94" width="56" height="24"></rect>
-            <rect class="loop-mini-button" x="92" y="94" width="56" height="24"></rect>
-            <rect class="loop-mini-line" x="20" y="132" width="92" height="4"></rect>
-          </g>
+                        <path
+                            class="loop-arrow"
+                            d="M225 190 C248 190, 263 190, 288 190"
+                        ></path>
+                        <path
+                            class="loop-arrow"
+                            d="M471 190 C496 190, 513 190, 536 190"
+                        ></path>
+                        <path
+                            class="loop-return"
+                            d="M628 286 C520 332, 270 333, 130 252"
+                        ></path>
+                        <rect
+                            class="loop-return-label-bg"
+                            x="304"
+                            y="306"
+                            width="252"
+                            height="22"
+                        ></rect>
+                        <text class="loop-return-label" x="318" y="321">
+                            user preference reshapes the surface
+                        </text>
+                    </svg>
+                    <figcaption>
+                        The pattern: the agent generates a calibrated UI, not
+                        just content, to make the next human decision easier and
+                        faster.
+                    </figcaption>
+                </figure>
 
-          <path class="loop-arrow" d="M225 190 C248 190, 263 190, 288 190"></path>
-          <path class="loop-arrow" d="M471 190 C496 190, 513 190, 536 190"></path>
-          <path class="loop-return" d="M628 286 C520 332, 270 333, 130 252"></path>
-          <rect class="loop-return-label-bg" x="304" y="306" width="252" height="22"></rect>
-          <text class="loop-return-label" x="318" y="321">user action becomes the next prompt</text>
-        </svg>
-        <figcaption>
-          My version of the pattern: the agent does not only produce content; it produces the temporary interaction that
-          makes the next human decision easier.
-        </figcaption>
-      </figure>
+                <p>
+                    Recently, Anthropic released
+                    <a
+                        href="https://www.anthropic.com/news/claude-design-anthropic-labs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Claude Design</a
+                    >, a design workspace where you collaborate with Claude
+                    through chat, canvas, inline comments, and direct edits. It
+                    exports to Canva, PDF, PPTX, or standalone HTML, and
+                    supports handoff to Claude Code for implementation. On the
+                    surface, it looks like a polished design tool. But the
+                    interface is not prebuilt: Claude generates and updates it
+                    in real time, adapting the layout to user feedback. It also
+                    embeds interactive functionality on demand: download
+                    buttons, pagination controls, sliders, whatever the task
+                    calls for.
+                </p>
 
-      <p>
-        A small moment in Claude Design feels less like an isolated feature and more like an early signal. Agent-native
-        applications will increasingly generate the interaction surface a user needs in the moment, not only return text
-        inside a chat window.
-      </p>
+                <p>
+                    This points to something bigger. Traditional web UI asks the
+                    user to adapt to its fixed contours. An agent-native
+                    platform reverses this:
+                    <strong
+                        >the surface adapts to the user, strengthening user
+                        agency.</strong
+                    >
+                    A task does not always need a fixed product screen designed
+                    in advance. It may need a temporary editor, generated for
+                    the task and discarded when it ends. What matters is not
+                    visual polish alone; it is interaction performance: how
+                    quickly a user can understand the state, make a choice, and
+                    give feedback.
+                    <strong
+                        >An agent-native platform should treat UI as a material
+                        the system can reshape around the user's demand and
+                        preference</strong
+                    >, not as a permanent container locked in months before
+                    anyone uses it.
+                </p>
 
-      <p>
-        Claude Design makes this trend concrete because it pairs chat with a canvas, inline comments, direct edits, and
-        export paths to HTML, Canva, or Claude Code. But the larger point is not HTML itself. HTML is only the easiest
-        visible example right now. The real shift is that an agent-native app can generate interaction at the moment of
-        need.
-      </p>
+                <figure class="blog-post-source-figure">
+                    <img
+                        src="../asset/blog/claude-design-hero.jpg"
+                        alt="Claude Design interface showing an editable prototype with generated controls"
+                        loading="lazy"
+                    />
+                    <figcaption>
+                        The useful detail here is the controls, not just the
+                        polish. Claude Design turns the answer into something
+                        the user can keep adjusting through its
+                        <em>Tweaks</em> feature.
+                    </figcaption>
+                </figure>
 
-      <p>
-        A task does not always need a fixed product screen designed months ago. It may need a temporary editor, a
-        comparison board, a set of controls, or a small canvas for arranging assets. This matters because user experience
-        is not only about visual polish. It is also about interaction performance: how quickly a user can understand the
-        state, make a choice, give feedback, and move to the next step.
-      </p>
+                <p>
+                    Claude Design happens to use HTML as its primary generated
+                    surface, and so do many of the agent-to-interface
+                    experiments people are running today. HTML is a natural
+                    place to start , but it is only one surface among many.
+                </p>
 
-      <p>
-        The way I would frame it: an agent-native platform should not treat UI as a permanent container. It should
-        treat UI as a material the system can reshape around the user's current intention.
-      </p>
+                <h2>HTML as One Surface</h2>
+                <p>
+                    Markdown is still useful. It is compact, easy for agents to
+                    produce, and good for plain explanations. But the final
+                    surface is often for a human, not for another agent. HTML is
+                    useful because it can carry layout, hierarchy, buttons,
+                    forms, SVG, tabs, sliders, and export actions in one
+                    familiar runtime.
+                </p>
 
-      <figure class="blog-post-source-figure">
-        <img src="../asset/blog/claude-design-hero.jpg" alt="Claude Design interface showing an editable prototype with generated controls" loading="lazy">
-        <figcaption>
-          The useful detail here is the controls, not just the polish. Claude Design turns the answer into something
-          the user can keep adjusting. Source: Anthropic.
-        </figcaption>
-      </figure>
+                <p>
+                    Simon Willison's note on the "<a
+                        href="https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >unreasonable effectiveness of HTML</a
+                    >" makes the same point from another angle: instead of
+                    returning a wall of Markdown, an agent can return a small
+                    self-contained page.
+                    <a
+                        href="https://thariqs.github.io/html-effectiveness/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Thariq Shihipar</a
+                    >
+                    (Anthropic)'s examples show code reviews, design systems,
+                    prototypes, diagrams, research explainers, and custom
+                    editors as HTML artifacts. These are not just prettier
+                    documents. They show how one agent answer can become a more
+                    usable interaction surface.
+                </p>
 
-      <h2>HTML as One Surface</h2>
-      <p>
-        Markdown is still useful. It is compact, easy for agents to produce, and good for plain explanations. But the
-        final surface is often for a human, not for another model. HTML is useful because it can carry layout,
-        hierarchy, buttons, forms, SVG, tabs, sliders, and export actions in one familiar runtime.
-      </p>
+                <figure
+                    class="blog-post-source-figure blog-post-source-figure--tall"
+                >
+                    <img
+                        src="../asset/blog/html-effectiveness-example.jpg"
+                        alt="Example HTML artifact explaining a Python script with cards and tables"
+                        loading="lazy"
+                    />
+                    <figcaption>
+                        From Simon Willison's note: an agent answer as a page,
+                        with sections, warnings, tables, and room to scan.
+                    </figcaption>
+                </figure>
 
-      <p>
-        Simon Willison's note on the "unreasonable effectiveness of HTML" makes the same point from another angle:
-        instead of returning a wall of Markdown, an agent can return a small self-contained page. Thariq Shihipar's
-        examples show code reviews, design systems, prototypes, diagrams, research explainers, and custom editors as
-        HTML artifacts. These are not just prettier documents. They show how one agent answer can become a more usable
-        interaction surface.
-      </p>
+                <h2>Agent-Native User Interface</h2>
+                <p>
+                    A future agent-native platform may not have one fixed
+                    interface. It may have a stable core product logic, plus
+                    many task-specific surfaces generated on the fly (In
+                    principle, even that core logic could be calibrated by the
+                    user, but stability is the key reason to keep it fixed). One
+                    user needs a dashboard. Another needs a Canva-like asset
+                    picker. A third needs a prompt tuner, a feature-flag editor,
+                    or a visual plan. The same app can become many small apps.
+                    Every programmer knows this intuitively: some swear by VS
+                    Code, others by JetBrains. The difference is never just
+                    aesthetic, it is about how the tool maps to the way a person
+                    thinks and works. In an agent-native platform, that kind of
+                    calibration is not limited to a settings panel. The
+                    interface itself can be reshaped to match the user's mental
+                    model.
+                </p>
 
-      <figure class="blog-post-source-figure blog-post-source-figure--tall">
-        <img src="../asset/blog/html-effectiveness-example.jpg" alt="Example HTML artifact explaining a Python script with cards and tables" loading="lazy">
-        <figcaption>
-          From Simon Willison's note: an agent answer as a page, with sections, warnings, tables, and room to scan.
-        </figcaption>
-      </figure>
+                <p>
+                    Some product functions feel natural here: temporary control
+                    panels for parameter tuning, comparison boards for choosing
+                    between generated options, editable previews before handoff,
+                    visual review surfaces for comments, task-specific
+                    dashboards, and export panels that know the user's next
+                    tool. If a generated surface becomes useful repeatedly, the
+                    product can promote it into a saved workflow. That is how an
+                    agent-native app can evolve without forcing every workflow
+                    into the same fixed screen.
+                </p>
 
-      <h2>Agent-Native Interaction</h2>
-      <p>
-        A future agent-native platform may not have one fixed interface. It may have a stable core product, plus many
-        task-specific surfaces generated on the fly. One user needs a dashboard. Another needs a Canva-like asset
-        picker. Another needs a prompt tuner, a feature-flag editor, or a visual plan. The same app can become many
-        small apps.
-      </p>
+                <h2>The Product Implication</h2>
+                <p>
+                    The product lesson is straightforward: agents should
+                    optimize not only for correct answers, but for the right
+                    interaction surface. That surface might be Markdown. It
+                    might be HTML. Increasingly, it may be a small generated
+                    workspace made exactly for the user and the task in front of
+                    them. None of this means every response should become a
+                    webpage. Plain text is still right for many cases, and
+                    future surfaces may also be canvas, spreadsheets, forms,
+                    simulations, voice, or mixed interfaces.
+                    <strong
+                        >The important question is not "Should this be HTML?"
+                        The better question is "What interface does this task
+                        need right now?"</strong
+                    >
+                </p>
 
-      <p>
-        This is especially relevant for collaboration products. In a system like Kordi, the agent should not only write
-        messages or produce documents. It should create the interface that lets a user decide, arrange, compare, export,
-        and give feedback. The user stays in the loop, but the loop becomes more visual and much tighter.
-      </p>
+                <p>
+                    Envisioning the Future, the interface can be freely
+                    calibrated to fit a user's preferences and habits, rather
+                    than asking the user to conform to it. In agent-native
+                    applications, on-demand calibrated interface will become a
+                    normal product primitive: shaped by user demand, calibrated
+                    by user preference, and promoted to a persistent surface
+                    when they earn their place.
+                </p>
 
-      <p>
-        Some product functions feel natural here: temporary control panels for parameter tuning, comparison boards for
-        choosing between generated options, editable previews before handoff, visual review surfaces for comments,
-        task-specific dashboards, and export panels that know the user's next tool. If a generated surface becomes useful
-        repeatedly, the product can promote it into a saved workflow. That is how an agent-native app can evolve without
-        forcing every workflow into the same fixed screen.
-      </p>
+                <p class="blog-post-links">
+                    Further reading:
+                    <a
+                        href="https://www.anthropic.com/news/claude-design-anthropic-labs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Anthropic announcement</a
+                    >,
+                    <a
+                        href="https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Claude Design guide</a
+                    >,
+                    <a
+                        href="https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Simon Willison</a
+                    >,
+                    <a
+                        href="https://thariqs.github.io/html-effectiveness/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >HTML examples</a
+                    >.
+                </p>
 
-      <h2>The Product Implication</h2>
-      <p>
-        "Anything can be HTML" does not mean every response should become a webpage. Plain text is still right for many
-        cases, and future surfaces may also be canvas, spreadsheets, forms, simulations, voice, or mixed interfaces. The
-        important question is not "should this be HTML?" The better question is "what interaction does this task need
-        right now?"
-      </p>
-
-      <p>
-        The product lesson is simple: agents should optimize not only for correct answers, but for the right interaction
-        surface. Sometimes that surface is Markdown. Sometimes it is HTML. Increasingly, it may be a small, generated
-        workspace made exactly for the user and the task in front of them.
-      </p>
-
-      <p>
-        My prediction is that this will stop feeling like a special design-tool feature. In agent-native applications,
-        on-demand interaction surfaces may become a normal product primitive: generated when the task needs them,
-        discarded when the moment passes, and saved only when they become a repeated workflow.
-      </p>
-
-      <p class="blog-post-links">
-        Further reading:
-        <a href="https://www.anthropic.com/news/claude-design-anthropic-labs" target="_blank" rel="noopener noreferrer">Anthropic announcement</a>,
-        <a href="https://support.claude.com/en/articles/14604416-get-started-with-claude-design" target="_blank" rel="noopener noreferrer">Claude Design guide</a>,
-        <a href="https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/" target="_blank" rel="noopener noreferrer">Simon Willison</a>,
-        <a href="https://thariqs.github.io/html-effectiveness/" target="_blank" rel="noopener noreferrer">HTML examples</a>.
-      </p>
-    </article>
-  </main>
-</body>
-
+                <div class="blog-cite">
+                    <pre>
+@misc{zhu2026calibrated,
+  title   = {On-Demand Generative User Interface Calibration},
+  author  = {Zhu, Shenzhe},
+  year    = {2026},
+  month   = {5},
+  url     = {https://shenzhezhu.github.io/blog/interfaces-on-demand.html},
+  note    = {Blog post}
+}</pre
+                    >
+                </div>
+            </article>
+        </main>
+    </body>
 </html>
