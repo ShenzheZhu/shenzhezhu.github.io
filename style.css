@@ -824,6 +824,7 @@ a:active {
 
 .interface-loop-svg .loop-return {
   stroke: rgba(68, 82, 112, 0.32);
+  marker-end: url(#interface-return-arrow);
 }
 
 .interface-loop-svg .loop-return-label-bg {
@@ -832,6 +833,10 @@ a:active {
 
 .interface-loop-svg marker path {
   fill: rgba(150, 103, 64, 0.58);
+}
+
+.interface-loop-svg #interface-return-arrow path {
+  fill: rgba(68, 82, 112, 0.45);
 }
 
 .platform-surfaces-svg {
