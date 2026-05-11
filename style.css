@@ -678,7 +678,8 @@ a:active {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0.55rem;
-  white-space: nowrap;
+  text-wrap: balance;
+  white-space: normal;
 }
 
 .blog-post-header .blog-meta {
