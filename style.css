@@ -857,6 +857,10 @@ a:active {
   font-size: 16px;
 }
 
+.platform-surfaces-svg .surface-label {
+  text-anchor: middle;
+}
+
 .platform-surfaces-svg .surface-title {
   fill: var(--swatch-1);
   font-size: 30px;
