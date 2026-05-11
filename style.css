@@ -642,7 +642,7 @@ a:active {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: -1.25rem auto 2.9rem;
+  margin: -1.8rem auto 3.15rem;
 }
 
 .blog-post-nav a {
@@ -654,7 +654,7 @@ a:active {
   font-size: 0.95rem;
   line-height: 1;
   text-decoration: none;
-  transform: translateY(-0.6rem);
+  transform: translateY(-0.85rem);
   transition:
     color 0.18s ease,
     transform 0.18s ease;
@@ -662,7 +662,7 @@ a:active {
 
 .blog-post-nav a:hover {
   color: var(--swatch-2);
-  transform: translateY(-0.68rem);
+  transform: translateY(-0.94rem);
 }
 
 .blog-post-header {
