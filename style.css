@@ -386,8 +386,8 @@ a:active {
   cursor: zoom-in;
 }
 
-.pub-image-smaller {
-  max-width: 340px;
+.pub-image.pub-image-smaller {
+  max-width: 300px;
 }
 
 .pub-image:hover {
