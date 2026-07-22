@@ -20,7 +20,8 @@
   --bg: #ffffff;
   --border: rgba(0, 0, 0, 0.15);
   --highlight: #800020;
-  --font-main: 'Marcellus', Optima, Candara, 'Gill Sans Nova', 'Gill Sans', system-ui, sans-serif;
+  --font-display: 'Marcellus', Optima, Candara, 'Gill Sans Nova', 'Gill Sans', system-ui, sans-serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ─── Skip Link ─── */
@@ -58,7 +59,7 @@ body {
   overflow-x: hidden;
   background-color: var(--bg);
   color: var(--swatch-1);
-  font-family: var(--font-main);
+  font-family: var(--font-body);
   font-size: 1.1rem;
   font-weight: normal;
   line-height: 1.2;
@@ -98,7 +99,7 @@ main {
 }
 
 .sidebar h1 {
-  font-family: var(--font-main);
+  font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.1;
@@ -173,7 +174,7 @@ main {
 
 /* ─── Typography ─── */
 h1, h2, h3 {
-  font-family: var(--font-main);
+  font-family: var(--font-display);
   font-weight: 480;
   margin-top: 0;
   line-height: 1;
@@ -186,7 +187,7 @@ h2, h3 {
 }
 
 h4 {
-  font-family: var(--font-main);
+  font-family: var(--font-display);
   font-weight: 480;
   margin-top: 0;
   margin-bottom: 0.4rem;
@@ -353,7 +354,7 @@ a:active {
 .year-section.year-first-visible { border-top: none; }
 
 .year-label {
-  font-family: var(--font-main);
+  font-family: var(--font-body);
   font-size: 1.1rem;
   color: var(--swatch-4);
   padding-top: 0.2rem;
@@ -797,7 +798,7 @@ a:active {
 
 .interface-loop-svg text {
   fill: var(--swatch-2);
-  font-family: var(--font-main);
+  font-family: var(--font-body);
 }
 
 .interface-loop-svg .loop-kicker,
@@ -891,7 +892,7 @@ a:active {
 
 .platform-surfaces-svg text {
   fill: var(--swatch-2);
-  font-family: var(--font-main);
+  font-family: var(--font-body);
 }
 
 .platform-surfaces-svg .surface-kicker,
@@ -1339,6 +1340,7 @@ a:active {
   }
 
   .mobile-header-name {
+    font-family: var(--font-display);
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--swatch-1);
