@@ -1,6 +1,12 @@
 /* style.css — 1:1 Cargo template replica */
 
-/* ─── Font: Inter as Diatype substitute (loaded via <link> in HTML) ─── */
+@font-face {
+  font-family: 'Marcellus';
+  src: url('asset/fonts/marcellus-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ─── Swatch System (Cargo-style opacity hierarchy) ─── */
 :root {
@@ -14,6 +20,7 @@
   --bg: #ffffff;
   --border: rgba(0, 0, 0, 0.15);
   --highlight: #800020;
+  --font-main: 'Marcellus', Optima, Candara, 'Gill Sans Nova', 'Gill Sans', system-ui, sans-serif;
 }
 
 /* ─── Skip Link ─── */
@@ -51,7 +58,7 @@ body {
   overflow-x: hidden;
   background-color: var(--bg);
   color: var(--swatch-1);
-  font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 1.1rem;
   font-weight: normal;
   line-height: 1.2;
@@ -91,7 +98,7 @@ main {
 }
 
 .sidebar h1 {
-  font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.1;
@@ -166,7 +173,7 @@ main {
 
 /* ─── Typography ─── */
 h1, h2, h3 {
-  font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-main);
   font-weight: 480;
   margin-top: 0;
   line-height: 1;
@@ -179,7 +186,7 @@ h2, h3 {
 }
 
 h4 {
-  font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-main);
   font-weight: 480;
   margin-top: 0;
   margin-bottom: 0.4rem;
@@ -346,7 +353,7 @@ a:active {
 .year-section.year-first-visible { border-top: none; }
 
 .year-label {
-  font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 1.1rem;
   color: var(--swatch-4);
   padding-top: 0.2rem;
@@ -790,7 +797,7 @@ a:active {
 
 .interface-loop-svg text {
   fill: var(--swatch-2);
-  font-family: 'Archivo Narrow', sans-serif;
+  font-family: var(--font-main);
 }
 
 .interface-loop-svg .loop-kicker,
@@ -884,7 +891,7 @@ a:active {
 
 .platform-surfaces-svg text {
   fill: var(--swatch-2);
-  font-family: 'Archivo Narrow', sans-serif;
+  font-family: var(--font-main);
 }
 
 .platform-surfaces-svg .surface-kicker,
