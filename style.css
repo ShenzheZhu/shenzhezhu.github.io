@@ -1,13 +1,5 @@
 /* style.css — 1:1 Cargo template replica */
 
-@font-face {
-  font-family: 'Marcellus';
-  src: url('asset/fonts/marcellus-latin.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* ─── Swatch System (Cargo-style opacity hierarchy) ─── */
 :root {
   --swatch-1: rgba(0, 0, 0, 0.85);
@@ -20,7 +12,6 @@
   --bg: #ffffff;
   --border: rgba(0, 0, 0, 0.15);
   --highlight: #800020;
-  --font-display: 'Marcellus', Optima, Candara, 'Gill Sans Nova', 'Gill Sans', system-ui, sans-serif;
   --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -99,7 +90,7 @@ main {
 }
 
 .sidebar h1 {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.1;
@@ -109,7 +100,7 @@ main {
 
 .sidebar h1 a {
   color: var(--swatch-1);
-  font-weight: 700;
+  font-weight: 450;
   text-decoration: none;
 }
 
@@ -175,8 +166,8 @@ main {
 
 /* ─── Typography ─── */
 h1, h2, h3 {
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 450;
   margin-top: 0;
   line-height: 1;
   color: var(--swatch-2);
@@ -188,8 +179,8 @@ h2, h3 {
 }
 
 h4 {
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 450;
   margin-top: 0;
   margin-bottom: 0.4rem;
   line-height: 1.2;
@@ -1341,9 +1332,9 @@ a:active {
   }
 
   .mobile-header-name {
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 450;
     color: var(--swatch-1);
     text-decoration: none;
   }
