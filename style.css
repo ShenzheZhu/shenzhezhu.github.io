@@ -176,7 +176,7 @@ main {
 /* ─── Typography ─── */
 h1, h2, h3 {
   font-family: var(--font-display);
-  font-weight: 480;
+  font-weight: 700;
   margin-top: 0;
   line-height: 1;
   color: var(--swatch-2);
@@ -189,7 +189,7 @@ h2, h3 {
 
 h4 {
   font-family: var(--font-display);
-  font-weight: 480;
+  font-weight: 700;
   margin-top: 0;
   margin-bottom: 0.4rem;
   line-height: 1.2;
