@@ -2,7 +2,9 @@ const wardrobe = document.querySelector('.wardrobe');
 const categoryLinks = [...wardrobe.querySelectorAll('.wardrobe-category')];
 const brandOptions = wardrobe.querySelector('.wardrobe-brand-options');
 const collection = wardrobe.querySelector('.wardrobe-collection');
-const products = [...collection.querySelectorAll('.wardrobe-card')].map(card => ({
+const grid = collection.querySelector('.wardrobe-grid');
+grid.append(...grid.querySelectorAll('.wardrobe-card-archived'));
+const products = [...grid.querySelectorAll('.wardrobe-card')].map(card => ({
   card,
   brand: card.querySelector('strong').textContent.trim(),
 }));
