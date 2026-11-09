@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="620" height="290" viewBox="0 0 620 290" role="img" aria-labelledby="title description">
   <title id="title">Wardrobe purchases by year and category</title>
   <desc id="description">59 purchases recorded in my wardrobe, including items I no longer own. 2021, Bottoms 1, Shoes 1, Fragrance 1. 2022, Bottoms 2, Shoes 1, Fragrance 1. 2023, Outerwear 1, Tops 1, Shoes 1, Bags &amp; Accessories 2, Fragrance 1. 2024, Outerwear 1, Tops 1, Bottoms 3, Shoes 4, Bags &amp; Accessories 6, Fragrance 1. 2025, Outerwear 2, Tops 3, Bottoms 3, Shoes 5, Bags &amp; Accessories 6. 2026, Outerwear 3, Tops 4, Bottoms 1, Shoes 2, Bags &amp; Accessories 1.</desc>
-  <rect width="620" height="290" rx="12" fill="#f7f5f1"/>
   <g transform="translate(0 -26)" font-family="Arial, Helvetica, sans-serif" fill="#3f3b38">
     <rect x="126" y="44" width="12" height="12" rx="2" fill="#b5a4bf"/>
     <text x="145" y="56" font-size="16">Outerwear</text>
