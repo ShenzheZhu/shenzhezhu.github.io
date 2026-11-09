@@ -13,22 +13,22 @@
     <path d="M442 61V261" stroke="#dcd7d0"/>
     <text x="442" y="52" font-size="15" text-anchor="middle" fill="#665e59">$6k</text>
     <text x="68" y="81" font-size="17" text-anchor="end">2021</text>
-    <rect x="82" y="67" width="11.93" height="17" rx="2" fill="#b49a91"/>
+    <rect x="82" y="67" width="11.93" height="17" rx="2" fill="#899ca5"/>
     <text x="101.93" y="81" font-size="16">$198.88</text>
     <text x="68" y="115" font-size="17" text-anchor="end">2022</text>
-    <rect x="82" y="101" width="10.37" height="17" rx="2" fill="#b49a91"/>
+    <rect x="82" y="101" width="10.37" height="17" rx="2" fill="#899ca5"/>
     <text x="100.37" y="115" font-size="16">$172.89</text>
     <text x="68" y="149" font-size="17" text-anchor="end">2023</text>
-    <rect x="82" y="135" width="41.49" height="17" rx="2" fill="#b49a91"/>
+    <rect x="82" y="135" width="41.49" height="17" rx="2" fill="#899ca5"/>
     <text x="131.49" y="149" font-size="16">$691.56</text>
     <text x="68" y="183" font-size="17" text-anchor="end">2024</text>
-    <rect x="82" y="169" width="342.53" height="17" rx="2" fill="#b49a91"/>
+    <rect x="82" y="169" width="342.53" height="17" rx="2" fill="#899ca5"/>
     <text x="432.53" y="183" font-size="16">$5,708.76</text>
     <text x="68" y="217" font-size="17" text-anchor="end">2025</text>
-    <rect x="82" y="203" width="377.93" height="17" rx="2" fill="#b49a91"/>
+    <rect x="82" y="203" width="377.93" height="17" rx="2" fill="#899ca5"/>
     <text x="467.93" y="217" font-size="16">$6,298.90</text>
     <text x="68" y="251" font-size="17" text-anchor="end">2026</text>
-    <rect x="82" y="237" width="137.06" height="17" rx="2" fill="#b49a91"/>
+    <rect x="82" y="237" width="137.06" height="17" rx="2" fill="#899ca5"/>
     <text x="227.06" y="251" font-size="16">$2,284.29</text>
   </g>
 </svg>
