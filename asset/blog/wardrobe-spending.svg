@@ -27,7 +27,7 @@
     <text x="68" y="217" font-size="17" text-anchor="end">2025</text>
     <rect x="82" y="203" width="377.93" height="17" rx="2" fill="#b49a91"/>
     <text x="467.93" y="217" font-size="16">$6,298.90</text>
-    <text x="68" y="251" font-size="14" text-anchor="end">2026 YTD</text>
+    <text x="68" y="251" font-size="17" text-anchor="end">2026</text>
     <rect x="82" y="237" width="137.06" height="17" rx="2" fill="#b49a91"/>
     <text x="227.06" y="251" font-size="16">$2,284.29</text>
   </g>
