@@ -61,6 +61,7 @@ a:focus-visible {
 
 .wardrobe-card {
   line-height: 1.35;
+  text-align: start;
 }
 
 .wardrobe-card img {
@@ -78,20 +79,17 @@ a:focus-visible {
   text-underline-offset: 2px;
 }
 
-.wardrobe-line {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.125rem 0.5rem;
+.wardrobe-card strong,
+.wardrobe-name {
+  display: block;
 }
 
-.wardrobe-line strong {
+.wardrobe-name {
+  overflow-wrap: anywhere;
+}
+
+.wardrobe-card strong {
   font-weight: 600;
-}
-
-.wardrobe-meta {
-  color: #606060;
-  margin-top: 0.125rem;
 }
 
 @media (min-width: 48rem) {
