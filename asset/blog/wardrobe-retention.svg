@@ -36,7 +36,7 @@
     <text x="464" y="254" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">17 of 32</text>
     <rect x="533" y="88" width="42" height="120" rx="2" fill="#879888"/>
     <text x="554" y="79" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="700">80%</text>
-    <text x="554" y="234" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="400">2026*</text>
+    <text x="554" y="234" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="400">2026 YTD</text>
     <text x="554" y="254" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">8 of 10</text>
   </g>
 </svg>

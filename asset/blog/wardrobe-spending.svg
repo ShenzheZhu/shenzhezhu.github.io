@@ -42,7 +42,7 @@
     <text x="477.65" y="238" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$12,989</text>
     <rect x="80" y="242" width="188.97" height="11" rx="2" fill="#b49a91"/>
     <text x="276.97" y="253" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$6,299</text>
-    <text x="66" y="284" font-size="17" text-anchor="end" fill="#3f3b38" font-weight="400">2026*</text>
+    <text x="66" y="284" font-size="14" text-anchor="end" fill="#3f3b38" font-weight="400">2026 YTD</text>
     <rect x="80" y="268" width="83.85" height="11" rx="2" fill="#899ca5"/>
     <text x="171.85" y="279" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$2,795</text>
     <rect x="80" y="283" width="68.53" height="11" rx="2" fill="#b49a91"/>

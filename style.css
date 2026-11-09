@@ -763,12 +763,6 @@ a:active {
   height: auto;
 }
 
-.wardrobe-chart figcaption {
-  margin-top: 0.6rem;
-  color: #665e59;
-  font-size: 0.9rem;
-}
-
 .wardrobe-months {
   width: 100%;
   table-layout: fixed;
