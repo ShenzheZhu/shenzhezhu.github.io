@@ -17,78 +17,80 @@
       <text y="274" font-size="13">OUR LEGACY</text>
     </g>
     <g transform="translate(142)">
+      <rect x="-13" y="112" width="26" height="144" fill="#a9b79e" stroke="#fff"/>
+      <text y="188" font-size="12">9</text>
+      <rect x="-13" y="96" width="26" height="16" fill="#c59fa2" stroke="#fff"/>
+      <text y="108" font-size="12">1</text>
+      <text y="274" font-size="13">Stüssy</text>
+    </g>
+    <g transform="translate(214)">
       <rect x="-13" y="192" width="26" height="64" fill="#a9b79e" stroke="#fff"/>
       <text y="228" font-size="12">4</text>
       <text y="274" font-size="13">Acne</text>
       <text y="289" font-size="13">Studios</text>
     </g>
-    <g transform="translate(214)">
+    <g transform="translate(286)">
       <rect x="-13" y="224" width="26" height="32" fill="#a9b79e" stroke="#fff"/>
       <text y="244" font-size="12">2</text>
       <rect x="-13" y="192" width="26" height="32" fill="#c59fa2" stroke="#fff"/>
       <text y="212" font-size="12">2</text>
       <text y="274" font-size="13">LEMAIRE</text>
     </g>
-    <g transform="translate(286)">
+    <g transform="translate(358)">
       <rect x="-13" y="224" width="26" height="32" fill="#a9b79e" stroke="#fff"/>
       <text y="244" font-size="12">2</text>
       <rect x="-13" y="208" width="26" height="16" fill="#c59fa2" stroke="#fff"/>
       <text y="220" font-size="12">1</text>
       <text y="274" font-size="13">Aesop</text>
     </g>
-    <g transform="translate(358)">
+    <g transform="translate(430)">
       <rect x="-13" y="224" width="26" height="32" fill="#a9b79e" stroke="#fff"/>
       <text y="244" font-size="12">2</text>
       <rect x="-13" y="208" width="26" height="16" fill="#c59fa2" stroke="#fff"/>
       <text y="220" font-size="12">1</text>
       <text y="274" font-size="13">Diesel</text>
     </g>
-    <g transform="translate(430)">
+    <g transform="translate(502)">
       <rect x="-13" y="224" width="26" height="32" fill="#a9b79e" stroke="#fff"/>
       <text y="244" font-size="12">2</text>
       <rect x="-13" y="208" width="26" height="16" fill="#c59fa2" stroke="#fff"/>
       <text y="220" font-size="12">1</text>
       <text y="274" font-size="13">ROA</text>
     </g>
-    <g transform="translate(502)">
+    <g transform="translate(574)">
       <rect x="-13" y="224" width="26" height="32" fill="#c59fa2" stroke="#fff"/>
       <text y="244" font-size="12">2</text>
       <text y="274" font-size="13">(di)vision</text>
     </g>
-    <g transform="translate(574)">
+    <g transform="translate(646)">
       <rect x="-13" y="224" width="26" height="32" fill="#a9b79e" stroke="#fff"/>
       <text y="244" font-size="12">2</text>
       <text y="274" font-size="13">Dries Van</text>
       <text y="289" font-size="13">Noten</text>
     </g>
-    <g transform="translate(646)">
+    <g transform="translate(718)">
       <rect x="-13" y="240" width="26" height="16" fill="#a9b79e" stroke="#fff"/>
       <text y="252" font-size="12">1</text>
       <rect x="-13" y="224" width="26" height="16" fill="#c59fa2" stroke="#fff"/>
       <text y="236" font-size="12">1</text>
       <text y="274" font-size="13">Guidi</text>
     </g>
-    <g transform="translate(718)">
+    <g transform="translate(790)">
       <rect x="-13" y="224" width="26" height="32" fill="#c59fa2" stroke="#fff"/>
       <text y="244" font-size="12">2</text>
       <text y="274" font-size="13">Levi&#x27;s</text>
     </g>
-    <g transform="translate(790)">
+    <g transform="translate(862)">
       <rect x="-13" y="224" width="26" height="32" fill="#a9b79e" stroke="#fff"/>
       <text y="244" font-size="12">2</text>
       <text y="274" font-size="13">Praying</text>
     </g>
-    <g transform="translate(862)">
+    <g transform="translate(934)">
       <rect x="-13" y="240" width="26" height="16" fill="#a9b79e" stroke="#fff"/>
       <text y="252" font-size="12">1</text>
       <rect x="-13" y="224" width="26" height="16" fill="#c59fa2" stroke="#fff"/>
       <text y="236" font-size="12">1</text>
       <text y="274" font-size="13">Salomon</text>
-    </g>
-    <g transform="translate(934)">
-      <rect x="-13" y="224" width="26" height="32" fill="#a9b79e" stroke="#fff"/>
-      <text y="244" font-size="12">2</text>
-      <text y="274" font-size="13">Stüssy</text>
     </g>
     <g transform="translate(1006)">
       <rect x="-13" y="240" width="26" height="16" fill="#a9b79e" stroke="#fff"/>

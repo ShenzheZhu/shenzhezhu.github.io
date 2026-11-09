@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="620" height="266" viewBox="0 0 620 266" role="img" aria-labelledby="title description">
   <title id="title">Items I still own and items I let go of by category</title>
-  <desc id="description">39 items I still own and 20 I let go of. Outerwear, 6 still owned and 1 let go. Tops, 7 still owned and 2 let go. Bottoms, 5 still owned and 5 let go. Shoes, 7 still owned and 7 let go. Bags &amp; Accessories, 11 still owned and 4 let go. Fragrance, 3 still owned and 1 let go.</desc>
+  <desc id="description">46 items I still own and 21 I let go of. Outerwear, 6 still owned and 1 let go. Tops, 10 still owned and 2 let go. Bottoms, 5 still owned and 5 let go. Shoes, 7 still owned and 7 let go. Bags &amp; Accessories, 15 still owned and 5 let go. Fragrance, 3 still owned and 1 let go.</desc>
   <g font-family="Arial, Helvetica, sans-serif" fill="#3f3b38">
     <rect x="182" y="18" width="12" height="12" rx="2" fill="#a9b79e"/>
     <text x="201" y="30" font-size="16">Still own</text>
@@ -8,40 +8,40 @@
     <text x="332" y="30" font-size="16">Let go</text>
     <path d="M182 43V245" stroke="#dcd7d0"/>
     <text x="168" y="65" font-size="17" text-anchor="end">Outerwear</text>
-    <rect x="182" y="49" width="150" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
-    <text x="257" y="65" font-size="15" text-anchor="middle">6</text>
-    <rect x="332" y="49" width="25" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
-    <text x="344.5" y="65" font-size="15" text-anchor="middle">1</text>
-    <text x="367" y="65" font-size="17" font-weight="700">7</text>
+    <rect x="182" y="49" width="120" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
+    <text x="242" y="65" font-size="15" text-anchor="middle">6</text>
+    <rect x="302" y="49" width="20" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
+    <text x="312" y="65" font-size="15" text-anchor="middle">1</text>
+    <text x="332" y="65" font-size="17" font-weight="700">7</text>
     <text x="168" y="99" font-size="17" text-anchor="end">Tops</text>
-    <rect x="182" y="83" width="175" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
-    <text x="269.5" y="99" font-size="15" text-anchor="middle">7</text>
-    <rect x="357" y="83" width="50" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
-    <text x="382" y="99" font-size="15" text-anchor="middle">2</text>
-    <text x="417" y="99" font-size="17" font-weight="700">9</text>
+    <rect x="182" y="83" width="200" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
+    <text x="282" y="99" font-size="15" text-anchor="middle">10</text>
+    <rect x="382" y="83" width="40" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
+    <text x="402" y="99" font-size="15" text-anchor="middle">2</text>
+    <text x="432" y="99" font-size="17" font-weight="700">12</text>
     <text x="168" y="133" font-size="17" text-anchor="end">Bottoms</text>
-    <rect x="182" y="117" width="125" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
-    <text x="244.5" y="133" font-size="15" text-anchor="middle">5</text>
-    <rect x="307" y="117" width="125" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
-    <text x="369.5" y="133" font-size="15" text-anchor="middle">5</text>
-    <text x="442" y="133" font-size="17" font-weight="700">10</text>
+    <rect x="182" y="117" width="100" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
+    <text x="232" y="133" font-size="15" text-anchor="middle">5</text>
+    <rect x="282" y="117" width="100" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
+    <text x="332" y="133" font-size="15" text-anchor="middle">5</text>
+    <text x="392" y="133" font-size="17" font-weight="700">10</text>
     <text x="168" y="167" font-size="17" text-anchor="end">Shoes</text>
-    <rect x="182" y="151" width="175" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
-    <text x="269.5" y="167" font-size="15" text-anchor="middle">7</text>
-    <rect x="357" y="151" width="175" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
-    <text x="444.5" y="167" font-size="15" text-anchor="middle">7</text>
-    <text x="542" y="167" font-size="17" font-weight="700">14</text>
+    <rect x="182" y="151" width="140" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
+    <text x="252" y="167" font-size="15" text-anchor="middle">7</text>
+    <rect x="322" y="151" width="140" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
+    <text x="392" y="167" font-size="15" text-anchor="middle">7</text>
+    <text x="472" y="167" font-size="17" font-weight="700">14</text>
     <text x="168" y="201" font-size="17" text-anchor="end">Bags &amp; Accessories</text>
-    <rect x="182" y="185" width="275" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
-    <text x="319.5" y="201" font-size="15" text-anchor="middle">11</text>
-    <rect x="457" y="185" width="100" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
-    <text x="507" y="201" font-size="15" text-anchor="middle">4</text>
-    <text x="567" y="201" font-size="17" font-weight="700">15</text>
+    <rect x="182" y="185" width="300" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
+    <text x="332" y="201" font-size="15" text-anchor="middle">15</text>
+    <rect x="482" y="185" width="100" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
+    <text x="532" y="201" font-size="15" text-anchor="middle">5</text>
+    <text x="592" y="201" font-size="17" font-weight="700">20</text>
     <text x="168" y="235" font-size="17" text-anchor="end">Fragrance</text>
-    <rect x="182" y="219" width="75" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
-    <text x="219.5" y="235" font-size="15" text-anchor="middle">3</text>
-    <rect x="257" y="219" width="25" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
-    <text x="269.5" y="235" font-size="15" text-anchor="middle">1</text>
-    <text x="292" y="235" font-size="17" font-weight="700">4</text>
+    <rect x="182" y="219" width="60" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
+    <text x="212" y="235" font-size="15" text-anchor="middle">3</text>
+    <rect x="242" y="219" width="20" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
+    <text x="252" y="235" font-size="15" text-anchor="middle">1</text>
+    <text x="272" y="235" font-size="17" font-weight="700">4</text>
   </g>
 </svg>
