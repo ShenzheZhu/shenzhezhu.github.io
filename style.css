@@ -765,6 +765,42 @@ a:active {
   height: auto;
 }
 
+.wardrobe-brand-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  padding: 1rem 1rem 0.5rem;
+  color: var(--swatch-2);
+  font-size: 0.8rem;
+}
+
+.wardrobe-brand-owned::before,
+.wardrobe-brand-left::before {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-inline-end: 0.35rem;
+  border-radius: 2px;
+  content: "";
+}
+
+.wardrobe-brand-owned::before {
+  background: #a9b79e;
+}
+
+.wardrobe-brand-left::before {
+  background: #c59fa2;
+}
+
+.wardrobe-brand-scroll {
+  overflow-x: auto;
+}
+
+.wardrobe-brand-scroll img {
+  width: auto;
+  max-width: none;
+}
+
 .wardrobe-months {
   width: 100%;
   table-layout: fixed;
