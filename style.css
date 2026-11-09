@@ -658,6 +658,10 @@ a:active {
   margin: -1.8rem auto 3.15rem;
 }
 
+.blog-post-nav--left {
+  justify-content: flex-start;
+}
+
 .blog-post-nav a {
   display: inline-flex;
   align-items: center;
