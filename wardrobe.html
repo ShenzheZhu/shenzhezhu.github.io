@@ -4,40 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wardrobe — Shenzhe Zhu</title>
-  <link rel="stylesheet" href="wardrobe.css">
-  <script src="wardrobe.js" defer></script>
+  <link rel="stylesheet" href="wardrobe.css?v=shop">
+  <script src="wardrobe.js?v=shop" defer></script>
 </head>
 <body>
   <main class="wardrobe" aria-label="Wardrobe">
     <nav class="wardrobe-categories" aria-label="Wardrobe categories">
-      <a class="wardrobe-index-link" href="#" hidden><span aria-hidden="true">←</span> Wardrobe home</a>
-      <a class="wardrobe-category" href="#outerwear">
-        <img src="asset/wardrobe/18214951.jpg" alt="" width="373" height="560">
-        <span>Outerwear</span>
-      </a>
-      <a class="wardrobe-category" href="#tops">
-        <img src="asset/wardrobe/18884951.jpg" alt="" width="373" height="560">
-        <span>Tops</span>
-      </a>
-      <a class="wardrobe-category" href="#bottoms">
-        <img src="asset/wardrobe/17863551.jpg" alt="" width="373" height="560">
-        <span>Bottoms</span>
-      </a>
-      <a class="wardrobe-category" href="#shoes">
-        <img src="asset/wardrobe/14944981.jpg" alt="" width="373" height="560">
-        <span>Shoes</span>
-      </a>
-      <a class="wardrobe-category" href="#accessories">
-        <img src="asset/wardrobe/17193031.jpg" alt="" width="373" height="560">
-        <span>Bags &amp; Accessories</span>
-      </a>
-      <a class="wardrobe-category" href="#fragrance">
-        <img class="wardrobe-fragrance-cover" src="asset/wardrobe/aesop-tacit-cover.jpg" alt="" width="373" height="560">
-        <span>Fragrance</span>
-      </a>
+      <a class="wardrobe-index-link" href="./">Back to home</a>
+      <a class="wardrobe-category" href="#outerwear">Outerwear</a>
+      <a class="wardrobe-category" href="#tops">Tops</a>
+      <a class="wardrobe-category" href="#bottoms">Bottoms</a>
+      <a class="wardrobe-category" href="#shoes">Shoes</a>
+      <a class="wardrobe-category" href="#accessories">Bags &amp; Accessories</a>
+      <a class="wardrobe-category" href="#fragrance">Fragrance</a>
     </nav>
-    <section class="wardrobe-collection" aria-labelledby="wardrobe-heading" hidden>
-      <h2 id="wardrobe-heading" tabindex="-1"></h2>
+    <aside class="wardrobe-brands" aria-label="Filter by brand">
+      <h2>Brands</h2>
+      <div class="wardrobe-brand-options"></div>
+    </aside>
+    <section class="wardrobe-collection" aria-label="Outerwear" tabindex="-1">
       <div class="wardrobe-grid">
       <a class="wardrobe-card" data-category="tops" href="https://www.ssense.com/en-ca/men/product/our-legacy/off-white-drift-shirt/18884951" target="_blank" rel="noopener noreferrer">
         <img src="asset/wardrobe/18884951.jpg" alt="Off-White Drift Shirt" width="373" height="560">
@@ -105,6 +90,28 @@
           <time datetime="2026-05-14">2026-05-14</time>
         </span>
       </a>
+      <a class="wardrobe-card" data-category="tops" href="https://www.mohawkgeneralstore.com/products/our-legacy-hausen-shirt-oyster-check-flannel" target="_blank" rel="noopener noreferrer">
+        <img src="asset/wardrobe/our-legacy-heusen-shirt.jpg" alt="Heusen Shirt – Oyster Check Hairy Flannel" width="576" height="720" loading="lazy">
+        <span class="wardrobe-line">
+          <strong>OUR LEGACY</strong>
+          <span>EUR 81.60</span>
+        </span>
+        <span class="wardrobe-line wardrobe-meta">
+          <span>50</span>
+          <time datetime="2026-04-28">2026-04-28</time>
+        </span>
+      </a>
+      <a class="wardrobe-card" data-category="accessories" href="https://www.reversible.com/shopping/men/item/our-legacy-3-cm-lace-belt-off-white-lace-664427450" target="_blank" rel="noopener noreferrer">
+        <img src="asset/wardrobe/our-legacy-lace-belt.jpg" alt="3 cm Lace Belt – Off White Lace" width="317" height="475" loading="lazy">
+        <span class="wardrobe-line">
+          <strong>OUR LEGACY</strong>
+          <span>EUR 57.60</span>
+        </span>
+        <span class="wardrobe-line wardrobe-meta">
+          <span>90</span>
+          <time datetime="2026-04-28">2026-04-28</time>
+        </span>
+      </a>
       <a class="wardrobe-card" data-category="shoes" href="https://www.ssense.com/en-ca/men/product/salomon/white-acs-pro-sneakers/16033541" target="_blank" rel="noopener noreferrer">
         <img src="asset/wardrobe/16033541.jpg" alt="White ACS Pro Sneakers" width="373" height="560">
         <span class="wardrobe-line">
@@ -125,6 +132,28 @@
         <span class="wardrobe-line wardrobe-meta">
           <span>IT 46</span>
           <time datetime="2026-01-15">2026-01-15</time>
+        </span>
+      </a>
+      <a class="wardrobe-card" data-category="accessories" href="https://www.ourlegacy.com/wave-bracelet-pomice-grey-fluid-calfskin" target="_blank" rel="noopener noreferrer">
+        <img src="asset/wardrobe/our-legacy-wave-bracelet.jpg" alt="Wave Bracelet – Pomice Grey Fluid Calfskin" width="317" height="475" loading="lazy">
+        <span class="wardrobe-line">
+          <strong>OUR LEGACY</strong>
+          <span>EUR 62.40</span>
+        </span>
+        <span class="wardrobe-line wardrobe-meta">
+          <span>One size</span>
+          <time datetime="2025-12-29">2025-12-29</time>
+        </span>
+      </a>
+      <a class="wardrobe-card" data-category="accessories" href="https://www.ourlegacy.com/flower-bracelet-deep-black-leather" target="_blank" rel="noopener noreferrer">
+        <img src="asset/wardrobe/our-legacy-flower-bracelet.jpg" alt="Flower Bracelet – Deep Black Leather" width="317" height="475" loading="lazy">
+        <span class="wardrobe-line">
+          <strong>OUR LEGACY</strong>
+          <span>EUR 62.40</span>
+        </span>
+        <span class="wardrobe-line wardrobe-meta">
+          <span>One size</span>
+          <time datetime="2025-12-29">2025-12-29</time>
         </span>
       </a>
       <a class="wardrobe-card" data-category="shoes" href="https://www.ssense.com/en-ca/men/product/salomon/white-xt-whisper-sneakers/17049821" target="_blank" rel="noopener noreferrer">
@@ -402,6 +431,28 @@
           <time datetime="2024-05-07">2024-05-07</time>
         </span>
       </a>
+      <a class="wardrobe-card" data-category="accessories" href="https://www.garmentory.com/sale/1135-our-legacy/mens-belts/1576453-link-belt-crystal-rubber-slash-white-leather" target="_blank" rel="noopener noreferrer">
+        <img src="asset/wardrobe/our-legacy-link-belt.jpg" alt="Link Belt – Crystal Rubber / White Leather" width="317" height="475" loading="lazy">
+        <span class="wardrobe-line">
+          <strong>OUR LEGACY</strong>
+          <span>EUR 38.40</span>
+        </span>
+        <span class="wardrobe-line wardrobe-meta">
+          <span>90</span>
+          <time datetime="2024-05-03">2024-05-03</time>
+        </span>
+      </a>
+      <a class="wardrobe-card" data-category="accessories" href="https://www.ourlegacy.com/2-cm-braided-belt-black-leather" target="_blank" rel="noopener noreferrer">
+        <img src="asset/wardrobe/our-legacy-braided-belt.jpg" alt="2 cm Braided Belt – Black Leather" width="317" height="475" loading="lazy">
+        <span class="wardrobe-line">
+          <strong>OUR LEGACY</strong>
+          <span>EUR 70.40</span>
+        </span>
+        <span class="wardrobe-line wardrobe-meta">
+          <span>90</span>
+          <time datetime="2024-05-03">2024-05-03</time>
+        </span>
+      </a>
       <a class="wardrobe-card" data-category="accessories" href="https://www.ssense.com/en-ca/men/product/chimi/ssense-exclusive-black-north-sunglasses/13107791" target="_blank" rel="noopener noreferrer">
         <img src="asset/wardrobe/13107791.jpg" alt="SSENSE Exclusive Black North Sunglasses" width="373" height="560" loading="lazy">
         <span class="wardrobe-line">
@@ -422,6 +473,17 @@
         <span class="wardrobe-line wardrobe-meta">
           <span>L</span>
           <time datetime="2024-02-03">2024-02-03</time>
+        </span>
+      </a>
+      <a class="wardrobe-card" data-category="tops" href="https://www.grailed.com/listings/68505603-our-legacy-our-legacy-shrunken-fullzip-polo-black-alpaca" target="_blank" rel="noopener noreferrer">
+        <img src="asset/wardrobe/our-legacy-shrunken-polo.jpg" alt="Shrunken Fullzip Polo – Black Alpaca" width="479" height="720" loading="lazy">
+        <span class="wardrobe-line">
+          <strong>OUR LEGACY</strong>
+          <span>EUR 136.00</span>
+        </span>
+        <span class="wardrobe-line wardrobe-meta">
+          <span>50</span>
+          <time datetime="2024-01-31">2024-01-31</time>
         </span>
       </a>
       <a class="wardrobe-card" data-category="shoes" href="https://www.ssense.com/en-ca/men/product/guidi/black-795v-boots/13878501" target="_blank" rel="noopener noreferrer">

@@ -6,7 +6,7 @@ body {
   margin: 0;
   background: #fff;
   color: #1b1b1b;
-  font: 0.875rem/1.4 "Helvetica Neue", Arial, sans-serif;
+  font: 0.75rem/1.4 Arial, "Helvetica Neue", sans-serif;
 }
 
 a {
@@ -15,86 +15,56 @@ a {
 }
 
 .wardrobe-categories a:hover,
-a[aria-current="page"] {
+.wardrobe-categories a[aria-current="page"],
+.wardrobe-brand-options button:hover,
+.wardrobe-brand-options button[aria-pressed="true"] {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
 
-a:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 3px;
 }
 
 .wardrobe {
-  max-width: 100rem;
+  max-width: 105rem;
   margin-inline: auto;
-  padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1rem, 4vw, 4rem) 4rem;
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 2vw, 2rem) 4rem;
 }
 
-.wardrobe:not(.is-browsing) {
-  display: grid;
-  align-content: center;
-  min-height: 100svh;
-  padding-block: clamp(1.5rem, 4vw, 3.5rem);
-}
-
-.wardrobe-categories {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.75rem 1rem;
-}
-
-.wardrobe-category {
-  display: block;
-}
-
-.wardrobe:not(.is-browsing) .wardrobe-category {
-  text-align: center;
-}
-
-.wardrobe-category img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 15rem;
-  aspect-ratio: 1.45;
-  object-fit: contain;
-  object-position: center bottom;
-  margin-bottom: 0.625rem;
-}
-
-.wardrobe-fragrance-cover {
-  padding-block-start: clamp(1.25rem, 4vw, 3.5rem);
-}
-
-.wardrobe-category span {
-  font-weight: 600;
-}
-
-.is-browsing .wardrobe-categories {
+.wardrobe-categories,
+.wardrobe-brand-options {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.625rem 1.125rem;
-  margin-bottom: 2rem;
-  font-size: 0.8125rem;
+  align-items: flex-start;
+  gap: 0.5rem 1rem;
 }
 
-.is-browsing .wardrobe-category img {
-  display: none;
-}
-
-.is-browsing .wardrobe-category span {
-  font-weight: inherit;
+.wardrobe-categories,
+.wardrobe-brands {
+  margin-bottom: 1.5rem;
 }
 
 .wardrobe-index-link {
-  font-weight: 600;
+  margin-inline-end: 0.5rem;
 }
 
-.wardrobe-collection h2 {
-  margin: 0 0 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
+.wardrobe-brands h2 {
+  margin: 0 0 0.4rem;
+  font: inherit;
+  text-transform: uppercase;
+}
+
+.wardrobe-brand-options button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
 }
 
 .wardrobe-grid {
@@ -104,7 +74,6 @@ a:focus-visible {
 }
 
 .wardrobe-card {
-  font-size: 0.75rem;
   line-height: 1.35;
 }
 
@@ -140,27 +109,42 @@ a:focus-visible {
 }
 
 @media (min-width: 48rem) {
-  .wardrobe-categories {
+  .wardrobe-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2.5rem 2rem;
+    gap: 2rem 1.25rem;
   }
+}
 
-  .wardrobe.is-browsing {
+@media (min-width: 60rem) {
+  .wardrobe {
     display: grid;
-    grid-template-columns: 9rem minmax(0, 1fr);
+    grid-template-columns: 8.5rem minmax(0, 1fr) 8rem;
+    grid-template-areas: "categories collection brands";
+    align-items: start;
     gap: 1.5rem;
   }
 
-  .is-browsing .wardrobe-categories {
+  .wardrobe-categories,
+  .wardrobe-brand-options {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.875rem;
-    margin: 0;
+    gap: 0.25rem;
   }
 
-  .wardrobe-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2.5rem 1.25rem;
+  .wardrobe-categories {
+    grid-area: categories;
+  }
+
+  .wardrobe-index-link {
+    margin-block-end: 0.75rem;
+  }
+
+  .wardrobe-collection {
+    grid-area: collection;
+  }
+
+  .wardrobe-brands {
+    grid-area: brands;
   }
 }
 
