@@ -567,8 +567,17 @@ a:active {
   transition: filter 0.25s ease, transform 0.25s ease;
 }
 
-.blog-card:hover .blog-card-thumb img,
-.blog-card:focus-within .blog-card-thumb img {
+.blog-card-thumb--screenshot {
+  background: #fff;
+}
+
+.blog-card-thumb--screenshot img {
+  object-fit: contain;
+  filter: none;
+}
+
+.blog-card:hover .blog-card-thumb:not(.blog-card-thumb--screenshot) img,
+.blog-card:focus-within .blog-card-thumb:not(.blog-card-thumb--screenshot) img {
   filter: grayscale(0%);
   transform: scale(1.03);
 }
