@@ -21,7 +21,7 @@ for (const brand of ['', ...brandNames]) {
 }
 
 function showCollection(event) {
-  const brandRoute = brandRoutes.get(location.hash);
+  const brandRoute = brandRoutes.get(location.hash || '#all-brands');
   const activeLink = brandRoute?.link
     ?? categoryLinks.find(link => link.hash === location.hash)
     ?? categoryLinks[0];
