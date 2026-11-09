@@ -567,8 +567,17 @@ a:active {
   transition: filter 0.25s ease, transform 0.25s ease;
 }
 
-.blog-card:hover .blog-card-thumb img,
-.blog-card:focus-within .blog-card-thumb img {
+.blog-card-thumb--screenshot {
+  background: #fff;
+}
+
+.blog-card-thumb--screenshot img {
+  object-fit: contain;
+  filter: none;
+}
+
+.blog-card:hover .blog-card-thumb:not(.blog-card-thumb--screenshot) img,
+.blog-card:focus-within .blog-card-thumb:not(.blog-card-thumb--screenshot) img {
   filter: grayscale(0%);
   transform: scale(1.03);
 }
@@ -647,6 +656,10 @@ a:active {
   justify-content: center;
   width: 100%;
   margin: -1.8rem auto 3.15rem;
+}
+
+.blog-post-nav--left {
+  justify-content: flex-start;
 }
 
 .blog-post-nav a {
@@ -737,6 +750,61 @@ a:active {
   width: 100%;
   max-width: 820px;
   margin: 2.5rem auto;
+}
+
+.wardrobe-chart {
+  max-width: 720px;
+  margin: 1.25rem auto 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 16px 34px rgba(56, 44, 34, 0.04), 0 2px 8px rgba(56, 44, 34, 0.02);
+}
+
+.wardrobe-chart img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wardrobe-months {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 2px;
+  color: #3f3b38;
+  font: clamp(0.6rem, 2.6vw, 0.86rem)/1.4 Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+.wardrobe-months th:first-child {
+  width: 16%;
+}
+
+.wardrobe-months th,
+.wardrobe-months td {
+  padding: 0.4rem 0;
+  text-align: center;
+}
+
+.wardrobe-months td {
+  border-radius: 3px;
+  background: #f2eeea;
+}
+
+.wardrobe-months [data-orders="1"] {
+  background: #e2d8d2;
+}
+
+.wardrobe-months [data-orders="2"],
+.wardrobe-months [data-orders="3"] {
+  background: #cdbbb2;
+}
+
+.wardrobe-months [data-orders="4"],
+.wardrobe-months [data-orders="5"] {
+  background: #b49a91;
+}
+
+.wardrobe-months .wardrobe-month-outside {
+  background: transparent;
 }
 
 .blog-cite {
