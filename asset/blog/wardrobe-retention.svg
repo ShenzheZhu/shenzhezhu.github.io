@@ -1,9 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="272" viewBox="0 0 620 272" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="248" viewBox="0 0 620 248" role="img" aria-labelledby="title description">
   <title id="title">SSENSE item retention by purchase year</title>
   <desc id="description">2021, 2 of 2 kept (100 percent). 2022, 3 of 3 kept (100 percent). 2023, 5 of 5 kept (100 percent). 2024, 12 of 31 kept (39 percent). 2025, 17 of 32 kept (53 percent). 2026, 8 of 10 kept (80 percent). The 2026 figures run through November 9.</desc>
-  <rect width="620" height="272" rx="12" fill="#f7f5f1"/>
-  <g font-family="Arial, Helvetica, sans-serif">
-    <text x="60" y="26" font-size="16" text-anchor="start" fill="#665e59" font-weight="400">Items kept</text>
+  <rect width="620" height="248" rx="12" fill="#f7f5f1"/>
+  <g transform="translate(0 -24)" font-family="Arial, Helvetica, sans-serif">
     <path d="M60 208H598" stroke="#dcd7d0"/>
     <text x="49" y="213" font-size="15" text-anchor="end" fill="#665e59" font-weight="400">0%</text>
     <path d="M60 170.5H598" stroke="#dcd7d0"/>
