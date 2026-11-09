@@ -1,0 +1,165 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #1b1b1b;
+  font: 0.875rem/1.4 "Helvetica Neue", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wardrobe-categories a:hover,
+a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.wardrobe {
+  max-width: 100rem;
+  margin-inline: auto;
+  padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1rem, 4vw, 4rem) 4rem;
+}
+
+.wardrobe-categories {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem 1rem;
+}
+
+.wardrobe-category {
+  display: block;
+}
+
+.wardrobe:not(.is-browsing) .wardrobe-category {
+  text-align: center;
+}
+
+.wardrobe-category img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 15rem;
+  aspect-ratio: 1.45;
+  object-fit: contain;
+  object-position: center bottom;
+  margin-bottom: 0.625rem;
+}
+
+.wardrobe-fragrance-cover {
+  padding-block-start: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+.wardrobe-category span {
+  font-weight: 600;
+}
+
+.is-browsing .wardrobe-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem 1.125rem;
+  margin-bottom: 2rem;
+  font-size: 0.8125rem;
+}
+
+.is-browsing .wardrobe-category img {
+  display: none;
+}
+
+.is-browsing .wardrobe-category span {
+  font-weight: inherit;
+}
+
+.wardrobe-index-link {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.wardrobe-collection h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.wardrobe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 0.875rem;
+}
+
+.wardrobe-card {
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.wardrobe-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  background: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.wardrobe-card:hover strong {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.wardrobe-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.125rem 0.5rem;
+}
+
+.wardrobe-line strong {
+  font-weight: 600;
+}
+
+.wardrobe-meta {
+  color: #606060;
+  margin-top: 0.125rem;
+}
+
+@media (min-width: 48rem) {
+  .wardrobe-categories {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem 2rem;
+  }
+
+  .wardrobe.is-browsing {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .is-browsing .wardrobe-categories {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.875rem;
+    margin: 0;
+  }
+
+  .wardrobe-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem 1.25rem;
+  }
+}
+
+@media (min-width: 68.75rem) {
+  .wardrobe-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}

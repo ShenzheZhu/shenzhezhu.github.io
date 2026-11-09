@@ -16,10 +16,15 @@ function setActiveLink(page) {
 }
 
 async function loadPage(page) {
+  if (page === 'wardrobe') {
+    location.replace('wardrobe.html');
+    return;
+  }
+
   lastLoadedPage = page;
   document.body.classList.toggle('page-home', page === 'home');
   try {
-    const response = await fetch(`pages/${page}.html?v=wardrobe4`);
+    const response = await fetch(`pages/${page}.html?v=wardrobe5`);
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const html = await response.text();
 
@@ -54,7 +59,7 @@ async function loadPage(page) {
     });
 
     // Update page title
-    const pageTitles = { about: 'About', publications: 'Publications', blog: 'Blogs', misc: 'Miscellaneous', wardrobe: 'Wardrobe', home: 'Home' };
+    const pageTitles = { about: 'About', publications: 'Publications', blog: 'Blogs', misc: 'Miscellaneous', home: 'Home' };
     document.title = pageTitles[page]
       ? `${pageTitles[page]} — Shenzhe Zhu`
       : 'Shenzhe Zhu';
@@ -363,7 +368,7 @@ window.addEventListener('hashchange', () => {
 
   // Close menu when a nav link is clicked
   sidebar.addEventListener('click', e => {
-    if (e.target.matches('a[data-page]') || e.target.closest('a[data-page]')) {
+    if (e.target.closest('.nav-index a, a[data-page]')) {
       setMenuState(false);
     }
   });
