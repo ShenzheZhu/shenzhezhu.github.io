@@ -1581,3 +1581,92 @@ a:active {
     opacity: 0.7;
   }
 }
+
+/* ─── Wardrobe ─── */
+.wardrobe {
+  padding-block: 0.5rem 3rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.wardrobe h2 {
+  margin-bottom: 1rem;
+  font: 500 0.875rem/1.3 "Helvetica Neue", Arial, sans-serif;
+}
+
+.wardrobe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 0.875rem;
+}
+
+.wardrobe-card {
+  position: relative;
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.wardrobe-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  background: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.wardrobe-card:hover strong {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.wardrobe-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.125rem 0.5rem;
+}
+
+.wardrobe-line strong {
+  font-weight: 600;
+}
+
+.wardrobe-meta {
+  color: var(--swatch-3);
+  margin-top: 0.125rem;
+}
+
+.wardrobe-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.125rem 0.25rem;
+  background: #fff;
+  color: var(--swatch-3);
+  font-size: 0.6875rem;
+}
+
+@media (min-width: 769px) {
+  body:has(.wardrobe) .sidebar {
+    width: 13rem;
+    min-width: 0;
+  }
+
+  main:has(.wardrobe) {
+    flex: 1;
+    max-width: none;
+    margin-left: 13rem;
+  }
+
+  .wardrobe-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem 1.25rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .wardrobe-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
