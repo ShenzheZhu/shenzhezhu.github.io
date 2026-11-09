@@ -7,44 +7,34 @@ const products = [...collection.querySelectorAll('.wardrobe-card')].map(card => 
   brand: card.querySelector('strong').textContent.trim(),
 }));
 
-function showBrands(categoryProducts) {
-  const names = [...new Set(categoryProducts.map(product => product.brand))]
-    .sort((a, b) => a.localeCompare(b));
-
-  brandOptions.replaceChildren(...['', ...names].map(name => {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.textContent = name || 'All brands';
-    button.setAttribute('aria-pressed', String(!name));
-    button.addEventListener('click', () => {
-      brandOptions.querySelector('[aria-pressed="true"]').setAttribute('aria-pressed', 'false');
-      button.setAttribute('aria-pressed', 'true');
-      categoryProducts.forEach(({ card, brand }) => {
-        card.hidden = Boolean(name && brand !== name);
-      });
-    });
-    return button;
-  }));
+const brandNames = [...new Set(products.map(product => product.brand))]
+  .sort((a, b) => a.localeCompare(b));
+const brandRoutes = new Map();
+for (const brand of ['', ...brandNames]) {
+  const link = document.createElement('a');
+  link.href = brand ? `#brand/${encodeURIComponent(brand)}` : '#all-brands';
+  link.textContent = brand || 'All brands';
+  brandRoutes.set(link.hash, { link, brand });
+  brandOptions.append(link);
 }
 
-function showCategory(event) {
-  const activeLink = categoryLinks.find(link => link.hash === location.hash) ?? categoryLinks[0];
+function showCollection(event) {
+  const brandRoute = brandRoutes.get(location.hash);
+  const activeLink = brandRoute?.link
+    ?? categoryLinks.find(link => link.hash === location.hash)
+    ?? categoryLinks[0];
   const category = activeLink.hash.slice(1);
   const label = activeLink.textContent;
   collection.setAttribute('aria-label', label);
   document.title = `${label} — Wardrobe`;
 
-  categoryLinks.forEach(link => {
-    if (link === activeLink) {
-      link.setAttribute('aria-current', 'page');
-    } else {
-      link.removeAttribute('aria-current');
-    }
+  wardrobe.querySelector('[aria-current="page"]')?.removeAttribute('aria-current');
+  activeLink.setAttribute('aria-current', 'page');
+  products.forEach(({ card, brand }) => {
+    card.hidden = brandRoute
+      ? Boolean(brandRoute.brand && brand !== brandRoute.brand)
+      : card.dataset.category !== category;
   });
-  products.forEach(({ card }) => {
-    card.hidden = card.dataset.category !== category;
-  });
-  showBrands(products.filter(({ card }) => !card.hidden));
 
   if (event) {
     collection.focus({ preventScroll: true });
@@ -52,5 +42,5 @@ function showCategory(event) {
   }
 }
 
-showCategory();
-window.addEventListener('hashchange', showCategory);
+showCollection();
+window.addEventListener('hashchange', showCollection);
