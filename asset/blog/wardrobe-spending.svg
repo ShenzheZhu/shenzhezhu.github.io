@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="319" viewBox="0 0 620 319" role="img" aria-labelledby="title description">
+  <title id="title">Annual SSENSE spending in Canadian dollars</title>
+  <desc id="description">2021, $198.88 before returns and $198.88 after return refunds. 2022, $172.89 before returns and $172.89 after return refunds. 2023, $691.56 before returns and $691.56 after return refunds. 2024, $11,750.87 before returns and $5,708.76 after return refunds. 2025, $12,988.50 before returns and $6,298.90 after return refunds. 2026, $2,795.05 before returns and $2,284.29 after return refunds. The 2026 figures run through November 9.</desc>
+  <rect width="620" height="319" rx="12" fill="#f7f5f1"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="72" y="13" width="13" height="13" rx="2" fill="#899ca5"/>
+    <text x="92" y="25" font-size="16" text-anchor="start" fill="#3f3b38" font-weight="400">Paid before returns</text>
+    <rect x="290" y="13" width="13" height="13" rx="2" fill="#b49a91"/>
+    <text x="310" y="25" font-size="16" text-anchor="start" fill="#3f3b38" font-weight="400">After return refunds</text>
+    <path d="M80 53V303" stroke="#dcd7d0"/>
+    <text x="80" y="47" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">$0</text>
+    <path d="M170 53V303" stroke="#dcd7d0"/>
+    <text x="170" y="47" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">$3k</text>
+    <path d="M260 53V303" stroke="#dcd7d0"/>
+    <text x="260" y="47" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">$6k</text>
+    <path d="M350 53V303" stroke="#dcd7d0"/>
+    <text x="350" y="47" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">$9k</text>
+    <path d="M440 53V303" stroke="#dcd7d0"/>
+    <text x="440" y="47" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">$12k</text>
+    <text x="66" y="79" font-size="17" text-anchor="end" fill="#3f3b38" font-weight="400">2021</text>
+    <rect x="80" y="63" width="5.97" height="11" rx="2" fill="#899ca5"/>
+    <text x="93.97" y="74" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$199</text>
+    <rect x="80" y="78" width="5.97" height="11" rx="2" fill="#b49a91"/>
+    <text x="93.97" y="89" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$199</text>
+    <text x="66" y="120" font-size="17" text-anchor="end" fill="#3f3b38" font-weight="400">2022</text>
+    <rect x="80" y="104" width="5.19" height="11" rx="2" fill="#899ca5"/>
+    <text x="93.19" y="115" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$173</text>
+    <rect x="80" y="119" width="5.19" height="11" rx="2" fill="#b49a91"/>
+    <text x="93.19" y="130" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$173</text>
+    <text x="66" y="161" font-size="17" text-anchor="end" fill="#3f3b38" font-weight="400">2023</text>
+    <rect x="80" y="145" width="20.75" height="11" rx="2" fill="#899ca5"/>
+    <text x="108.75" y="156" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$692</text>
+    <rect x="80" y="160" width="20.75" height="11" rx="2" fill="#b49a91"/>
+    <text x="108.75" y="171" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$692</text>
+    <text x="66" y="202" font-size="17" text-anchor="end" fill="#3f3b38" font-weight="400">2024</text>
+    <rect x="80" y="186" width="352.53" height="11" rx="2" fill="#899ca5"/>
+    <text x="440.53" y="197" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$11,751</text>
+    <rect x="80" y="201" width="171.26" height="11" rx="2" fill="#b49a91"/>
+    <text x="259.26" y="212" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$5,709</text>
+    <text x="66" y="243" font-size="17" text-anchor="end" fill="#3f3b38" font-weight="400">2025</text>
+    <rect x="80" y="227" width="389.65" height="11" rx="2" fill="#899ca5"/>
+    <text x="477.65" y="238" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$12,989</text>
+    <rect x="80" y="242" width="188.97" height="11" rx="2" fill="#b49a91"/>
+    <text x="276.97" y="253" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$6,299</text>
+    <text x="66" y="284" font-size="17" text-anchor="end" fill="#3f3b38" font-weight="400">2026*</text>
+    <rect x="80" y="268" width="83.85" height="11" rx="2" fill="#899ca5"/>
+    <text x="171.85" y="279" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$2,795</text>
+    <rect x="80" y="283" width="68.53" height="11" rx="2" fill="#b49a91"/>
+    <text x="156.53" y="294" font-size="15" text-anchor="start" fill="#3f3b38" font-weight="400">$2,284</text>
+  </g>
+</svg>

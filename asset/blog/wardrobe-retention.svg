@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="272" viewBox="0 0 620 272" role="img" aria-labelledby="title description">
+  <title id="title">SSENSE item retention by purchase year</title>
+  <desc id="description">2021, 2 of 2 kept (100 percent). 2022, 3 of 3 kept (100 percent). 2023, 5 of 5 kept (100 percent). 2024, 12 of 31 kept (39 percent). 2025, 17 of 32 kept (53 percent). 2026, 8 of 10 kept (80 percent). The 2026 figures run through November 9.</desc>
+  <rect width="620" height="272" rx="12" fill="#f7f5f1"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="60" y="26" font-size="16" text-anchor="start" fill="#665e59" font-weight="400">Items kept</text>
+    <path d="M60 208H598" stroke="#dcd7d0"/>
+    <text x="49" y="213" font-size="15" text-anchor="end" fill="#665e59" font-weight="400">0%</text>
+    <path d="M60 170.5H598" stroke="#dcd7d0"/>
+    <text x="49" y="175.5" font-size="15" text-anchor="end" fill="#665e59" font-weight="400">25%</text>
+    <path d="M60 133H598" stroke="#dcd7d0"/>
+    <text x="49" y="138" font-size="15" text-anchor="end" fill="#665e59" font-weight="400">50%</text>
+    <path d="M60 95.5H598" stroke="#dcd7d0"/>
+    <text x="49" y="100.5" font-size="15" text-anchor="end" fill="#665e59" font-weight="400">75%</text>
+    <path d="M60 58H598" stroke="#dcd7d0"/>
+    <text x="49" y="63" font-size="15" text-anchor="end" fill="#665e59" font-weight="400">100%</text>
+    <rect x="83" y="58" width="42" height="150" rx="2" fill="#879888"/>
+    <text x="104" y="49" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="700">100%</text>
+    <text x="104" y="234" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="400">2021</text>
+    <text x="104" y="254" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">2 of 2</text>
+    <rect x="173" y="58" width="42" height="150" rx="2" fill="#879888"/>
+    <text x="194" y="49" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="700">100%</text>
+    <text x="194" y="234" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="400">2022</text>
+    <text x="194" y="254" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">3 of 3</text>
+    <rect x="263" y="58" width="42" height="150" rx="2" fill="#879888"/>
+    <text x="284" y="49" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="700">100%</text>
+    <text x="284" y="234" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="400">2023</text>
+    <text x="284" y="254" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">5 of 5</text>
+    <rect x="353" y="149.94" width="42" height="58.06" rx="2" fill="#879888"/>
+    <text x="374" y="140.94" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="700">39%</text>
+    <text x="374" y="234" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="400">2024</text>
+    <text x="374" y="254" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">12 of 31</text>
+    <rect x="443" y="128.31" width="42" height="79.69" rx="2" fill="#879888"/>
+    <text x="464" y="119.31" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="700">53%</text>
+    <text x="464" y="234" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="400">2025</text>
+    <text x="464" y="254" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">17 of 32</text>
+    <rect x="533" y="88" width="42" height="120" rx="2" fill="#879888"/>
+    <text x="554" y="79" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="700">80%</text>
+    <text x="554" y="234" font-size="17" text-anchor="middle" fill="#3f3b38" font-weight="400">2026*</text>
+    <text x="554" y="254" font-size="15" text-anchor="middle" fill="#665e59" font-weight="400">8 of 10</text>
+  </g>
+</svg>

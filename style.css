@@ -752,6 +752,65 @@ a:active {
   margin: 2.5rem auto;
 }
 
+.wardrobe-chart {
+  max-width: 720px;
+  margin: 1.25rem auto 1.75rem;
+}
+
+.wardrobe-chart img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wardrobe-chart figcaption {
+  margin-top: 0.6rem;
+  color: #665e59;
+  font-size: 0.9rem;
+}
+
+.wardrobe-months {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 2px;
+  color: #3f3b38;
+  font: clamp(0.6rem, 2.6vw, 0.86rem)/1.4 Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+.wardrobe-months th:first-child {
+  width: 16%;
+}
+
+.wardrobe-months th,
+.wardrobe-months td {
+  padding: 0.4rem 0;
+  text-align: center;
+}
+
+.wardrobe-months td {
+  border-radius: 3px;
+  background: #f2eeea;
+}
+
+.wardrobe-months [data-orders="1"] {
+  background: #e2d8d2;
+}
+
+.wardrobe-months [data-orders="2"],
+.wardrobe-months [data-orders="3"] {
+  background: #cdbbb2;
+}
+
+.wardrobe-months [data-orders="4"],
+.wardrobe-months [data-orders="5"] {
+  background: #b49a91;
+}
+
+.wardrobe-months .wardrobe-month-outside {
+  background: transparent;
+}
+
 .blog-cite {
   max-width: 720px;
   margin: 2rem auto 0;
