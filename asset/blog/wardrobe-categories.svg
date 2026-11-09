@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="324" viewBox="0 0 620 324" role="img" aria-labelledby="title description">
-  <title id="title">Current wardrobe by purchase year and category</title>
-  <desc id="description">39 items currently in the wardrobe, grouped by purchase year. 2021, 0 items. 2022, 0 items. 2023, Bags &amp; Accessories 1. 2024, Outerwear 1, Bottoms 1, Shoes 2, Bags &amp; Accessories 4. 2025, Outerwear 2, Tops 3, Bottoms 3, Shoes 3, Bags &amp; Accessories 5. 2026, Outerwear 3, Tops 4, Bottoms 1, Shoes 2, Bags &amp; Accessories 1. Unknown year, Fragrance 3.</desc>
-  <rect width="620" height="324" rx="12" fill="#f7f5f1"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="290" viewBox="0 0 620 290" role="img" aria-labelledby="title description">
+  <title id="title">Wardrobe purchases by year and category</title>
+  <desc id="description">59 purchases recorded in my wardrobe, including items I no longer own. 2021, Bottoms 1, Shoes 1, Fragrance 1. 2022, Bottoms 2, Shoes 1, Fragrance 1. 2023, Outerwear 1, Tops 1, Shoes 1, Bags &amp; Accessories 2, Fragrance 1. 2024, Outerwear 1, Tops 1, Bottoms 3, Shoes 4, Bags &amp; Accessories 6, Fragrance 1. 2025, Outerwear 2, Tops 3, Bottoms 3, Shoes 5, Bags &amp; Accessories 6. 2026, Outerwear 3, Tops 4, Bottoms 1, Shoes 2, Bags &amp; Accessories 1.</desc>
+  <rect width="620" height="290" rx="12" fill="#f7f5f1"/>
   <g transform="translate(0 -26)" font-family="Arial, Helvetica, sans-serif" fill="#3f3b38">
     <rect x="126" y="44" width="12" height="12" rx="2" fill="#b5a4bf"/>
     <text x="145" y="56" font-size="16">Outerwear</text>
@@ -15,52 +15,72 @@
     <text x="284" y="80" font-size="16">Bags &amp; Accessories</text>
     <rect x="472" y="68" width="12" height="12" rx="2" fill="#a497aa"/>
     <text x="491" y="80" font-size="16">Fragrance</text>
-    <path d="M126 93V329" stroke="#dcd7d0"/>
+    <path d="M126 93V295" stroke="#dcd7d0"/>
     <text x="112" y="115" font-size="17" text-anchor="end">2021</text>
-    <text x="136" y="115" font-size="17" font-weight="700">0</text>
+    <rect x="126" y="99" width="22" height="22" fill="#d4c19c" stroke="#f7f5f1"/>
+    <text x="137" y="115" font-size="15" text-anchor="middle">1</text>
+    <rect x="148" y="99" width="22" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
+    <text x="159" y="115" font-size="15" text-anchor="middle">1</text>
+    <rect x="170" y="99" width="22" height="22" fill="#a497aa" stroke="#f7f5f1"/>
+    <text x="181" y="115" font-size="15" text-anchor="middle">1</text>
+    <text x="202" y="115" font-size="17" font-weight="700">3</text>
     <text x="112" y="149" font-size="17" text-anchor="end">2022</text>
-    <text x="136" y="149" font-size="17" font-weight="700">0</text>
+    <rect x="126" y="133" width="44" height="22" fill="#d4c19c" stroke="#f7f5f1"/>
+    <text x="148" y="149" font-size="15" text-anchor="middle">2</text>
+    <rect x="170" y="133" width="22" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
+    <text x="181" y="149" font-size="15" text-anchor="middle">1</text>
+    <rect x="192" y="133" width="22" height="22" fill="#a497aa" stroke="#f7f5f1"/>
+    <text x="203" y="149" font-size="15" text-anchor="middle">1</text>
+    <text x="224" y="149" font-size="17" font-weight="700">4</text>
     <text x="112" y="183" font-size="17" text-anchor="end">2023</text>
-    <rect x="126" y="167" width="25" height="22" fill="#c6b5a9" stroke="#f7f5f1"/>
-    <text x="138.5" y="183" font-size="15" text-anchor="middle">1</text>
-    <text x="161" y="183" font-size="17" font-weight="700">1</text>
+    <rect x="126" y="167" width="22" height="22" fill="#b5a4bf" stroke="#f7f5f1"/>
+    <text x="137" y="183" font-size="15" text-anchor="middle">1</text>
+    <rect x="148" y="167" width="22" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
+    <text x="159" y="183" font-size="15" text-anchor="middle">1</text>
+    <rect x="170" y="167" width="22" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
+    <text x="181" y="183" font-size="15" text-anchor="middle">1</text>
+    <rect x="192" y="167" width="44" height="22" fill="#c6b5a9" stroke="#f7f5f1"/>
+    <text x="214" y="183" font-size="15" text-anchor="middle">2</text>
+    <rect x="236" y="167" width="22" height="22" fill="#a497aa" stroke="#f7f5f1"/>
+    <text x="247" y="183" font-size="15" text-anchor="middle">1</text>
+    <text x="268" y="183" font-size="17" font-weight="700">6</text>
     <text x="112" y="217" font-size="17" text-anchor="end">2024</text>
-    <rect x="126" y="201" width="25" height="22" fill="#b5a4bf" stroke="#f7f5f1"/>
-    <text x="138.5" y="217" font-size="15" text-anchor="middle">1</text>
-    <rect x="151" y="201" width="25" height="22" fill="#d4c19c" stroke="#f7f5f1"/>
-    <text x="163.5" y="217" font-size="15" text-anchor="middle">1</text>
-    <rect x="176" y="201" width="50" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
-    <text x="201" y="217" font-size="15" text-anchor="middle">2</text>
-    <rect x="226" y="201" width="100" height="22" fill="#c6b5a9" stroke="#f7f5f1"/>
-    <text x="276" y="217" font-size="15" text-anchor="middle">4</text>
-    <text x="336" y="217" font-size="17" font-weight="700">8</text>
+    <rect x="126" y="201" width="22" height="22" fill="#b5a4bf" stroke="#f7f5f1"/>
+    <text x="137" y="217" font-size="15" text-anchor="middle">1</text>
+    <rect x="148" y="201" width="22" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
+    <text x="159" y="217" font-size="15" text-anchor="middle">1</text>
+    <rect x="170" y="201" width="66" height="22" fill="#d4c19c" stroke="#f7f5f1"/>
+    <text x="203" y="217" font-size="15" text-anchor="middle">3</text>
+    <rect x="236" y="201" width="88" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
+    <text x="280" y="217" font-size="15" text-anchor="middle">4</text>
+    <rect x="324" y="201" width="132" height="22" fill="#c6b5a9" stroke="#f7f5f1"/>
+    <text x="390" y="217" font-size="15" text-anchor="middle">6</text>
+    <rect x="456" y="201" width="22" height="22" fill="#a497aa" stroke="#f7f5f1"/>
+    <text x="467" y="217" font-size="15" text-anchor="middle">1</text>
+    <text x="488" y="217" font-size="17" font-weight="700">16</text>
     <text x="112" y="251" font-size="17" text-anchor="end">2025</text>
-    <rect x="126" y="235" width="50" height="22" fill="#b5a4bf" stroke="#f7f5f1"/>
-    <text x="151" y="251" font-size="15" text-anchor="middle">2</text>
-    <rect x="176" y="235" width="75" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
-    <text x="213.5" y="251" font-size="15" text-anchor="middle">3</text>
-    <rect x="251" y="235" width="75" height="22" fill="#d4c19c" stroke="#f7f5f1"/>
-    <text x="288.5" y="251" font-size="15" text-anchor="middle">3</text>
-    <rect x="326" y="235" width="75" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
-    <text x="363.5" y="251" font-size="15" text-anchor="middle">3</text>
-    <rect x="401" y="235" width="125" height="22" fill="#c6b5a9" stroke="#f7f5f1"/>
-    <text x="463.5" y="251" font-size="15" text-anchor="middle">5</text>
-    <text x="536" y="251" font-size="17" font-weight="700">16</text>
+    <rect x="126" y="235" width="44" height="22" fill="#b5a4bf" stroke="#f7f5f1"/>
+    <text x="148" y="251" font-size="15" text-anchor="middle">2</text>
+    <rect x="170" y="235" width="66" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
+    <text x="203" y="251" font-size="15" text-anchor="middle">3</text>
+    <rect x="236" y="235" width="66" height="22" fill="#d4c19c" stroke="#f7f5f1"/>
+    <text x="269" y="251" font-size="15" text-anchor="middle">3</text>
+    <rect x="302" y="235" width="110" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
+    <text x="357" y="251" font-size="15" text-anchor="middle">5</text>
+    <rect x="412" y="235" width="132" height="22" fill="#c6b5a9" stroke="#f7f5f1"/>
+    <text x="478" y="251" font-size="15" text-anchor="middle">6</text>
+    <text x="554" y="251" font-size="17" font-weight="700">19</text>
     <text x="112" y="285" font-size="17" text-anchor="end">2026</text>
-    <rect x="126" y="269" width="75" height="22" fill="#b5a4bf" stroke="#f7f5f1"/>
-    <text x="163.5" y="285" font-size="15" text-anchor="middle">3</text>
-    <rect x="201" y="269" width="100" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
-    <text x="251" y="285" font-size="15" text-anchor="middle">4</text>
-    <rect x="301" y="269" width="25" height="22" fill="#d4c19c" stroke="#f7f5f1"/>
-    <text x="313.5" y="285" font-size="15" text-anchor="middle">1</text>
-    <rect x="326" y="269" width="50" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
-    <text x="351" y="285" font-size="15" text-anchor="middle">2</text>
-    <rect x="376" y="269" width="25" height="22" fill="#c6b5a9" stroke="#f7f5f1"/>
-    <text x="388.5" y="285" font-size="15" text-anchor="middle">1</text>
-    <text x="411" y="285" font-size="17" font-weight="700">11</text>
-    <text x="112" y="319" font-size="17" text-anchor="end">Unknown year</text>
-    <rect x="126" y="303" width="75" height="22" fill="#a497aa" stroke="#f7f5f1"/>
-    <text x="163.5" y="319" font-size="15" text-anchor="middle">3</text>
-    <text x="211" y="319" font-size="17" font-weight="700">3</text>
+    <rect x="126" y="269" width="66" height="22" fill="#b5a4bf" stroke="#f7f5f1"/>
+    <text x="159" y="285" font-size="15" text-anchor="middle">3</text>
+    <rect x="192" y="269" width="88" height="22" fill="#a9b79e" stroke="#f7f5f1"/>
+    <text x="236" y="285" font-size="15" text-anchor="middle">4</text>
+    <rect x="280" y="269" width="22" height="22" fill="#d4c19c" stroke="#f7f5f1"/>
+    <text x="291" y="285" font-size="15" text-anchor="middle">1</text>
+    <rect x="302" y="269" width="44" height="22" fill="#c59fa2" stroke="#f7f5f1"/>
+    <text x="324" y="285" font-size="15" text-anchor="middle">2</text>
+    <rect x="346" y="269" width="22" height="22" fill="#c6b5a9" stroke="#f7f5f1"/>
+    <text x="357" y="285" font-size="15" text-anchor="middle">1</text>
+    <text x="378" y="285" font-size="17" font-weight="700">11</text>
   </g>
 </svg>
